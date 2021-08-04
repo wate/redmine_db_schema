@@ -22,7 +22,7 @@ CREATE TABLE `import_items` (
 
 ## カラム一覧
 
-| 名前        | タイプ          | デフォルト値       | Nullable | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
+| 名前        | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
 | --------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
 | id        | int(11)      |              | false    | auto_increment   |            |            |          |
 | import_id | int(11)      |              | false    |                  |            |            |          |

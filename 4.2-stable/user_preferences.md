@@ -2,6 +2,8 @@
 
 ## 概要
 
+ユーザー設定
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -21,13 +23,13 @@ CREATE TABLE `user_preferences` (
 
 ## カラム一覧
 
-| 名前        | タイプ          | デフォルト値       | Nullable | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| --------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id        | int(11)      |              | false    | auto_increment   |            |            |          |
-| user_id   | int(11)      | 0            | false    |                  |            |            |          |
-| others    | text         |              | true     |                  |            |            |          |
-| hide_mail | tinyint(1)   | 1            | true     |                  |            |            |          |
-| time_zone | varchar(255) |              | true     |                  |            |            |          |
+| 名前        | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント                 |
+| --------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------------------- |
+| id        | int(11)      |              | false    | auto_increment   |            |            |                      |
+| user_id   | int(11)      | 0            | false    |                  |            |            |                      |
+| others    | text         |              | true     |                  |            |            |                      |
+| hide_mail | tinyint(1)   | 1            | true     |                  |            |            | メールアドレスを隠す           |
+| time_zone | varchar(255) |              | true     |                  |            |            | タイムゾーン               |
 
 ## 制約一覧
 

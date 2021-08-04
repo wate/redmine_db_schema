@@ -2,6 +2,8 @@
 
 ## 概要
 
+トラッカー
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -23,7 +25,7 @@ CREATE TABLE `trackers` (
 
 ## カラム一覧
 
-| 名前                | タイプ          | デフォルト値       | Nullable | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
+| 名前                | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
 | ----------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
 | id                | int(11)      |              | false    | auto_increment   |            |            |          |
 | name              | varchar(30)  |              | false    |                  |            |            |          |

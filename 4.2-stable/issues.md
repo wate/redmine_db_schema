@@ -2,6 +2,8 @@
 
 ## 概要
 
+チケット
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -50,32 +52,32 @@ CREATE TABLE `issues` (
 
 ## カラム一覧
 
-| 名前               | タイプ          | デフォルト値       | Nullable | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ---------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id               | int(11)      |              | false    | auto_increment   |            |            |          |
-| tracker_id       | int(11)      |              | false    |                  |            |            |          |
-| project_id       | int(11)      |              | false    |                  |            |            |          |
-| subject          | varchar(255) |              | false    |                  |            |            |          |
-| description      | longtext     |              | true     |                  |            |            |          |
-| due_date         | date         |              | true     |                  |            |            |          |
-| category_id      | int(11)      |              | true     |                  |            |            |          |
-| status_id        | int(11)      |              | false    |                  |            |            |          |
-| assigned_to_id   | int(11)      |              | true     |                  |            |            |          |
-| priority_id      | int(11)      |              | false    |                  |            |            |          |
-| fixed_version_id | int(11)      |              | true     |                  |            |            |          |
-| author_id        | int(11)      |              | false    |                  |            |            |          |
-| lock_version     | int(11)      | 0            | false    |                  |            |            |          |
-| created_on       | timestamp    |              | true     |                  |            |            |          |
-| updated_on       | timestamp    |              | true     |                  |            |            |          |
-| start_date       | date         |              | true     |                  |            |            |          |
-| done_ratio       | int(11)      | 0            | false    |                  |            |            |          |
-| estimated_hours  | float        |              | true     |                  |            |            |          |
-| parent_id        | int(11)      |              | true     |                  |            |            |          |
-| root_id          | int(11)      |              | true     |                  |            |            |          |
-| lft              | int(11)      |              | true     |                  |            |            |          |
-| rgt              | int(11)      |              | true     |                  |            |            |          |
-| is_private       | tinyint(1)   | 0            | false    |                  |            |            |          |
-| closed_on        | datetime     |              | true     |                  |            |            |          |
+| 名前               | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント             |
+| ---------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | ---------------- |
+| id               | int(11)      |              | false    | auto_increment   |            |            |                  |
+| tracker_id       | int(11)      |              | false    |                  |            |            | トラッカーID          |
+| project_id       | int(11)      |              | false    |                  |            |            | プロジェクトID         |
+| subject          | varchar(255) |              | false    |                  |            |            | 題名               |
+| description      | longtext     |              | true     |                  |            |            | 説明               |
+| due_date         | date         |              | true     |                  |            |            | 期日               |
+| category_id      | int(11)      |              | true     |                  |            |            | カテゴリーID          |
+| status_id        | int(11)      |              | false    |                  |            |            | ステータスID          |
+| assigned_to_id   | int(11)      |              | true     |                  |            |            | 担当者ID            |
+| priority_id      | int(11)      |              | false    |                  |            |            | 優先度ID            |
+| fixed_version_id | int(11)      |              | true     |                  |            |            | 対象バージョンID        |
+| author_id        | int(11)      |              | false    |                  |            |            | 登録者ID            |
+| lock_version     | int(11)      | 0            | false    |                  |            |            | ロックバージョン         |
+| created_on       | timestamp    |              | true     |                  |            |            |                  |
+| updated_on       | timestamp    |              | true     |                  |            |            |                  |
+| start_date       | date         |              | true     |                  |            |            | 開始日              |
+| done_ratio       | int(11)      | 0            | false    |                  |            |            | 進捗率              |
+| estimated_hours  | float        |              | true     |                  |            |            | 予定工数             |
+| parent_id        | int(11)      |              | true     |                  |            |            | 親チケット            |
+| root_id          | int(11)      |              | true     |                  |            |            | ルートID            |
+| lft              | int(11)      |              | true     |                  |            |            | 左ノードポインタ         |
+| rgt              | int(11)      |              | true     |                  |            |            | 右ノードポインタ         |
+| is_private       | tinyint(1)   | 0            | false    |                  |            |            | プライベート           |
+| closed_on        | datetime     |              | true     |                  |            |            | 完了日時             |
 
 ## 制約一覧
 

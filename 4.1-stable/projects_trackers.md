@@ -2,6 +2,8 @@
 
 ## 概要
 
+プロジェクト⇔トラッカー
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -18,7 +20,7 @@ CREATE TABLE `projects_trackers` (
 
 ## カラム一覧
 
-| 名前         | タイプ     | デフォルト値       | Nullable | 子テーブル      | 親テーブル      | コメント     |
+| 名前         | タイプ     | デフォルト値       | NULL許可   | 子テーブル      | 親テーブル      | コメント     |
 | ---------- | ------- | ------------ | -------- | ---------- | ---------- | -------- |
 | project_id | int(11) | 0            | false    |            |            |          |
 | tracker_id | int(11) | 0            | false    |            |            |          |

@@ -22,7 +22,7 @@ CREATE TABLE `open_id_authentication_associations` (
 
 ## カラム一覧
 
-| 名前         | タイプ          | デフォルト値       | Nullable | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
+| 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
 | ---------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
 | id         | int(11)      |              | false    | auto_increment   |            |            |          |
 | issued     | int(11)      |              | true     |                  |            |            |          |

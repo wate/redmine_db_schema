@@ -2,6 +2,8 @@
 
 ## 概要
 
+Wikiページ
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -17,14 +19,14 @@ CREATE TABLE `wiki_pages` (
   KEY `wiki_pages_wiki_id_title` (`wiki_id`,`title`),
   KEY `index_wiki_pages_on_wiki_id` (`wiki_id`),
   KEY `index_wiki_pages_on_parent_id` (`parent_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
 ```
 
 </details>
 
 ## カラム一覧
 
-| 名前         | タイプ          | デフォルト値       | Nullable | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
+| 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
 | ---------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
 | id         | int(11)      |              | false    | auto_increment   |            |            |          |
 | wiki_id    | int(11)      |              | false    |                  |            |            |          |

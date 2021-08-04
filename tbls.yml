@@ -15,6 +15,7 @@ dict:
   Indexes: INDEX一覧
   Constraints: 制約一覧
   Triggers: トリガー
+  Nullable: NULL許可
   Relations: ER図
   Name: 名前
   Comment: コメント
@@ -38,6 +39,137 @@ lint:
       - created_on
       - updated_on
 comments:
+  - table: ar_internal_metadata
+  - table: attachments
+  - table: auth_sources
+  - table: boards
+    tableComment: フォーラム
+  - table: changes
+  - table: changeset_parents
+  - table: changesets
+  - table: changesets_issues
+  - table: comments
+  - table: custom_field_enumerations
+  - table: custom_fields
+    tableComment: カスタムフィールド
+  - table: custom_fields_projects
+    tableComment: カスタムフィールド⇔プロジェクト
+  - table: custom_fields_roles
+    tableComment: カスタムフィールド⇔ロール
+  - table: custom_fields_trackers
+    tableComment: カスタムフィールド⇔トラッカー
+  - table: custom_values
+  - table: documents
+    tableComment: 文書
+  - table: email_addresses
+    tableComment: メールアドレス
+  - table: enabled_modules
+  - table: enumerations
+    tableComment: 選択肢の値
+    columnComments:
+      type: IssuePriority:チケットの優先度 / DocumentCategory:文書カテゴリ / TimeEntryActivity:作業分類 (時間管理)
+  - table: groups_users
+    tableComment: グループ⇔ユーザー
+  - table: import_items
+  - table: imports
+  - table: issue_categories
+    tableComment: カテゴリー
+  - table: issue_relations
+    tableComment: 関連チケット
+  - table: issue_statuses
+    tableComment: ステータス
+  - table: issues
+    tableComment: チケット
+    columnComments:
+      tracker_id: トラッカーID
+      project_id: プロジェクトID
+      subject: 題名
+      description: 説明
+      due_date: 期日
+      category_id: カテゴリーID
+      status_id: ステータスID
+      assigned_to_id: 担当者ID
+      priority_id: 優先度ID
+      fixed_version_id: 対象バージョンID
+      lock_version: ロックバージョン
+      author_id: 登録者ID
+      start_date: 開始日
+      done_ratio: 進捗率
+      estimated_hours: 予定工数
+      parent_id: 親チケット
+      root_id: ルートID
+      lft: 左ノードポインタ
+      rgt: 右ノードポインタ
+      is_private: プライベート
+      closed_on: 完了日時
+  - table: journal_details
+  - table: journals
+  - table: member_roles
+  - table: members
+  - table: messages
+  - table: news
+    tableComment: ニュース
+  - table: open_id_authentication_associations
+  - table: open_id_authentication_nonces
+  - table: projects
+    tableComment: プロジェクト
+  - table: projects_trackers
+    tableComment: プロジェクト⇔トラッカー
+  - table: queries
+    tableComment: カスタムクエリ
+  - table: queries_roles
+  - table: repositories
+    tableComment: リポジトリ
+  - table: roles
+    tableComment: ロール
+  - table: roles_managed_roles
+  - table: settings
+    tableComment: 設定
+  - table: time_entries
+    tableComment: 時間管理
+  - table: tokens
+  - table: trackers
+    tableComment: トラッカー
+  - table: user_preferences
+    tableComment: ユーザー設定
+    columnComments:
+      hide_mail: メールアドレスを隠す
+      time_zone: タイムゾーン
   - table: users
     tableComment: ユーザー / グループ
-relations: []
+    columnComments:
+      login: ログインID
+      firstname: 名
+      lastname: 姓
+      language: 言語
+      admin: システム管理者
+      mail_notification: メール通知
+      hashed_password: パスワード(ハッシュ化済み)
+      must_change_passwd: 次回ログイン時にパスワード変更を強制
+      type: User:ユーザー / Group:グループ
+  - table: versions
+    tableComment: バージョン
+  - table: watchers
+    tableComment: ウォッチャー
+  - table: wiki_content_versions
+  - table: wiki_contents
+  - table: wiki_pages
+    tableComment: Wikiページ
+  - table: wiki_redirects
+  - table: wikis
+  - table: workflows
+    tableComment: ワークフロー
+
+relations:
+  - table: groups_users
+    columns:
+      - user_id
+    parentTable: users
+    parentColumns:
+      - id
+  - table: groups_users
+    columns:
+      - group_id
+    parentTable: users
+    parentColumns:
+      - id

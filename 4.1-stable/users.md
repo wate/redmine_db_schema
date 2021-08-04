@@ -38,26 +38,26 @@ CREATE TABLE `users` (
 
 ## カラム一覧
 
-| 名前                 | タイプ          | デフォルト値       | Nullable | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ------------------ | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id                 | int(11)      |              | false    | auto_increment   |            |            |          |
-| login              | varchar(255) |              | false    |                  |            |            |          |
-| hashed_password    | varchar(40)  |              | false    |                  |            |            |          |
-| firstname          | varchar(30)  |              | false    |                  |            |            |          |
-| lastname           | varchar(255) |              | false    |                  |            |            |          |
-| admin              | tinyint(1)   | 0            | false    |                  |            |            |          |
-| status             | int(11)      | 1            | false    |                  |            |            |          |
-| last_login_on      | datetime     |              | true     |                  |            |            |          |
-| language           | varchar(5)   |              | true     |                  |            |            |          |
-| auth_source_id     | int(11)      |              | true     |                  |            |            |          |
-| created_on         | timestamp    |              | true     |                  |            |            |          |
-| updated_on         | timestamp    |              | true     |                  |            |            |          |
-| type               | varchar(255) |              | true     |                  |            |            |          |
-| identity_url       | varchar(255) |              | true     |                  |            |            |          |
-| mail_notification  | varchar(255) |              | false    |                  |            |            |          |
-| salt               | varchar(64)  |              | true     |                  |            |            |          |
-| must_change_passwd | tinyint(1)   | 0            | false    |                  |            |            |          |
-| passwd_changed_on  | datetime     |              | true     |                  |            |            |          |
+| 名前                 | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                           | 親テーブル      | コメント                                 |
+| ------------------ | ------------ | ------------ | -------- | ---------------- | ------------------------------- | ---------- | ------------------------------------ |
+| id                 | int(11)      |              | false    | auto_increment   | [groups_users](groups_users.md) |            |                                      |
+| login              | varchar(255) |              | false    |                  |                                 |            | ログインID                               |
+| hashed_password    | varchar(40)  |              | false    |                  |                                 |            | パスワード(ハッシュ化済み)                       |
+| firstname          | varchar(30)  |              | false    |                  |                                 |            | 名                                    |
+| lastname           | varchar(255) |              | false    |                  |                                 |            | 姓                                    |
+| admin              | tinyint(1)   | 0            | false    |                  |                                 |            | システム管理者                              |
+| status             | int(11)      | 1            | false    |                  |                                 |            |                                      |
+| last_login_on      | datetime     |              | true     |                  |                                 |            |                                      |
+| language           | varchar(5)   |              | true     |                  |                                 |            | 言語                                   |
+| auth_source_id     | int(11)      |              | true     |                  |                                 |            |                                      |
+| created_on         | timestamp    |              | true     |                  |                                 |            |                                      |
+| updated_on         | timestamp    |              | true     |                  |                                 |            |                                      |
+| type               | varchar(255) |              | true     |                  |                                 |            | User:ユーザー / Group:グループ               |
+| identity_url       | varchar(255) |              | true     |                  |                                 |            |                                      |
+| mail_notification  | varchar(255) |              | false    |                  |                                 |            | メール通知                                |
+| salt               | varchar(64)  |              | true     |                  |                                 |            |                                      |
+| must_change_passwd | tinyint(1)   | 0            | false    |                  |                                 |            | 次回ログイン時にパスワード変更を強制                   |
+| passwd_changed_on  | datetime     |              | true     |                  |                                 |            |                                      |
 
 ## 制約一覧
 

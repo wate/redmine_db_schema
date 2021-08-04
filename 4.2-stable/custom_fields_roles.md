@@ -2,6 +2,8 @@
 
 ## 概要
 
+カスタムフィールド⇔ロール
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -17,7 +19,7 @@ CREATE TABLE `custom_fields_roles` (
 
 ## カラム一覧
 
-| 名前              | タイプ     | デフォルト値       | Nullable | 子テーブル      | 親テーブル      | コメント     |
+| 名前              | タイプ     | デフォルト値       | NULL許可   | 子テーブル      | 親テーブル      | コメント     |
 | --------------- | ------- | ------------ | -------- | ---------- | ---------- | -------- |
 | custom_field_id | int(11) |              | false    |            |            |          |
 | role_id         | int(11) |              | false    |            |            |          |
