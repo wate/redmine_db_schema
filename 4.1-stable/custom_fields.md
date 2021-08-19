@@ -30,7 +30,7 @@ CREATE TABLE `custom_fields` (
   `description` text,
   PRIMARY KEY (`id`),
   KEY `index_custom_fields_on_id_and_type` (`id`,`type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
 ```
 
 </details>
