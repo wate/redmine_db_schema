@@ -32,18 +32,18 @@ CREATE TABLE `workflows` (
 
 ## カラム一覧
 
-| 名前            | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ------------- | ----------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id            | int(11)     |              | false    | auto_increment   |            |            |          |
-| tracker_id    | int(11)     | 0            | false    |                  |            |            |          |
-| old_status_id | int(11)     | 0            | false    |                  |            |            |          |
-| new_status_id | int(11)     | 0            | false    |                  |            |            |          |
-| role_id       | int(11)     | 0            | false    |                  |            |            |          |
-| assignee      | tinyint(1)  | 0            | false    |                  |            |            |          |
-| author        | tinyint(1)  | 0            | false    |                  |            |            |          |
-| type          | varchar(30) |              | true     |                  |            |            |          |
-| field_name    | varchar(30) |              | true     |                  |            |            |          |
-| rule          | varchar(30) |              | true     |                  |            |            |          |
+| 名前            | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                               | コメント     |
+| ------------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------------------------- | -------- |
+| id            | int(11)     |              | false    | auto_increment   |            |                                     |          |
+| tracker_id    | int(11)     | 0            | false    |                  |            | [trackers](trackers.md)             |          |
+| old_status_id | int(11)     | 0            | false    |                  |            | [issue_statuses](issue_statuses.md) |          |
+| new_status_id | int(11)     | 0            | false    |                  |            | [issue_statuses](issue_statuses.md) |          |
+| role_id       | int(11)     | 0            | false    |                  |            |                                     |          |
+| assignee      | tinyint(1)  | 0            | false    |                  |            |                                     |          |
+| author        | tinyint(1)  | 0            | false    |                  |            |                                     |          |
+| type          | varchar(30) |              | true     |                  |            |                                     |          |
+| field_name    | varchar(30) |              | true     |                  |            |                                     |          |
+| rule          | varchar(30) |              | true     |                  |            |                                     |          |
 
 ## 制約一覧
 

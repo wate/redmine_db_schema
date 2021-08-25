@@ -19,10 +19,10 @@ CREATE TABLE `custom_fields_trackers` (
 
 ## カラム一覧
 
-| 名前              | タイプ     | デフォルト値       | NULL許可   | 子テーブル      | 親テーブル      | コメント     |
-| --------------- | ------- | ------------ | -------- | ---------- | ---------- | -------- |
-| custom_field_id | int(11) | 0            | false    |            |            |          |
-| tracker_id      | int(11) | 0            | false    |            |            |          |
+| 名前              | タイプ     | デフォルト値       | NULL許可   | 子テーブル      | 親テーブル                             | コメント     |
+| --------------- | ------- | ------------ | -------- | ---------- | --------------------------------- | -------- |
+| custom_field_id | int(11) | 0            | false    |            | [custom_fields](custom_fields.md) |          |
+| tracker_id      | int(11) | 0            | false    |            | [trackers](trackers.md)           |          |
 
 ## 制約一覧
 

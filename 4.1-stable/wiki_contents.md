@@ -24,15 +24,15 @@ CREATE TABLE `wiki_contents` (
 
 ## カラム一覧
 
-| 名前         | タイプ           | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ---------- | ------------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id         | int(11)       |              | false    | auto_increment   |            |            |          |
-| page_id    | int(11)       |              | false    |                  |            |            |          |
-| author_id  | int(11)       |              | true     |                  |            |            |          |
-| text       | longtext      |              | true     |                  |            |            |          |
-| comments   | varchar(1024) |              | true     |                  |            |            |          |
-| updated_on | datetime      |              | false    |                  |            |            |          |
-| version    | int(11)       |              | false    |                  |            |            |          |
+| 名前         | タイプ           | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                             | 親テーブル                       | コメント     |
+| ---------- | ------------- | ------------ | -------- | ---------------- | ------------------------------------------------- | --------------------------- | -------- |
+| id         | int(11)       |              | false    | auto_increment   | [wiki_content_versions](wiki_content_versions.md) |                             |          |
+| page_id    | int(11)       |              | false    |                  |                                                   | [wiki_pages](wiki_pages.md) |          |
+| author_id  | int(11)       |              | true     |                  |                                                   | [users](users.md)           |          |
+| text       | longtext      |              | true     |                  |                                                   |                             |          |
+| comments   | varchar(1024) |              | true     |                  |                                                   |                             |          |
+| updated_on | datetime      |              | false    |                  |                                                   |                             |          |
+| version    | int(11)       |              | false    |                  |                                                   |                             |          |
 
 ## 制約一覧
 

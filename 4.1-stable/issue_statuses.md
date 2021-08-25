@@ -24,13 +24,13 @@ CREATE TABLE `issue_statuses` (
 
 ## カラム一覧
 
-| 名前                 | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ------------------ | ----------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id                 | int(11)     |              | false    | auto_increment   |            |            |          |
-| name               | varchar(30) |              | false    |                  |            |            |          |
-| is_closed          | tinyint(1)  | 0            | false    |                  |            |            |          |
-| position           | int(11)     |              | true     |                  |            |            |          |
-| default_done_ratio | int(11)     |              | true     |                  |            |            |          |
+| 名前                 | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                                                 | 親テーブル      | コメント     |
+| ------------------ | ----------- | ------------ | -------- | ---------------- | --------------------------------------------------------------------- | ---------- | -------- |
+| id                 | int(11)     |              | false    | auto_increment   | [trackers](trackers.md) [workflows](workflows.md) [issues](issues.md) |            |          |
+| name               | varchar(30) |              | false    |                  |                                                                       |            |          |
+| is_closed          | tinyint(1)  | 0            | false    |                  |                                                                       |            |          |
+| position           | int(11)     |              | true     |                  |                                                                       |            |          |
+| default_done_ratio | int(11)     |              | true     |                  |                                                                       |            |          |
 
 ## 制約一覧
 

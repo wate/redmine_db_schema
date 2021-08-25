@@ -23,13 +23,13 @@ CREATE TABLE `members` (
 
 ## カラム一覧
 
-| 名前                | タイプ        | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ----------------- | ---------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id                | int(11)    |              | false    | auto_increment   |            |            |          |
-| user_id           | int(11)    | 0            | false    |                  |            |            |          |
-| project_id        | int(11)    | 0            | false    |                  |            |            |          |
-| created_on        | timestamp  |              | true     |                  |            |            |          |
-| mail_notification | tinyint(1) | 0            | false    |                  |            |            |          |
+| 名前                | タイプ        | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント     |
+| ----------------- | ---------- | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
+| id                | int(11)    |              | false    | auto_increment   |            |                         |          |
+| user_id           | int(11)    | 0            | false    |                  |            |                         |          |
+| project_id        | int(11)    | 0            | false    |                  |            | [projects](projects.md) |          |
+| created_on        | timestamp  |              | true     |                  |            |                         |          |
+| mail_notification | tinyint(1) | 0            | false    |                  |            |                         |          |
 
 ## 制約一覧
 

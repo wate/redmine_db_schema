@@ -25,15 +25,15 @@ CREATE TABLE `email_addresses` (
 
 ## カラム一覧
 
-| 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ---------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id         | int(11)      |              | false    | auto_increment   |            |            |          |
-| user_id    | int(11)      |              | false    |                  |            |            |          |
-| address    | varchar(255) |              | false    |                  |            |            |          |
-| is_default | tinyint(1)   | 0            | false    |                  |            |            |          |
-| notify     | tinyint(1)   | 1            | false    |                  |            |            |          |
-| created_on | datetime     |              | false    |                  |            |            |          |
-| updated_on | datetime     |              | false    |                  |            |            |          |
+| 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
+| ---------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
+| id         | int(11)      |              | false    | auto_increment   |            |                   |          |
+| user_id    | int(11)      |              | false    |                  |            | [users](users.md) |          |
+| address    | varchar(255) |              | false    |                  |            |                   |          |
+| is_default | tinyint(1)   | 0            | false    |                  |            |                   |          |
+| notify     | tinyint(1)   | 1            | false    |                  |            |                   |          |
+| created_on | datetime     |              | false    |                  |            |                   |          |
+| updated_on | datetime     |              | false    |                  |            |                   |          |
 
 ## 制約一覧
 

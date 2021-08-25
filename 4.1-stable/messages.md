@@ -32,20 +32,20 @@ CREATE TABLE `messages` (
 
 ## カラム一覧
 
-| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id            | int(11)      |              | false    | auto_increment   |            |            |          |
-| board_id      | int(11)      |              | false    |                  |            |            |          |
-| parent_id     | int(11)      |              | true     |                  |            |            |          |
-| subject       | varchar(255) |              | false    |                  |            |            |          |
-| content       | text         |              | true     |                  |            |            |          |
-| author_id     | int(11)      |              | true     |                  |            |            |          |
-| replies_count | int(11)      | 0            | false    |                  |            |            |          |
-| last_reply_id | int(11)      |              | true     |                  |            |            |          |
-| created_on    | datetime     |              | false    |                  |            |            |          |
-| updated_on    | datetime     |              | false    |                  |            |            |          |
-| locked        | tinyint(1)   | 0            | true     |                  |            |            |          |
-| sticky        | int(11)      | 0            | true     |                  |            |            |          |
+| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
+| ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
+| id            | int(11)      |              | false    | auto_increment   |            |                   |          |
+| board_id      | int(11)      |              | false    |                  |            |                   |          |
+| parent_id     | int(11)      |              | true     |                  |            |                   |          |
+| subject       | varchar(255) |              | false    |                  |            |                   |          |
+| content       | text         |              | true     |                  |            |                   |          |
+| author_id     | int(11)      |              | true     |                  |            | [users](users.md) |          |
+| replies_count | int(11)      | 0            | false    |                  |            |                   |          |
+| last_reply_id | int(11)      |              | true     |                  |            |                   |          |
+| created_on    | datetime     |              | false    |                  |            |                   |          |
+| updated_on    | datetime     |              | false    |                  |            |                   |          |
+| locked        | tinyint(1)   | 0            | true     |                  |            |                   |          |
+| sticky        | int(11)      | 0            | true     |                  |            |                   |          |
 
 ## 制約一覧
 

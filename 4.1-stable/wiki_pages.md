@@ -26,14 +26,14 @@ CREATE TABLE `wiki_pages` (
 
 ## カラム一覧
 
-| 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ---------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id         | int(11)      |              | false    | auto_increment   |            |            |          |
-| wiki_id    | int(11)      |              | false    |                  |            |            |          |
-| title      | varchar(255) |              | false    |                  |            |            |          |
-| created_on | datetime     |              | false    |                  |            |            |          |
-| protected  | tinyint(1)   | 0            | false    |                  |            |            |          |
-| parent_id  | int(11)      |              | true     |                  |            |            |          |
+| 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                                                                                           | 親テーブル                       | コメント     |
+| ---------- | ------------ | ------------ | -------- | ---------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------- | -------- |
+| id         | int(11)      |              | false    | auto_increment   | [wiki_pages](wiki_pages.md) [wiki_contents](wiki_contents.md) [wiki_content_versions](wiki_content_versions.md) |                             |          |
+| wiki_id    | int(11)      |              | false    |                  |                                                                                                                 | [wikis](wikis.md)           |          |
+| title      | varchar(255) |              | false    |                  |                                                                                                                 |                             |          |
+| created_on | datetime     |              | false    |                  |                                                                                                                 |                             |          |
+| protected  | tinyint(1)   | 0            | false    |                  |                                                                                                                 |                             |          |
+| parent_id  | int(11)      |              | true     |                  |                                                                                                                 | [wiki_pages](wiki_pages.md) |          |
 
 ## 制約一覧
 

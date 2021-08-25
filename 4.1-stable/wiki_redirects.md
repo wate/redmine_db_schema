@@ -23,14 +23,14 @@ CREATE TABLE `wiki_redirects` (
 
 ## カラム一覧
 
-| 名前                   | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| -------------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id                   | int(11)      |              | false    | auto_increment   |            |            |          |
-| wiki_id              | int(11)      |              | false    |                  |            |            |          |
-| title                | varchar(255) |              | true     |                  |            |            |          |
-| redirects_to         | varchar(255) |              | true     |                  |            |            |          |
-| created_on           | datetime     |              | false    |                  |            |            |          |
-| redirects_to_wiki_id | int(11)      |              | false    |                  |            |            |          |
+| 名前                   | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
+| -------------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
+| id                   | int(11)      |              | false    | auto_increment   |            |                   |          |
+| wiki_id              | int(11)      |              | false    |                  |            | [wikis](wikis.md) |          |
+| title                | varchar(255) |              | true     |                  |            |                   |          |
+| redirects_to         | varchar(255) |              | true     |                  |            |                   |          |
+| created_on           | datetime     |              | false    |                  |            |                   |          |
+| redirects_to_wiki_id | int(11)      |              | false    |                  |            | [wikis](wikis.md) |          |
 
 ## 制約一覧
 

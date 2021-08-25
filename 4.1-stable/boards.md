@@ -28,17 +28,17 @@ CREATE TABLE `boards` (
 
 ## カラム一覧
 
-| 名前              | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| --------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id              | int(11)      |              | false    | auto_increment   |            |            |          |
-| project_id      | int(11)      |              | false    |                  |            |            |          |
-| name            | varchar(255) |              | false    |                  |            |            |          |
-| description     | varchar(255) |              | true     |                  |            |            |          |
-| position        | int(11)      |              | true     |                  |            |            |          |
-| topics_count    | int(11)      | 0            | false    |                  |            |            |          |
-| messages_count  | int(11)      | 0            | false    |                  |            |            |          |
-| last_message_id | int(11)      |              | true     |                  |            |            |          |
-| parent_id       | int(11)      |              | true     |                  |            |            |          |
+| 名前              | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント     |
+| --------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
+| id              | int(11)      |              | false    | auto_increment   |            |                         |          |
+| project_id      | int(11)      |              | false    |                  |            | [projects](projects.md) |          |
+| name            | varchar(255) |              | false    |                  |            |                         |          |
+| description     | varchar(255) |              | true     |                  |            |                         |          |
+| position        | int(11)      |              | true     |                  |            |                         |          |
+| topics_count    | int(11)      | 0            | false    |                  |            |                         |          |
+| messages_count  | int(11)      | 0            | false    |                  |            |                         |          |
+| last_message_id | int(11)      |              | true     |                  |            |                         |          |
+| parent_id       | int(11)      |              | true     |                  |            |                         |          |
 
 ## 制約一覧
 

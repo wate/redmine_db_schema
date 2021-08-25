@@ -24,15 +24,15 @@ CREATE TABLE `comments` (
 
 ## カラム一覧
 
-| 名前             | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| -------------- | ----------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id             | int(11)     |              | false    | auto_increment   |            |            |          |
-| commented_type | varchar(30) |              | false    |                  |            |            |          |
-| commented_id   | int(11)     | 0            | false    |                  |            |            |          |
-| author_id      | int(11)     | 0            | false    |                  |            |            |          |
-| content        | text        |              | true     |                  |            |            |          |
-| created_on     | datetime    |              | false    |                  |            |            |          |
-| updated_on     | datetime    |              | false    |                  |            |            |          |
+| 名前             | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
+| -------------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
+| id             | int(11)     |              | false    | auto_increment   |            |                   |          |
+| commented_type | varchar(30) |              | false    |                  |            |                   |          |
+| commented_id   | int(11)     | 0            | false    |                  |            |                   |          |
+| author_id      | int(11)     | 0            | false    |                  |            | [users](users.md) |          |
+| content        | text        |              | true     |                  |            |                   |          |
+| created_on     | datetime    |              | false    |                  |            |                   |          |
+| updated_on     | datetime    |              | false    |                  |            |                   |          |
 
 ## 制約一覧
 

@@ -23,26 +23,26 @@ CREATE TABLE `queries` (
   PRIMARY KEY (`id`),
   KEY `index_queries_on_project_id` (`project_id`),
   KEY `index_queries_on_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
 ```
 
 </details>
 
 ## カラム一覧
 
-| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id            | int(11)      |              | false    | auto_increment   |            |            |          |
-| project_id    | int(11)      |              | true     |                  |            |            |          |
-| name          | varchar(255) |              | false    |                  |            |            |          |
-| filters       | text         |              | true     |                  |            |            |          |
-| user_id       | int(11)      | 0            | false    |                  |            |            |          |
-| column_names  | text         |              | true     |                  |            |            |          |
-| sort_criteria | text         |              | true     |                  |            |            |          |
-| group_by      | varchar(255) |              | true     |                  |            |            |          |
-| type          | varchar(255) |              | true     |                  |            |            |          |
-| visibility    | int(11)      | 0            | true     |                  |            |            |          |
-| options       | text         |              | true     |                  |            |            |          |
+| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                             | 親テーブル                   | コメント     |
+| ------------- | ------------ | ------------ | -------- | ---------------- | --------------------------------- | ----------------------- | -------- |
+| id            | int(11)      |              | false    | auto_increment   | [queries_roles](queries_roles.md) |                         |          |
+| project_id    | int(11)      |              | true     |                  |                                   | [projects](projects.md) |          |
+| name          | varchar(255) |              | false    |                  |                                   |                         |          |
+| filters       | text         |              | true     |                  |                                   |                         |          |
+| user_id       | int(11)      | 0            | false    |                  |                                   |                         |          |
+| column_names  | text         |              | true     |                  |                                   |                         |          |
+| sort_criteria | text         |              | true     |                  |                                   |                         |          |
+| group_by      | varchar(255) |              | true     |                  |                                   |                         |          |
+| type          | varchar(255) |              | true     |                  |                                   |                         |          |
+| visibility    | int(11)      | 0            | true     |                  |                                   |                         |          |
+| options       | text         |              | true     |                  |                                   |                         |          |
 
 ## 制約一覧
 

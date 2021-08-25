@@ -25,16 +25,16 @@ CREATE TABLE `trackers` (
 
 ## カラム一覧
 
-| 名前                | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ----------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id                | int(11)      |              | false    | auto_increment   |            |            |          |
-| name              | varchar(30)  |              | false    |                  |            |            |          |
-| description       | varchar(255) |              | true     |                  |            |            |          |
-| is_in_chlog       | tinyint(1)   | 0            | false    |                  |            |            |          |
-| position          | int(11)      |              | true     |                  |            |            |          |
-| is_in_roadmap     | tinyint(1)   | 1            | false    |                  |            |            |          |
-| fields_bits       | int(11)      | 0            | true     |                  |            |            |          |
-| default_status_id | int(11)      |              | true     |                  |            |            |          |
+| 名前                | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                                                                                                                       | 親テーブル                               | コメント     |
+| ----------------- | ------------ | ------------ | -------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | -------- |
+| id                | int(11)      |              | false    | auto_increment   | [workflows](workflows.md) [custom_fields_trackers](custom_fields_trackers.md) [projects_trackers](projects_trackers.md) [issues](issues.md) |                                     |          |
+| name              | varchar(30)  |              | false    |                  |                                                                                                                                             |                                     |          |
+| description       | varchar(255) |              | true     |                  |                                                                                                                                             |                                     |          |
+| is_in_chlog       | tinyint(1)   | 0            | false    |                  |                                                                                                                                             |                                     |          |
+| position          | int(11)      |              | true     |                  |                                                                                                                                             |                                     |          |
+| is_in_roadmap     | tinyint(1)   | 1            | false    |                  |                                                                                                                                             |                                     |          |
+| fields_bits       | int(11)      | 0            | true     |                  |                                                                                                                                             |                                     |          |
+| default_status_id | int(11)      |              | true     |                  |                                                                                                                                             | [issue_statuses](issue_statuses.md) |          |
 
 ## 制約一覧
 
