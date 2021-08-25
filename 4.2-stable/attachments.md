@@ -32,21 +32,21 @@ CREATE TABLE `attachments` (
 
 ## カラム一覧
 
-| 名前             | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| -------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id             | int(11)      |              | false    | auto_increment   |            |            |          |
-| container_id   | int(11)      |              | true     |                  |            |            |          |
-| container_type | varchar(30)  |              | true     |                  |            |            |          |
-| filename       | varchar(255) |              | false    |                  |            |            |          |
-| disk_filename  | varchar(255) |              | false    |                  |            |            |          |
-| filesize       | bigint(20)   | 0            | false    |                  |            |            |          |
-| content_type   | varchar(255) |              | true     |                  |            |            |          |
-| digest         | varchar(64)  |              | false    |                  |            |            |          |
-| downloads      | int(11)      | 0            | false    |                  |            |            |          |
-| author_id      | int(11)      | 0            | false    |                  |            |            |          |
-| created_on     | timestamp    |              | true     |                  |            |            |          |
-| description    | varchar(255) |              | true     |                  |            |            |          |
-| disk_directory | varchar(255) |              | true     |                  |            |            |          |
+| 名前             | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
+| -------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
+| id             | int(11)      |              | false    | auto_increment   |            |                   |          |
+| container_id   | int(11)      |              | true     |                  |            |                   |          |
+| container_type | varchar(30)  |              | true     |                  |            |                   |          |
+| filename       | varchar(255) |              | false    |                  |            |                   |          |
+| disk_filename  | varchar(255) |              | false    |                  |            |                   |          |
+| filesize       | bigint(20)   | 0            | false    |                  |            |                   |          |
+| content_type   | varchar(255) |              | true     |                  |            |                   |          |
+| digest         | varchar(64)  |              | false    |                  |            |                   |          |
+| downloads      | int(11)      | 0            | false    |                  |            |                   |          |
+| author_id      | int(11)      | 0            | false    |                  |            | [users](users.md) |          |
+| created_on     | timestamp    |              | true     |                  |            |                   |          |
+| description    | varchar(255) |              | true     |                  |            |                   |          |
+| disk_directory | varchar(255) |              | true     |                  |            |                   |          |
 
 ## 制約一覧
 

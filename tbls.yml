@@ -160,16 +160,324 @@ comments:
   - table: workflows
     tableComment: ワークフロー
 
-relations:
-  - table: groups_users
+## 外部参照
+common_relations:
+  author_id: &relation_author_id
+    columns:
+      - author_id
+    parentTable: users
+    parentColumns:
+      - id
+  project_id: &relation_project_id
+    columns:
+      - project_id
+    parentTable: projects
+    parentColumns:
+      - id
+  tracker_id: &relation_tracker_id
+    columns:
+      - tracker_id
+    parentTable: trackers
+    parentColumns:
+      - id
+  role_id: &relation_role_id
+    columns:
+      - role_id
+    parentTable: roles
+    parentColumns:
+      - id
+  user_id: &relation_user_id
     columns:
       - user_id
     parentTable: users
     parentColumns:
       - id
+  role: &relation_role_id
+    columns:
+      - role_id
+    parentTable: roles
+    parentColumns:
+      - id
+  custom_field_id: &relation_custom_field_id
+    columns:
+      - custom_field_id
+    parentTable: custom_fields
+    parentColumns:
+      - id
+  assigned_to_id: &relation_assigned_to_id
+    columns:
+      - assigned_to_id
+    parentTable: users
+    parentColumns:
+      - id
+  page_id: &relation_page_id
+    columns:
+      - page_id
+    parentTable: wiki_pages
+    parentColumns:
+      - id
+
+
+## 外部参照
+relations:
+  ## user_preferences
+  - table: user_preferences
+    <<: *relation_user_id
+  ## email_addresses
+  - table: email_addresses
+    <<: *relation_user_id
+  ## groups_users
+  - table: groups_users
+    <<: *relation_user_id
   - table: groups_users
     columns:
       - group_id
     parentTable: users
     parentColumns:
       - id
+  ## trackers
+  - table: trackers
+    columns:
+      - default_status_id
+    parentTable: issue_statuses
+    parentColumns:
+      - id
+  ## workflows
+  - table: workflows
+    <<: *relation_tracker_id
+  - table: workflows
+    columns:
+      - old_status_id
+    parentTable: issue_statuses
+    parentColumns:
+      - id
+  - table: workflows
+    columns:
+      - new_status_id
+    parentTable: issue_statuses
+    parentColumns:
+      - id
+  ## custom_fields_roles
+  - table: custom_fields_roles
+    <<: *relation_custom_field_id
+  - table: custom_fields_roles
+    <<: *relation_role_id
+  ## custom_fields_projects
+  - table: custom_fields_projects
+    <<: *relation_custom_field_id
+  - table: custom_fields_projects
+    <<: *relation_project_id
+  ## custom_fields_trackers
+  - table: custom_fields_trackers
+    <<: *relation_custom_field_id
+  - table: custom_fields_trackers
+    <<: *relation_tracker_id
+  ## custom_field_enumerations
+  - table: custom_field_enumerations
+    <<: *relation_custom_field_id
+  ## custom_values
+  - table: custom_values
+    <<: *relation_custom_field_id
+  ## projects
+  - table: projects
+    columns:
+      - parent_id
+    parentTable: projects
+    parentColumns:
+      - id
+  - table: projects
+    columns:
+      - default_version_id
+    parentTable: versions
+    parentColumns:
+      - id
+  - table: projects
+    columns:
+      - default_assigned_to_id
+    parentTable: users
+    parentColumns:
+      - id
+  ## projects_trackers
+  - table: projects_trackers
+    <<: *relation_project_id
+  - table: projects_trackers
+    <<: *relation_tracker_id
+  ## versions
+  - table: versions
+    <<: *relation_project_id
+  ## issues
+  - table: issues
+    <<: *relation_project_id
+  - table: issues
+    <<: *relation_author_id
+  - table: issues
+    <<: *relation_tracker_id
+  - table: issues
+    columns:
+      - priority_id
+    parentTable: enumerations
+    parentColumns:
+      - id
+  - table: issues
+    columns:
+      - status_id
+    parentTable: issue_statuses
+    parentColumns:
+      - id
+  - table: issues
+    <<: *relation_assigned_to_id
+  - table: issues
+    columns:
+      - category_id
+    parentTable: issue_categories
+    parentColumns:
+      - id
+  - table: issues
+    columns:
+      - parent_id
+    parentTable: issues
+    parentColumns:
+      - id
+  - table: issues
+    columns:
+      - root_id
+    parentTable: issues
+    parentColumns:
+      - id
+  ## issue_relations
+  - table: issue_relations
+    columns:
+      - issue_from_id
+    parentTable: issues
+    parentColumns:
+      - id
+  - table: issue_relations
+    columns:
+      - issue_to_id
+    parentTable: issues
+    parentColumns:
+      - id
+  ## issue_categories
+  - table: issue_categories
+    <<: *relation_project_id
+  - table: issue_categories
+    <<: *relation_assigned_to_id
+  ## wikis
+  - table: wikis
+    <<: *relation_project_id
+  ## wiki_pages
+  - table: wiki_pages
+    columns :
+      - wiki_id
+    parentTable: wikis
+    parentColumns:
+      - id
+  - table: wiki_pages
+    columns :
+      - parent_id
+    parentTable: wiki_pages
+    parentColumns:
+      - id
+  ## wiki_contents
+  - table: wiki_contents
+    <<: *relation_author_id
+  - table: wiki_contents
+    columns :
+      - page_id
+    parentTable: wiki_pages
+    parentColumns:
+      - id
+  ## wiki_content_versions
+  - table: wiki_content_versions
+    <<: *relation_author_id
+  - table: wiki_content_versions
+    <<: *relation_page_id
+  - table: wiki_content_versions
+    columns:
+      - wiki_content_id
+    parentTable: wiki_contents
+    parentColumns:
+      - id
+  ## wiki_redirects
+  - table: wiki_redirects
+    columns:
+      - wiki_id
+    parentTable: wikis
+    parentColumns:
+      - id
+  - table: wiki_redirects
+    columns:
+      - redirects_to_wiki_id
+    parentTable: wikis
+    parentColumns:
+      - id
+  ## news
+  - table: news
+    <<: *relation_project_id
+  - table: news
+    <<: *relation_author_id
+  ## repositories
+  - table: repositories
+    <<: *relation_project_id
+  ## queries
+  - table: queries
+    <<: *relation_project_id
+  ## boards
+  - table: boards
+    <<: *relation_project_id
+  ## projects_trackers
+  - table: projects_trackers
+    <<: *relation_project_id
+  ## members
+  - table: members
+    <<: *relation_project_id
+  ## enabled_modules
+  - table: enabled_modules
+    <<: *relation_project_id
+  ## time_entries
+  - table: time_entries
+    <<: *relation_project_id
+  - table: time_entries
+    <<: *relation_author_id
+  ## enumerations
+  - table: enumerations
+    <<: *relation_project_id
+  ## documents
+  - table: documents
+    <<: *relation_project_id
+  - table: documents
+    columns:
+      - category_id
+    parentTable: enumerations
+    parentColumns:
+      - id
+  ## attachments
+  - table: attachments
+    <<: *relation_author_id
+  ## messages
+  - table: messages
+    <<: *relation_author_id
+  ## comments
+  - table: comments
+    <<: *relation_author_id
+  ## watchers
+  - table: watchers
+    <<: *relation_user_id
+  ## tokens
+  - table: tokens
+    <<: *relation_user_id
+  ## queries_roles
+  - table: queries_roles
+    <<: *relation_role_id
+  - table: queries_roles
+    columns:
+      - query_id
+    parentTable: queries
+    parentColumns:
+      - id
+  ## member_roles
+  - table: member_roles
+    <<: *relation_role_id
+  ## roles_managed_roles
+  - table: roles_managed_roles
+    <<: *relation_role_id

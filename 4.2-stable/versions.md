@@ -29,18 +29,18 @@ CREATE TABLE `versions` (
 
 ## カラム一覧
 
-| 名前              | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| --------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id              | int(11)      |              | false    | auto_increment   |            |            |          |
-| project_id      | int(11)      | 0            | false    |                  |            |            |          |
-| name            | varchar(255) |              | false    |                  |            |            |          |
-| description     | varchar(255) |              | true     |                  |            |            |          |
-| effective_date  | date         |              | true     |                  |            |            |          |
-| created_on      | timestamp    |              | true     |                  |            |            |          |
-| updated_on      | timestamp    |              | true     |                  |            |            |          |
-| wiki_page_title | varchar(255) |              | true     |                  |            |            |          |
-| status          | varchar(255) | open         | true     |                  |            |            |          |
-| sharing         | varchar(255) | none         | false    |                  |            |            |          |
+| 名前              | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                   | 親テーブル                   | コメント     |
+| --------------- | ------------ | ------------ | -------- | ---------------- | ----------------------- | ----------------------- | -------- |
+| id              | int(11)      |              | false    | auto_increment   | [projects](projects.md) |                         |          |
+| project_id      | int(11)      | 0            | false    |                  |                         | [projects](projects.md) |          |
+| name            | varchar(255) |              | false    |                  |                         |                         |          |
+| description     | varchar(255) |              | true     |                  |                         |                         |          |
+| effective_date  | date         |              | true     |                  |                         |                         |          |
+| created_on      | timestamp    |              | true     |                  |                         |                         |          |
+| updated_on      | timestamp    |              | true     |                  |                         |                         |          |
+| wiki_page_title | varchar(255) |              | true     |                  |                         |                         |          |
+| status          | varchar(255) | open         | true     |                  |                         |                         |          |
+| sharing         | varchar(255) | none         | false    |                  |                         |                         |          |
 
 ## 制約一覧
 

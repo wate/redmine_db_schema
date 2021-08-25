@@ -26,14 +26,14 @@ CREATE TABLE `documents` (
 
 ## カラム一覧
 
-| 名前          | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ----------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id          | int(11)      |              | false    | auto_increment   |            |            |          |
-| project_id  | int(11)      | 0            | false    |                  |            |            |          |
-| category_id | int(11)      | 0            | false    |                  |            |            |          |
-| title       | varchar(255) |              | false    |                  |            |            |          |
-| description | text         |              | true     |                  |            |            |          |
-| created_on  | timestamp    |              | true     |                  |            |            |          |
+| 名前          | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                           | コメント     |
+| ----------- | ------------ | ------------ | -------- | ---------------- | ---------- | ------------------------------- | -------- |
+| id          | int(11)      |              | false    | auto_increment   |            |                                 |          |
+| project_id  | int(11)      | 0            | false    |                  |            | [projects](projects.md)         |          |
+| category_id | int(11)      | 0            | false    |                  |            | [enumerations](enumerations.md) |          |
+| title       | varchar(255) |              | false    |                  |            |                                 |          |
+| description | text         |              | true     |                  |            |                                 |          |
+| created_on  | timestamp    |              | true     |                  |            |                                 |          |
 
 ## 制約一覧
 

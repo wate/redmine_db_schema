@@ -25,13 +25,13 @@ CREATE TABLE `issue_relations` (
 
 ## カラム一覧
 
-| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id            | int(11)      |              | false    | auto_increment   |            |            |          |
-| issue_from_id | int(11)      |              | false    |                  |            |            |          |
-| issue_to_id   | int(11)      |              | false    |                  |            |            |          |
-| relation_type | varchar(255) |              | false    |                  |            |            |          |
-| delay         | int(11)      |              | true     |                  |            |            |          |
+| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル               | コメント     |
+| ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ------------------- | -------- |
+| id            | int(11)      |              | false    | auto_increment   |            |                     |          |
+| issue_from_id | int(11)      |              | false    |                  |            | [issues](issues.md) |          |
+| issue_to_id   | int(11)      |              | false    |                  |            | [issues](issues.md) |          |
+| relation_type | varchar(255) |              | false    |                  |            |                     |          |
+| delay         | int(11)      |              | true     |                  |            |                     |          |
 
 ## 制約一覧
 

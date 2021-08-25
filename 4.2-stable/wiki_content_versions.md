@@ -26,17 +26,17 @@ CREATE TABLE `wiki_content_versions` (
 
 ## カラム一覧
 
-| 名前              | タイプ           | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| --------------- | ------------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id              | int(11)       |              | false    | auto_increment   |            |            |          |
-| wiki_content_id | int(11)       |              | false    |                  |            |            |          |
-| page_id         | int(11)       |              | false    |                  |            |            |          |
-| author_id       | int(11)       |              | true     |                  |            |            |          |
-| data            | longblob      |              | true     |                  |            |            |          |
-| compression     | varchar(6)    |              | true     |                  |            |            |          |
-| comments        | varchar(1024) |              | true     |                  |            |            |          |
-| updated_on      | datetime      |              | false    |                  |            |            |          |
-| version         | int(11)       |              | false    |                  |            |            |          |
+| 名前              | タイプ           | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                             | コメント     |
+| --------------- | ------------- | ------------ | -------- | ---------------- | ---------- | --------------------------------- | -------- |
+| id              | int(11)       |              | false    | auto_increment   |            |                                   |          |
+| wiki_content_id | int(11)       |              | false    |                  |            | [wiki_contents](wiki_contents.md) |          |
+| page_id         | int(11)       |              | false    |                  |            | [wiki_pages](wiki_pages.md)       |          |
+| author_id       | int(11)       |              | true     |                  |            | [users](users.md)                 |          |
+| data            | longblob      |              | true     |                  |            |                                   |          |
+| compression     | varchar(6)    |              | true     |                  |            |                                   |          |
+| comments        | varchar(1024) |              | true     |                  |            |                                   |          |
+| updated_on      | datetime      |              | false    |                  |            |                                   |          |
+| version         | int(11)       |              | false    |                  |            |                                   |          |
 
 ## 制約一覧
 

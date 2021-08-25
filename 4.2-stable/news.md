@@ -28,16 +28,16 @@ CREATE TABLE `news` (
 
 ## カラム一覧
 
-| 名前             | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| -------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id             | int(11)      |              | false    | auto_increment   |            |            |          |
-| project_id     | int(11)      |              | true     |                  |            |            |          |
-| title          | varchar(60)  |              | false    |                  |            |            |          |
-| summary        | varchar(255) |              | true     |                  |            |            |          |
-| description    | text         |              | true     |                  |            |            |          |
-| author_id      | int(11)      | 0            | false    |                  |            |            |          |
-| created_on     | timestamp    |              | true     |                  |            |            |          |
-| comments_count | int(11)      | 0            | false    |                  |            |            |          |
+| 名前             | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント     |
+| -------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
+| id             | int(11)      |              | false    | auto_increment   |            |                         |          |
+| project_id     | int(11)      |              | true     |                  |            | [projects](projects.md) |          |
+| title          | varchar(60)  |              | false    |                  |            |                         |          |
+| summary        | varchar(255) |              | true     |                  |            |                         |          |
+| description    | text         |              | true     |                  |            |                         |          |
+| author_id      | int(11)      | 0            | false    |                  |            | [users](users.md)       |          |
+| created_on     | timestamp    |              | true     |                  |            |                         |          |
+| comments_count | int(11)      | 0            | false    |                  |            |                         |          |
 
 ## 制約一覧
 

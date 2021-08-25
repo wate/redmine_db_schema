@@ -20,12 +20,12 @@ CREATE TABLE `wikis` (
 
 ## カラム一覧
 
-| 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ---------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id         | int(11)      |              | false    | auto_increment   |            |            |          |
-| project_id | int(11)      |              | false    |                  |            |            |          |
-| start_page | varchar(255) |              | false    |                  |            |            |          |
-| status     | int(11)      | 1            | false    |                  |            |            |          |
+| 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                                           | 親テーブル                   | コメント     |
+| ---------- | ------------ | ------------ | -------- | ---------------- | --------------------------------------------------------------- | ----------------------- | -------- |
+| id         | int(11)      |              | false    | auto_increment   | [wiki_pages](wiki_pages.md) [wiki_redirects](wiki_redirects.md) |                         |          |
+| project_id | int(11)      |              | false    |                  |                                                                 | [projects](projects.md) |          |
+| start_page | varchar(255) |              | false    |                  |                                                                 |                         |          |
+| status     | int(11)      | 1            | false    |                  |                                                                 |                         |          |
 
 ## 制約一覧
 

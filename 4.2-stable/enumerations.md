@@ -28,17 +28,17 @@ CREATE TABLE `enumerations` (
 
 ## カラム一覧
 
-| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント                                                                                                   |
-| ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------ |
-| id            | int(11)      |              | false    | auto_increment   |            |            |                                                                                                        |
-| name          | varchar(30)  |              | false    |                  |            |            |                                                                                                        |
-| position      | int(11)      |              | true     |                  |            |            |                                                                                                        |
-| is_default    | tinyint(1)   | 0            | false    |                  |            |            |                                                                                                        |
-| type          | varchar(255) |              | true     |                  |            |            | IssuePriority:チケットの優先度 / DocumentCategory:文書カテゴリ / TimeEntryActivity:作業分類 (時間管理)                       |
-| active        | tinyint(1)   | 1            | false    |                  |            |            |                                                                                                        |
-| project_id    | int(11)      |              | true     |                  |            |            |                                                                                                        |
-| parent_id     | int(11)      |              | true     |                  |            |            |                                                                                                        |
-| position_name | varchar(30)  |              | true     |                  |            |            |                                                                                                        |
+| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                         | 親テーブル                   | コメント                                                                                                   |
+| ------------- | ------------ | ------------ | -------- | ---------------- | --------------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------ |
+| id            | int(11)      |              | false    | auto_increment   | [issues](issues.md) [documents](documents.md) |                         |                                                                                                        |
+| name          | varchar(30)  |              | false    |                  |                                               |                         |                                                                                                        |
+| position      | int(11)      |              | true     |                  |                                               |                         |                                                                                                        |
+| is_default    | tinyint(1)   | 0            | false    |                  |                                               |                         |                                                                                                        |
+| type          | varchar(255) |              | true     |                  |                                               |                         | IssuePriority:チケットの優先度 / DocumentCategory:文書カテゴリ / TimeEntryActivity:作業分類 (時間管理)                       |
+| active        | tinyint(1)   | 1            | false    |                  |                                               |                         |                                                                                                        |
+| project_id    | int(11)      |              | true     |                  |                                               | [projects](projects.md) |                                                                                                        |
+| parent_id     | int(11)      |              | true     |                  |                                               |                         |                                                                                                        |
+| position_name | varchar(30)  |              | true     |                  |                                               |                         |                                                                                                        |
 
 ## 制約一覧
 

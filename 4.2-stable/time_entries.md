@@ -36,22 +36,22 @@ CREATE TABLE `time_entries` (
 
 ## カラム一覧
 
-| 名前          | タイプ           | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ----------- | ------------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id          | int(11)       |              | false    | auto_increment   |            |            |          |
-| project_id  | int(11)       |              | false    |                  |            |            |          |
-| author_id   | int(11)       |              | true     |                  |            |            |          |
-| user_id     | int(11)       |              | false    |                  |            |            |          |
-| issue_id    | int(11)       |              | true     |                  |            |            |          |
-| hours       | float         |              | false    |                  |            |            |          |
-| comments    | varchar(1024) |              | true     |                  |            |            |          |
-| activity_id | int(11)       |              | false    |                  |            |            |          |
-| spent_on    | date          |              | false    |                  |            |            |          |
-| tyear       | int(11)       |              | false    |                  |            |            |          |
-| tmonth      | int(11)       |              | false    |                  |            |            |          |
-| tweek       | int(11)       |              | false    |                  |            |            |          |
-| created_on  | datetime      |              | false    |                  |            |            |          |
-| updated_on  | datetime      |              | false    |                  |            |            |          |
+| 名前          | タイプ           | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント     |
+| ----------- | ------------- | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
+| id          | int(11)       |              | false    | auto_increment   |            |                         |          |
+| project_id  | int(11)       |              | false    |                  |            | [projects](projects.md) |          |
+| author_id   | int(11)       |              | true     |                  |            | [users](users.md)       |          |
+| user_id     | int(11)       |              | false    |                  |            |                         |          |
+| issue_id    | int(11)       |              | true     |                  |            |                         |          |
+| hours       | float         |              | false    |                  |            |                         |          |
+| comments    | varchar(1024) |              | true     |                  |            |                         |          |
+| activity_id | int(11)       |              | false    |                  |            |                         |          |
+| spent_on    | date          |              | false    |                  |            |                         |          |
+| tyear       | int(11)       |              | false    |                  |            |                         |          |
+| tmonth      | int(11)       |              | false    |                  |            |                         |          |
+| tweek       | int(11)       |              | false    |                  |            |                         |          |
+| created_on  | datetime      |              | false    |                  |            |                         |          |
+| updated_on  | datetime      |              | false    |                  |            |                         |          |
 
 ## 制約一覧
 

@@ -23,14 +23,14 @@ CREATE TABLE `tokens` (
 
 ## カラム一覧
 
-| 名前         | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ---------- | ----------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id         | int(11)     |              | false    | auto_increment   |            |            |          |
-| user_id    | int(11)     | 0            | false    |                  |            |            |          |
-| action     | varchar(30) |              | false    |                  |            |            |          |
-| value      | varchar(40) |              | false    |                  |            |            |          |
-| created_on | datetime    |              | false    |                  |            |            |          |
-| updated_on | timestamp   |              | true     |                  |            |            |          |
+| 名前         | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
+| ---------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
+| id         | int(11)     |              | false    | auto_increment   |            |                   |          |
+| user_id    | int(11)     | 0            | false    |                  |            | [users](users.md) |          |
+| action     | varchar(30) |              | false    |                  |            |                   |          |
+| value      | varchar(40) |              | false    |                  |            |                   |          |
+| created_on | datetime    |              | false    |                  |            |                   |          |
+| updated_on | timestamp   |              | true     |                  |            |                   |          |
 
 ## 制約一覧
 
