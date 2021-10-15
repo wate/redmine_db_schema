@@ -217,7 +217,6 @@ common_relations:
     parentColumns:
       - id
 
-
 ## 外部参照
 relations:
   ## user_preferences
@@ -431,6 +430,8 @@ relations:
   ## members
   - table: members
     <<: *relation_project_id
+  - table: members
+    <<: *relation_user_id
   ## enabled_modules
   - table: enabled_modules
     <<: *relation_project_id
@@ -478,6 +479,12 @@ relations:
   ## member_roles
   - table: member_roles
     <<: *relation_role_id
+  - table: member_roles
+    columns:
+      - member_id
+    parentTable: members
+    parentColumns:
+      - id
   ## roles_managed_roles
   - table: roles_managed_roles
     <<: *relation_role_id
