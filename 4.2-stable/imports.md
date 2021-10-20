@@ -2,6 +2,8 @@
 
 ## 概要
 
+インポート
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -24,17 +26,17 @@ CREATE TABLE `imports` (
 
 ## カラム一覧
 
-| 名前          | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ----------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id          | int(11)      |              | false    | auto_increment   |            |            |          |
-| type        | varchar(255) |              | true     |                  |            |            |          |
-| user_id     | int(11)      |              | false    |                  |            |            |          |
-| filename    | varchar(255) |              | true     |                  |            |            |          |
-| settings    | text         |              | true     |                  |            |            |          |
-| total_items | int(11)      |              | true     |                  |            |            |          |
-| finished    | tinyint(1)   | 0            | false    |                  |            |            |          |
-| created_at  | datetime     |              | false    |                  |            |            |          |
-| updated_at  | datetime     |              | false    |                  |            |            |          |
+| 名前          | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                           | 親テーブル      | コメント     |
+| ----------- | ------------ | ------------ | -------- | ---------------- | ------------------------------- | ---------- | -------- |
+| id          | int(11)      |              | false    | auto_increment   | [import_items](import_items.md) |            |          |
+| type        | varchar(255) |              | true     |                  |                                 |            |          |
+| user_id     | int(11)      |              | false    |                  |                                 |            |          |
+| filename    | varchar(255) |              | true     |                  |                                 |            |          |
+| settings    | text         |              | true     |                  |                                 |            |          |
+| total_items | int(11)      |              | true     |                  |                                 |            |          |
+| finished    | tinyint(1)   | 0            | false    |                  |                                 |            |          |
+| created_at  | datetime     |              | false    |                  |                                 |            |          |
+| updated_at  | datetime     |              | false    |                  |                                 |            |          |
 
 ## 制約一覧
 

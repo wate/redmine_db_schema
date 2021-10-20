@@ -2,6 +2,8 @@
 
 ## 概要
 
+インポート項目
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -22,14 +24,14 @@ CREATE TABLE `import_items` (
 
 ## カラム一覧
 
-| 名前        | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| --------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id        | int(11)      |              | false    | auto_increment   |            |            |          |
-| import_id | int(11)      |              | false    |                  |            |            |          |
-| position  | int(11)      |              | false    |                  |            |            |          |
-| obj_id    | int(11)      |              | true     |                  |            |            |          |
-| message   | text         |              | true     |                  |            |            |          |
-| unique_id | varchar(255) |              | true     |                  |            |            |          |
+| 名前        | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                 | コメント     |
+| --------- | ------------ | ------------ | -------- | ---------------- | ---------- | --------------------- | -------- |
+| id        | int(11)      |              | false    | auto_increment   |            |                       |          |
+| import_id | int(11)      |              | false    |                  |            | [imports](imports.md) |          |
+| position  | int(11)      |              | false    |                  |            |                       |          |
+| obj_id    | int(11)      |              | true     |                  |            |                       |          |
+| message   | text         |              | true     |                  |            |                       |          |
+| unique_id | varchar(255) |              | true     |                  |            |                       |          |
 
 ## 制約一覧
 

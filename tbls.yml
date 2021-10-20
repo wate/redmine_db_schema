@@ -71,7 +71,9 @@ comments:
   - table: groups_users
     tableComment: グループ⇔ユーザー
   - table: import_items
+    tableComment: インポート項目
   - table: imports
+    tableComment: インポート
   - table: issue_categories
     tableComment: カテゴリー
   - table: issue_relations
@@ -354,6 +356,13 @@ relations:
     columns:
       - issue_to_id
     parentTable: issues
+    parentColumns:
+      - id
+  ## import_items
+  - table: import_items
+    columns:
+      - import_id
+    parentTable: imports
     parentColumns:
       - id
   ## issue_categories

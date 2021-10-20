@@ -15,7 +15,7 @@ CREATE TABLE `member_roles` (
   KEY `index_member_roles_on_member_id` (`member_id`),
   KEY `index_member_roles_on_role_id` (`role_id`),
   KEY `index_member_roles_on_inherited_from` (`inherited_from`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
 ```
 
 </details>

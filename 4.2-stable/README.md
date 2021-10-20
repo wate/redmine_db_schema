@@ -24,8 +24,8 @@
 | [enabled_modules](enabled_modules.md)                                         | 3          |                                  | BASE TABLE |
 | [enumerations](enumerations.md)                                               | 9          | 選択肢の値                            | BASE TABLE |
 | [groups_users](groups_users.md)                                               | 2          | グループ⇔ユーザー                        | BASE TABLE |
-| [import_items](import_items.md)                                               | 6          |                                  | BASE TABLE |
-| [imports](imports.md)                                                         | 9          |                                  | BASE TABLE |
+| [import_items](import_items.md)                                               | 6          | インポート項目                          | BASE TABLE |
+| [imports](imports.md)                                                         | 9          | インポート                            | BASE TABLE |
 | [issue_categories](issue_categories.md)                                       | 4          | カテゴリー                            | BASE TABLE |
 | [issue_relations](issue_relations.md)                                         | 5          | 関連チケット                           | BASE TABLE |
 | [issue_statuses](issue_statuses.md)                                           | 5          | ステータス                            | BASE TABLE |
