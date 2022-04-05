@@ -9,15 +9,15 @@
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `commented_type` varchar(30) NOT NULL DEFAULT '',
-  `commented_id` int(11) NOT NULL DEFAULT '0',
-  `author_id` int(11) NOT NULL DEFAULT '0',
-  `content` text,
+  `commented_id` int(11) NOT NULL DEFAULT 0,
+  `author_id` int(11) NOT NULL DEFAULT 0,
+  `content` text DEFAULT NULL,
   `created_on` datetime NOT NULL,
   `updated_on` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_comments_on_commented_id_and_commented_type` (`commented_id`,`commented_type`),
   KEY `index_comments_on_author_id` (`author_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -27,10 +27,10 @@ CREATE TABLE `comments` (
 | 名前             | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
 | -------------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
 | id             | int(11)     |              | false    | auto_increment   |            |                   |          |
-| commented_type | varchar(30) |              | false    |                  |            |                   |          |
+| commented_type | varchar(30) | ''           | false    |                  |            |                   |          |
 | commented_id   | int(11)     | 0            | false    |                  |            |                   |          |
 | author_id      | int(11)     | 0            | false    |                  |            | [users](users.md) |          |
-| content        | text        |              | true     |                  |            |                   |          |
+| content        | text        | NULL         | true     |                  |            |                   |          |
 | created_on     | datetime    |              | false    |                  |            |                   |          |
 | updated_on     | datetime    |              | false    |                  |            |                   |          |
 

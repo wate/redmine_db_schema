@@ -8,14 +8,14 @@
 ```sql
 CREATE TABLE `journal_details` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `journal_id` int(11) NOT NULL DEFAULT '0',
+  `journal_id` int(11) NOT NULL DEFAULT 0,
   `property` varchar(30) NOT NULL DEFAULT '',
   `prop_key` varchar(30) NOT NULL DEFAULT '',
-  `old_value` longtext,
-  `value` longtext,
+  `old_value` longtext DEFAULT NULL,
+  `value` longtext DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `journal_details_journal_id` (`journal_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -26,10 +26,10 @@ CREATE TABLE `journal_details` (
 | ---------- | ----------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
 | id         | int(11)     |              | false    | auto_increment   |            |            |          |
 | journal_id | int(11)     | 0            | false    |                  |            |            |          |
-| property   | varchar(30) |              | false    |                  |            |            |          |
-| prop_key   | varchar(30) |              | false    |                  |            |            |          |
-| old_value  | longtext    |              | true     |                  |            |            |          |
-| value      | longtext    |              | true     |                  |            |            |          |
+| property   | varchar(30) | ''           | false    |                  |            |            |          |
+| prop_key   | varchar(30) | ''           | false    |                  |            |            |          |
+| old_value  | longtext    | NULL         | true     |                  |            |            |          |
+| value      | longtext    | NULL         | true     |                  |            |            |          |
 
 ## 制約一覧
 

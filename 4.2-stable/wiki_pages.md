@@ -13,13 +13,13 @@ CREATE TABLE `wiki_pages` (
   `wiki_id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `created_on` datetime NOT NULL,
-  `protected` tinyint(1) NOT NULL DEFAULT '0',
+  `protected` tinyint(1) NOT NULL DEFAULT 0,
   `parent_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `wiki_pages_wiki_id_title` (`wiki_id`,`title`),
   KEY `index_wiki_pages_on_wiki_id` (`wiki_id`),
   KEY `index_wiki_pages_on_parent_id` (`parent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -33,7 +33,7 @@ CREATE TABLE `wiki_pages` (
 | title      | varchar(255) |              | false    |                  |                                                                                                                 |                             |          |
 | created_on | datetime     |              | false    |                  |                                                                                                                 |                             |          |
 | protected  | tinyint(1)   | 0            | false    |                  |                                                                                                                 |                             |          |
-| parent_id  | int(11)      |              | true     |                  |                                                                                                                 | [wiki_pages](wiki_pages.md) |          |
+| parent_id  | int(11)      | NULL         | true     |                  |                                                                                                                 | [wiki_pages](wiki_pages.md) |          |
 
 ## 制約一覧
 

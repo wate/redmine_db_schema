@@ -10,7 +10,7 @@ CREATE TABLE `roles_managed_roles` (
   `role_id` int(11) NOT NULL,
   `managed_role_id` int(11) NOT NULL,
   UNIQUE KEY `index_roles_managed_roles_on_role_id_and_managed_role_id` (`role_id`,`managed_role_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

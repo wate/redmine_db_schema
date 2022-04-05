@@ -11,11 +11,11 @@
 CREATE TABLE `settings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
-  `value` text,
+  `value` text DEFAULT NULL,
   `updated_on` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_settings_on_name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -25,9 +25,9 @@ CREATE TABLE `settings` (
 | 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
 | ---------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
 | id         | int(11)      |              | false    | auto_increment   |            |            |          |
-| name       | varchar(255) |              | false    |                  |            |            |          |
-| value      | text         |              | true     |                  |            |            |          |
-| updated_on | timestamp    |              | true     |                  |            |            |          |
+| name       | varchar(255) | ''           | false    |                  |            |            |          |
+| value      | text         | NULL         | true     |                  |            |            |          |
+| updated_on | timestamp    | NULL         | true     |                  |            |            |          |
 
 ## 制約一覧
 

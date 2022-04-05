@@ -13,13 +13,13 @@ CREATE TABLE `imports` (
   `type` varchar(255) DEFAULT NULL,
   `user_id` int(11) NOT NULL,
   `filename` varchar(255) DEFAULT NULL,
-  `settings` text,
+  `settings` text DEFAULT NULL,
   `total_items` int(11) DEFAULT NULL,
-  `finished` tinyint(1) NOT NULL DEFAULT '0',
+  `finished` tinyint(1) NOT NULL DEFAULT 0,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -29,11 +29,11 @@ CREATE TABLE `imports` (
 | 名前          | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                           | 親テーブル      | コメント     |
 | ----------- | ------------ | ------------ | -------- | ---------------- | ------------------------------- | ---------- | -------- |
 | id          | int(11)      |              | false    | auto_increment   | [import_items](import_items.md) |            |          |
-| type        | varchar(255) |              | true     |                  |                                 |            |          |
+| type        | varchar(255) | NULL         | true     |                  |                                 |            |          |
 | user_id     | int(11)      |              | false    |                  |                                 |            |          |
-| filename    | varchar(255) |              | true     |                  |                                 |            |          |
-| settings    | text         |              | true     |                  |                                 |            |          |
-| total_items | int(11)      |              | true     |                  |                                 |            |          |
+| filename    | varchar(255) | NULL         | true     |                  |                                 |            |          |
+| settings    | text         | NULL         | true     |                  |                                 |            |          |
+| total_items | int(11)      | NULL         | true     |                  |                                 |            |          |
 | finished    | tinyint(1)   | 0            | false    |                  |                                 |            |          |
 | created_at  | datetime     |              | false    |                  |                                 |            |          |
 | updated_at  | datetime     |              | false    |                  |                                 |            |          |

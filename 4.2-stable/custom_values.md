@@ -9,13 +9,13 @@
 CREATE TABLE `custom_values` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `customized_type` varchar(30) NOT NULL DEFAULT '',
-  `customized_id` int(11) NOT NULL DEFAULT '0',
-  `custom_field_id` int(11) NOT NULL DEFAULT '0',
-  `value` longtext,
+  `customized_id` int(11) NOT NULL DEFAULT 0,
+  `custom_field_id` int(11) NOT NULL DEFAULT 0,
+  `value` longtext DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `custom_values_customized` (`customized_type`,`customized_id`),
   KEY `index_custom_values_on_custom_field_id` (`custom_field_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -25,10 +25,10 @@ CREATE TABLE `custom_values` (
 | 名前              | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                             | コメント     |
 | --------------- | ----------- | ------------ | -------- | ---------------- | ---------- | --------------------------------- | -------- |
 | id              | int(11)     |              | false    | auto_increment   |            |                                   |          |
-| customized_type | varchar(30) |              | false    |                  |            |                                   |          |
+| customized_type | varchar(30) | ''           | false    |                  |            |                                   |          |
 | customized_id   | int(11)     | 0            | false    |                  |            |                                   |          |
 | custom_field_id | int(11)     | 0            | false    |                  |            | [custom_fields](custom_fields.md) |          |
-| value           | longtext    |              | true     |                  |            |                                   |          |
+| value           | longtext    | NULL         | true     |                  |            |                                   |          |
 
 ## 制約一覧
 

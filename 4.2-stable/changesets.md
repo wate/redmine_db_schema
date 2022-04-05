@@ -12,7 +12,7 @@ CREATE TABLE `changesets` (
   `revision` varchar(255) NOT NULL,
   `committer` varchar(255) DEFAULT NULL,
   `committed_on` datetime NOT NULL,
-  `comments` longtext,
+  `comments` longtext DEFAULT NULL,
   `commit_date` date DEFAULT NULL,
   `scmid` varchar(255) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE `changesets` (
   KEY `index_changesets_on_repository_id` (`repository_id`),
   KEY `index_changesets_on_committed_on` (`committed_on`),
   KEY `changesets_repos_scmid` (`repository_id`,`scmid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -34,12 +34,12 @@ CREATE TABLE `changesets` (
 | id            | int(11)      |              | false    | auto_increment   |            |            |          |
 | repository_id | int(11)      |              | false    |                  |            |            |          |
 | revision      | varchar(255) |              | false    |                  |            |            |          |
-| committer     | varchar(255) |              | true     |                  |            |            |          |
+| committer     | varchar(255) | NULL         | true     |                  |            |            |          |
 | committed_on  | datetime     |              | false    |                  |            |            |          |
-| comments      | longtext     |              | true     |                  |            |            |          |
-| commit_date   | date         |              | true     |                  |            |            |          |
-| scmid         | varchar(255) |              | true     |                  |            |            |          |
-| user_id       | int(11)      |              | true     |                  |            |            |          |
+| comments      | longtext     | NULL         | true     |                  |            |            |          |
+| commit_date   | date         | NULL         | true     |                  |            |            |          |
+| scmid         | varchar(255) | NULL         | true     |                  |            |            |          |
+| user_id       | int(11)      | NULL         | true     |                  |            |            |          |
 
 ## 制約一覧
 

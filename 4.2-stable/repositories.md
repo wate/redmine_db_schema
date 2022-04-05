@@ -10,7 +10,7 @@
 ```sql
 CREATE TABLE `repositories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `project_id` int(11) NOT NULL DEFAULT '0',
+  `project_id` int(11) NOT NULL DEFAULT 0,
   `url` varchar(255) NOT NULL DEFAULT '',
   `login` varchar(60) DEFAULT '',
   `password` varchar(255) DEFAULT '',
@@ -18,13 +18,13 @@ CREATE TABLE `repositories` (
   `type` varchar(255) DEFAULT NULL,
   `path_encoding` varchar(64) DEFAULT NULL,
   `log_encoding` varchar(64) DEFAULT NULL,
-  `extra_info` longtext,
+  `extra_info` longtext DEFAULT NULL,
   `identifier` varchar(255) DEFAULT NULL,
-  `is_default` tinyint(1) DEFAULT '0',
+  `is_default` tinyint(1) DEFAULT 0,
   `created_on` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_repositories_on_project_id` (`project_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -35,17 +35,17 @@ CREATE TABLE `repositories` (
 | ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
 | id            | int(11)      |              | false    | auto_increment   |            |                         |          |
 | project_id    | int(11)      | 0            | false    |                  |            | [projects](projects.md) |          |
-| url           | varchar(255) |              | false    |                  |            |                         |          |
-| login         | varchar(60)  |              | true     |                  |            |                         |          |
-| password      | varchar(255) |              | true     |                  |            |                         |          |
-| root_url      | varchar(255) |              | true     |                  |            |                         |          |
-| type          | varchar(255) |              | true     |                  |            |                         |          |
-| path_encoding | varchar(64)  |              | true     |                  |            |                         |          |
-| log_encoding  | varchar(64)  |              | true     |                  |            |                         |          |
-| extra_info    | longtext     |              | true     |                  |            |                         |          |
-| identifier    | varchar(255) |              | true     |                  |            |                         |          |
+| url           | varchar(255) | ''           | false    |                  |            |                         |          |
+| login         | varchar(60)  | ''           | true     |                  |            |                         |          |
+| password      | varchar(255) | ''           | true     |                  |            |                         |          |
+| root_url      | varchar(255) | ''           | true     |                  |            |                         |          |
+| type          | varchar(255) | NULL         | true     |                  |            |                         |          |
+| path_encoding | varchar(64)  | NULL         | true     |                  |            |                         |          |
+| log_encoding  | varchar(64)  | NULL         | true     |                  |            |                         |          |
+| extra_info    | longtext     | NULL         | true     |                  |            |                         |          |
+| identifier    | varchar(255) | NULL         | true     |                  |            |                         |          |
 | is_default    | tinyint(1)   | 0            | true     |                  |            |                         |          |
-| created_on    | timestamp    |              | true     |                  |            |                         |          |
+| created_on    | timestamp    | NULL         | true     |                  |            |                         |          |
 
 ## 制約一覧
 

@@ -10,10 +10,10 @@ CREATE TABLE `custom_field_enumerations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `custom_field_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `active` tinyint(1) NOT NULL DEFAULT '1',
-  `position` int(11) NOT NULL DEFAULT '1',
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `position` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

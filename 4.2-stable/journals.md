@@ -8,18 +8,18 @@
 ```sql
 CREATE TABLE `journals` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `journalized_id` int(11) NOT NULL DEFAULT '0',
+  `journalized_id` int(11) NOT NULL DEFAULT 0,
   `journalized_type` varchar(30) NOT NULL DEFAULT '',
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `notes` longtext,
+  `user_id` int(11) NOT NULL DEFAULT 0,
+  `notes` longtext DEFAULT NULL,
   `created_on` datetime NOT NULL,
-  `private_notes` tinyint(1) NOT NULL DEFAULT '0',
+  `private_notes` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `journals_journalized_id` (`journalized_id`,`journalized_type`),
   KEY `index_journals_on_user_id` (`user_id`),
   KEY `index_journals_on_journalized_id` (`journalized_id`),
   KEY `index_journals_on_created_on` (`created_on`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -30,9 +30,9 @@ CREATE TABLE `journals` (
 | ---------------- | ----------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
 | id               | int(11)     |              | false    | auto_increment   |            |            |          |
 | journalized_id   | int(11)     | 0            | false    |                  |            |            |          |
-| journalized_type | varchar(30) |              | false    |                  |            |            |          |
+| journalized_type | varchar(30) | ''           | false    |                  |            |            |          |
 | user_id          | int(11)     | 0            | false    |                  |            |            |          |
-| notes            | longtext    |              | true     |                  |            |            |          |
+| notes            | longtext    | NULL         | true     |                  |            |            |          |
 | created_on       | datetime    |              | false    |                  |            |            |          |
 | private_notes    | tinyint(1)  | 0            | false    |                  |            |            |          |
 

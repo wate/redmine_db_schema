@@ -13,11 +13,11 @@ CREATE TABLE `import_items` (
   `import_id` int(11) NOT NULL,
   `position` int(11) NOT NULL,
   `obj_id` int(11) DEFAULT NULL,
-  `message` text,
+  `message` text DEFAULT NULL,
   `unique_id` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_import_items_on_import_id_and_unique_id` (`import_id`,`unique_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -29,9 +29,9 @@ CREATE TABLE `import_items` (
 | id        | int(11)      |              | false    | auto_increment   |            |                       |          |
 | import_id | int(11)      |              | false    |                  |            | [imports](imports.md) |          |
 | position  | int(11)      |              | false    |                  |            |                       |          |
-| obj_id    | int(11)      |              | true     |                  |            |                       |          |
-| message   | text         |              | true     |                  |            |                       |          |
-| unique_id | varchar(255) |              | true     |                  |            |                       |          |
+| obj_id    | int(11)      | NULL         | true     |                  |            |                       |          |
+| message   | text         | NULL         | true     |                  |            |                       |          |
+| unique_id | varchar(255) | NULL         | true     |                  |            |                       |          |
 
 ## 制約一覧
 

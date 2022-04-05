@@ -11,7 +11,7 @@ CREATE TABLE `wiki_content_versions` (
   `wiki_content_id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
   `author_id` int(11) DEFAULT NULL,
-  `data` longblob,
+  `data` longblob DEFAULT NULL,
   `compression` varchar(6) DEFAULT '',
   `comments` varchar(1024) DEFAULT '',
   `updated_on` datetime NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE `wiki_content_versions` (
   PRIMARY KEY (`id`),
   KEY `wiki_content_versions_wcid` (`wiki_content_id`),
   KEY `index_wiki_content_versions_on_updated_on` (`updated_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -31,10 +31,10 @@ CREATE TABLE `wiki_content_versions` (
 | id              | int(11)       |              | false    | auto_increment   |            |                                   |          |
 | wiki_content_id | int(11)       |              | false    |                  |            | [wiki_contents](wiki_contents.md) |          |
 | page_id         | int(11)       |              | false    |                  |            | [wiki_pages](wiki_pages.md)       |          |
-| author_id       | int(11)       |              | true     |                  |            | [users](users.md)                 |          |
-| data            | longblob      |              | true     |                  |            |                                   |          |
-| compression     | varchar(6)    |              | true     |                  |            |                                   |          |
-| comments        | varchar(1024) |              | true     |                  |            |                                   |          |
+| author_id       | int(11)       | NULL         | true     |                  |            | [users](users.md)                 |          |
+| data            | longblob      | NULL         | true     |                  |            |                                   |          |
+| compression     | varchar(6)    | ''           | true     |                  |            |                                   |          |
+| comments        | varchar(1024) | ''           | true     |                  |            |                                   |          |
 | updated_on      | datetime      |              | false    |                  |            |                                   |          |
 | version         | int(11)       |              | false    |                  |            |                                   |          |
 

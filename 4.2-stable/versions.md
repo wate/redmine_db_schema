@@ -10,7 +10,7 @@
 ```sql
 CREATE TABLE `versions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `project_id` int(11) NOT NULL DEFAULT '0',
+  `project_id` int(11) NOT NULL DEFAULT 0,
   `name` varchar(255) NOT NULL DEFAULT '',
   `description` varchar(255) DEFAULT '',
   `effective_date` date DEFAULT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE `versions` (
   PRIMARY KEY (`id`),
   KEY `versions_project_id` (`project_id`),
   KEY `index_versions_on_sharing` (`sharing`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -33,14 +33,14 @@ CREATE TABLE `versions` (
 | --------------- | ------------ | ------------ | -------- | ---------------- | ----------------------- | ----------------------- | -------- |
 | id              | int(11)      |              | false    | auto_increment   | [projects](projects.md) |                         |          |
 | project_id      | int(11)      | 0            | false    |                  |                         | [projects](projects.md) |          |
-| name            | varchar(255) |              | false    |                  |                         |                         |          |
-| description     | varchar(255) |              | true     |                  |                         |                         |          |
-| effective_date  | date         |              | true     |                  |                         |                         |          |
-| created_on      | timestamp    |              | true     |                  |                         |                         |          |
-| updated_on      | timestamp    |              | true     |                  |                         |                         |          |
-| wiki_page_title | varchar(255) |              | true     |                  |                         |                         |          |
-| status          | varchar(255) | open         | true     |                  |                         |                         |          |
-| sharing         | varchar(255) | none         | false    |                  |                         |                         |          |
+| name            | varchar(255) | ''           | false    |                  |                         |                         |          |
+| description     | varchar(255) | ''           | true     |                  |                         |                         |          |
+| effective_date  | date         | NULL         | true     |                  |                         |                         |          |
+| created_on      | timestamp    | NULL         | true     |                  |                         |                         |          |
+| updated_on      | timestamp    | NULL         | true     |                  |                         |                         |          |
+| wiki_page_title | varchar(255) | NULL         | true     |                  |                         |                         |          |
+| status          | varchar(255) | 'open'       | true     |                  |                         |                         |          |
+| sharing         | varchar(255) | 'none'       | false    |                  |                         |                         |          |
 
 ## 制約一覧
 

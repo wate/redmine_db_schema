@@ -10,13 +10,13 @@
 ```sql
 CREATE TABLE `user_preferences` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `others` text,
-  `hide_mail` tinyint(1) DEFAULT '1',
+  `user_id` int(11) NOT NULL DEFAULT 0,
+  `others` text DEFAULT NULL,
+  `hide_mail` tinyint(1) DEFAULT 1,
   `time_zone` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_user_preferences_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -27,9 +27,9 @@ CREATE TABLE `user_preferences` (
 | --------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------------------- |
 | id        | int(11)      |              | false    | auto_increment   |            |                   |                      |
 | user_id   | int(11)      | 0            | false    |                  |            | [users](users.md) |                      |
-| others    | text         |              | true     |                  |            |                   |                      |
+| others    | text         | NULL         | true     |                  |            |                   |                      |
 | hide_mail | tinyint(1)   | 1            | true     |                  |            |                   | メールアドレスを隠す           |
-| time_zone | varchar(255) |              | true     |                  |            |                   | タイムゾーン               |
+| time_zone | varchar(255) | NULL         | true     |                  |            |                   | タイムゾーン               |
 
 ## 制約一覧
 

@@ -18,7 +18,7 @@ CREATE TABLE `issue_relations` (
   UNIQUE KEY `index_issue_relations_on_issue_from_id_and_issue_to_id` (`issue_from_id`,`issue_to_id`),
   KEY `index_issue_relations_on_issue_from_id` (`issue_from_id`),
   KEY `index_issue_relations_on_issue_to_id` (`issue_to_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -30,8 +30,8 @@ CREATE TABLE `issue_relations` (
 | id            | int(11)      |              | false    | auto_increment   |            |                     |          |
 | issue_from_id | int(11)      |              | false    |                  |            | [issues](issues.md) |          |
 | issue_to_id   | int(11)      |              | false    |                  |            | [issues](issues.md) |          |
-| relation_type | varchar(255) |              | false    |                  |            |                     |          |
-| delay         | int(11)      |              | true     |                  |            |                     |          |
+| relation_type | varchar(255) | ''           | false    |                  |            |                     |          |
+| delay         | int(11)      | NULL         | true     |                  |            |                     |          |
 
 ## 制約一覧
 

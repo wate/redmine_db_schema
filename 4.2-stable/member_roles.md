@@ -15,7 +15,7 @@ CREATE TABLE `member_roles` (
   KEY `index_member_roles_on_member_id` (`member_id`),
   KEY `index_member_roles_on_role_id` (`role_id`),
   KEY `index_member_roles_on_inherited_from` (`inherited_from`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -27,7 +27,7 @@ CREATE TABLE `member_roles` (
 | id             | int(11) |              | false    | auto_increment   |            |                       |          |
 | member_id      | int(11) |              | false    |                  |            | [members](members.md) |          |
 | role_id        | int(11) |              | false    |                  |            | [roles](roles.md)     |          |
-| inherited_from | int(11) |              | true     |                  |            |                       |          |
+| inherited_from | int(11) | NULL         | true     |                  |            |                       |          |
 
 ## 制約一覧
 

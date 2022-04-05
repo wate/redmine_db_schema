@@ -8,15 +8,15 @@
 ```sql
 CREATE TABLE `members` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `project_id` int(11) NOT NULL DEFAULT '0',
+  `user_id` int(11) NOT NULL DEFAULT 0,
+  `project_id` int(11) NOT NULL DEFAULT 0,
   `created_on` timestamp NULL DEFAULT NULL,
-  `mail_notification` tinyint(1) NOT NULL DEFAULT '0',
+  `mail_notification` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `index_members_on_user_id_and_project_id` (`user_id`,`project_id`),
   KEY `index_members_on_user_id` (`user_id`),
   KEY `index_members_on_project_id` (`project_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -28,7 +28,7 @@ CREATE TABLE `members` (
 | id                | int(11)    |              | false    | auto_increment   | [member_roles](member_roles.md) |                         |          |
 | user_id           | int(11)    | 0            | false    |                  |                                 | [users](users.md)       |          |
 | project_id        | int(11)    | 0            | false    |                  |                                 | [projects](projects.md) |          |
-| created_on        | timestamp  |              | true     |                  |                                 |                         |          |
+| created_on        | timestamp  | NULL         | true     |                  |                                 |                         |          |
 | mail_notification | tinyint(1) | 0            | false    |                  |                                 |                         |          |
 
 ## 制約一覧

@@ -12,7 +12,7 @@ CREATE TABLE `groups_users` (
   `group_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   UNIQUE KEY `groups_users_ids` (`group_id`,`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

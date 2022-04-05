@@ -11,13 +11,13 @@
 CREATE TABLE `watchers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `watchable_type` varchar(255) NOT NULL DEFAULT '',
-  `watchable_id` int(11) NOT NULL DEFAULT '0',
+  `watchable_id` int(11) NOT NULL DEFAULT 0,
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `watchers_user_id_type` (`user_id`,`watchable_type`),
   KEY `index_watchers_on_user_id` (`user_id`),
   KEY `index_watchers_on_watchable_id_and_watchable_type` (`watchable_id`,`watchable_type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -27,9 +27,9 @@ CREATE TABLE `watchers` (
 | 名前             | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
 | -------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
 | id             | int(11)      |              | false    | auto_increment   |            |                   |          |
-| watchable_type | varchar(255) |              | false    |                  |            |                   |          |
+| watchable_type | varchar(255) | ''           | false    |                  |            |                   |          |
 | watchable_id   | int(11)      | 0            | false    |                  |            |                   |          |
-| user_id        | int(11)      |              | true     |                  |            | [users](users.md) |          |
+| user_id        | int(11)      | NULL         | true     |                  |            | [users](users.md) |          |
 
 ## 制約一覧
 

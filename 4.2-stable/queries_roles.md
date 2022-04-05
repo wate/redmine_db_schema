@@ -10,7 +10,7 @@ CREATE TABLE `queries_roles` (
   `query_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL,
   UNIQUE KEY `queries_roles_ids` (`query_id`,`role_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

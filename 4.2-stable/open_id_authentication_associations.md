@@ -12,10 +12,10 @@ CREATE TABLE `open_id_authentication_associations` (
   `lifetime` int(11) DEFAULT NULL,
   `handle` varchar(255) DEFAULT NULL,
   `assoc_type` varchar(255) DEFAULT NULL,
-  `server_url` blob,
-  `secret` blob,
+  `server_url` blob DEFAULT NULL,
+  `secret` blob DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -25,12 +25,12 @@ CREATE TABLE `open_id_authentication_associations` (
 | 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
 | ---------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
 | id         | int(11)      |              | false    | auto_increment   |            |            |          |
-| issued     | int(11)      |              | true     |                  |            |            |          |
-| lifetime   | int(11)      |              | true     |                  |            |            |          |
-| handle     | varchar(255) |              | true     |                  |            |            |          |
-| assoc_type | varchar(255) |              | true     |                  |            |            |          |
-| server_url | blob         |              | true     |                  |            |            |          |
-| secret     | blob         |              | true     |                  |            |            |          |
+| issued     | int(11)      | NULL         | true     |                  |            |            |          |
+| lifetime   | int(11)      | NULL         | true     |                  |            |            |          |
+| handle     | varchar(255) | NULL         | true     |                  |            |            |          |
+| assoc_type | varchar(255) | NULL         | true     |                  |            |            |          |
+| server_url | blob         | NULL         | true     |                  |            |            |          |
+| secret     | blob         | NULL         | true     |                  |            |            |          |
 
 ## 制約一覧
 

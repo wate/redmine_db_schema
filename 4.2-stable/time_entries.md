@@ -29,7 +29,7 @@ CREATE TABLE `time_entries` (
   KEY `index_time_entries_on_activity_id` (`activity_id`),
   KEY `index_time_entries_on_user_id` (`user_id`),
   KEY `index_time_entries_on_created_on` (`created_on`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -40,11 +40,11 @@ CREATE TABLE `time_entries` (
 | ----------- | ------------- | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
 | id          | int(11)       |              | false    | auto_increment   |            |                         |          |
 | project_id  | int(11)       |              | false    |                  |            | [projects](projects.md) |          |
-| author_id   | int(11)       |              | true     |                  |            | [users](users.md)       |          |
+| author_id   | int(11)       | NULL         | true     |                  |            | [users](users.md)       |          |
 | user_id     | int(11)       |              | false    |                  |            |                         |          |
-| issue_id    | int(11)       |              | true     |                  |            |                         |          |
+| issue_id    | int(11)       | NULL         | true     |                  |            |                         |          |
 | hours       | float         |              | false    |                  |            |                         |          |
-| comments    | varchar(1024) |              | true     |                  |            |                         |          |
+| comments    | varchar(1024) | NULL         | true     |                  |            |                         |          |
 | activity_id | int(11)       |              | false    |                  |            |                         |          |
 | spent_on    | date          |              | false    |                  |            |                         |          |
 | tyear       | int(11)       |              | false    |                  |            |                         |          |

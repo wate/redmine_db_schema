@@ -10,16 +10,16 @@
 ```sql
 CREATE TABLE `documents` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `project_id` int(11) NOT NULL DEFAULT '0',
-  `category_id` int(11) NOT NULL DEFAULT '0',
+  `project_id` int(11) NOT NULL DEFAULT 0,
+  `category_id` int(11) NOT NULL DEFAULT 0,
   `title` varchar(255) NOT NULL DEFAULT '',
-  `description` text,
+  `description` text DEFAULT NULL,
   `created_on` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `documents_project_id` (`project_id`),
   KEY `index_documents_on_category_id` (`category_id`),
   KEY `index_documents_on_created_on` (`created_on`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -31,9 +31,9 @@ CREATE TABLE `documents` (
 | id          | int(11)      |              | false    | auto_increment   |            |                                 |          |
 | project_id  | int(11)      | 0            | false    |                  |            | [projects](projects.md)         |          |
 | category_id | int(11)      | 0            | false    |                  |            | [enumerations](enumerations.md) |          |
-| title       | varchar(255) |              | false    |                  |            |                                 |          |
-| description | text         |              | true     |                  |            |                                 |          |
-| created_on  | timestamp    |              | true     |                  |            |                                 |          |
+| title       | varchar(255) | ''           | false    |                  |            |                                 |          |
+| description | text         | NULL         | true     |                  |            |                                 |          |
+| created_on  | timestamp    | NULL         | true     |                  |            |                                 |          |
 
 ## 制約一覧
 

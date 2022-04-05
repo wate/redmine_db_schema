@@ -8,7 +8,7 @@
 ```sql
 CREATE TABLE `tokens` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL DEFAULT '0',
+  `user_id` int(11) NOT NULL DEFAULT 0,
   `action` varchar(30) NOT NULL DEFAULT '',
   `value` varchar(40) NOT NULL DEFAULT '',
   `created_on` datetime NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE `tokens` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `tokens_value` (`value`),
   KEY `index_tokens_on_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -27,10 +27,10 @@ CREATE TABLE `tokens` (
 | ---------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
 | id         | int(11)     |              | false    | auto_increment   |            |                   |          |
 | user_id    | int(11)     | 0            | false    |                  |            | [users](users.md) |          |
-| action     | varchar(30) |              | false    |                  |            |                   |          |
-| value      | varchar(40) |              | false    |                  |            |                   |          |
+| action     | varchar(30) | ''           | false    |                  |            |                   |          |
+| value      | varchar(40) | ''           | false    |                  |            |                   |          |
 | created_on | datetime    |              | false    |                  |            |                   |          |
-| updated_on | timestamp   |              | true     |                  |            |                   |          |
+| updated_on | timestamp   | NULL         | true     |                  |            |                   |          |
 
 ## 制約一覧
 

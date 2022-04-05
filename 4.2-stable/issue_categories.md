@@ -10,13 +10,13 @@
 ```sql
 CREATE TABLE `issue_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `project_id` int(11) NOT NULL DEFAULT '0',
+  `project_id` int(11) NOT NULL DEFAULT 0,
   `name` varchar(60) NOT NULL DEFAULT '',
   `assigned_to_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `issue_categories_project_id` (`project_id`),
   KEY `index_issue_categories_on_assigned_to_id` (`assigned_to_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -27,8 +27,8 @@ CREATE TABLE `issue_categories` (
 | -------------- | ----------- | ------------ | -------- | ---------------- | ------------------- | ----------------------- | -------- |
 | id             | int(11)     |              | false    | auto_increment   | [issues](issues.md) |                         |          |
 | project_id     | int(11)     | 0            | false    |                  |                     | [projects](projects.md) |          |
-| name           | varchar(60) |              | false    |                  |                     |                         |          |
-| assigned_to_id | int(11)     |              | true     |                  |                     | [users](users.md)       |          |
+| name           | varchar(60) | ''           | false    |                  |                     |                         |          |
+| assigned_to_id | int(11)     | NULL         | true     |                  |                     | [users](users.md)       |          |
 
 ## 制約一覧
 

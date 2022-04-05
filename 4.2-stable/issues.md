@@ -13,7 +13,7 @@ CREATE TABLE `issues` (
   `tracker_id` int(11) NOT NULL,
   `project_id` int(11) NOT NULL,
   `subject` varchar(255) NOT NULL DEFAULT '',
-  `description` longtext,
+  `description` longtext DEFAULT NULL,
   `due_date` date DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
   `status_id` int(11) NOT NULL,
@@ -21,17 +21,17 @@ CREATE TABLE `issues` (
   `priority_id` int(11) NOT NULL,
   `fixed_version_id` int(11) DEFAULT NULL,
   `author_id` int(11) NOT NULL,
-  `lock_version` int(11) NOT NULL DEFAULT '0',
+  `lock_version` int(11) NOT NULL DEFAULT 0,
   `created_on` timestamp NULL DEFAULT NULL,
   `updated_on` timestamp NULL DEFAULT NULL,
   `start_date` date DEFAULT NULL,
-  `done_ratio` int(11) NOT NULL DEFAULT '0',
+  `done_ratio` int(11) NOT NULL DEFAULT 0,
   `estimated_hours` float DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `root_id` int(11) DEFAULT NULL,
   `lft` int(11) DEFAULT NULL,
   `rgt` int(11) DEFAULT NULL,
-  `is_private` tinyint(1) NOT NULL DEFAULT '0',
+  `is_private` tinyint(1) NOT NULL DEFAULT 0,
   `closed_on` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `issues_project_id` (`project_id`),
@@ -45,7 +45,7 @@ CREATE TABLE `issues` (
   KEY `index_issues_on_created_on` (`created_on`),
   KEY `index_issues_on_root_id_and_lft_and_rgt` (`root_id`,`lft`,`rgt`),
   KEY `index_issues_on_parent_id` (`parent_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -57,27 +57,27 @@ CREATE TABLE `issues` (
 | id               | int(11)      |              | false    | auto_increment   | [issues](issues.md) [issue_relations](issue_relations.md) |                                         |                  |
 | tracker_id       | int(11)      |              | false    |                  |                                                           | [trackers](trackers.md)                 | トラッカーID          |
 | project_id       | int(11)      |              | false    |                  |                                                           | [projects](projects.md)                 | プロジェクトID         |
-| subject          | varchar(255) |              | false    |                  |                                                           |                                         | 題名               |
-| description      | longtext     |              | true     |                  |                                                           |                                         | 説明               |
-| due_date         | date         |              | true     |                  |                                                           |                                         | 期日               |
-| category_id      | int(11)      |              | true     |                  |                                                           | [issue_categories](issue_categories.md) | カテゴリーID          |
+| subject          | varchar(255) | ''           | false    |                  |                                                           |                                         | 題名               |
+| description      | longtext     | NULL         | true     |                  |                                                           |                                         | 説明               |
+| due_date         | date         | NULL         | true     |                  |                                                           |                                         | 期日               |
+| category_id      | int(11)      | NULL         | true     |                  |                                                           | [issue_categories](issue_categories.md) | カテゴリーID          |
 | status_id        | int(11)      |              | false    |                  |                                                           | [issue_statuses](issue_statuses.md)     | ステータスID          |
-| assigned_to_id   | int(11)      |              | true     |                  |                                                           | [users](users.md)                       | 担当者ID            |
+| assigned_to_id   | int(11)      | NULL         | true     |                  |                                                           | [users](users.md)                       | 担当者ID            |
 | priority_id      | int(11)      |              | false    |                  |                                                           | [enumerations](enumerations.md)         | 優先度ID            |
-| fixed_version_id | int(11)      |              | true     |                  |                                                           |                                         | 対象バージョンID        |
+| fixed_version_id | int(11)      | NULL         | true     |                  |                                                           |                                         | 対象バージョンID        |
 | author_id        | int(11)      |              | false    |                  |                                                           | [users](users.md)                       | 登録者ID            |
 | lock_version     | int(11)      | 0            | false    |                  |                                                           |                                         | ロックバージョン         |
-| created_on       | timestamp    |              | true     |                  |                                                           |                                         |                  |
-| updated_on       | timestamp    |              | true     |                  |                                                           |                                         |                  |
-| start_date       | date         |              | true     |                  |                                                           |                                         | 開始日              |
+| created_on       | timestamp    | NULL         | true     |                  |                                                           |                                         |                  |
+| updated_on       | timestamp    | NULL         | true     |                  |                                                           |                                         |                  |
+| start_date       | date         | NULL         | true     |                  |                                                           |                                         | 開始日              |
 | done_ratio       | int(11)      | 0            | false    |                  |                                                           |                                         | 進捗率              |
-| estimated_hours  | float        |              | true     |                  |                                                           |                                         | 予定工数             |
-| parent_id        | int(11)      |              | true     |                  |                                                           | [issues](issues.md)                     | 親チケット            |
-| root_id          | int(11)      |              | true     |                  |                                                           | [issues](issues.md)                     | ルートID            |
-| lft              | int(11)      |              | true     |                  |                                                           |                                         | 左ノードポインタ         |
-| rgt              | int(11)      |              | true     |                  |                                                           |                                         | 右ノードポインタ         |
+| estimated_hours  | float        | NULL         | true     |                  |                                                           |                                         | 予定工数             |
+| parent_id        | int(11)      | NULL         | true     |                  |                                                           | [issues](issues.md)                     | 親チケット            |
+| root_id          | int(11)      | NULL         | true     |                  |                                                           | [issues](issues.md)                     | ルートID            |
+| lft              | int(11)      | NULL         | true     |                  |                                                           |                                         | 左ノードポインタ         |
+| rgt              | int(11)      | NULL         | true     |                  |                                                           |                                         | 右ノードポインタ         |
 | is_private       | tinyint(1)   | 0            | false    |                  |                                                           |                                         | プライベート           |
-| closed_on        | datetime     |              | true     |                  |                                                           |                                         | 完了日時             |
+| closed_on        | datetime     | NULL         | true     |                  |                                                           |                                         | 完了日時             |
 
 ## 制約一覧
 

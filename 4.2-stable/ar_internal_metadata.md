@@ -7,12 +7,12 @@
 
 ```sql
 CREATE TABLE `ar_internal_metadata` (
-  `key` varchar(255) NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8 NOT NULL,
   `value` varchar(255) DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -22,7 +22,7 @@ CREATE TABLE `ar_internal_metadata` (
 | 名前         | タイプ          | デフォルト値       | NULL許可   | 子テーブル      | 親テーブル      | コメント     |
 | ---------- | ------------ | ------------ | -------- | ---------- | ---------- | -------- |
 | key        | varchar(255) |              | false    |            |            |          |
-| value      | varchar(255) |              | true     |            |            |          |
+| value      | varchar(255) | NULL         | true     |            |            |          |
 | created_at | datetime     |              | false    |            |            |          |
 | updated_at | datetime     |              | false    |            |            |          |
 

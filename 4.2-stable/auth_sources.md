@@ -19,14 +19,14 @@ CREATE TABLE `auth_sources` (
   `attr_firstname` varchar(30) DEFAULT NULL,
   `attr_lastname` varchar(30) DEFAULT NULL,
   `attr_mail` varchar(30) DEFAULT NULL,
-  `onthefly_register` tinyint(1) NOT NULL DEFAULT '0',
-  `tls` tinyint(1) NOT NULL DEFAULT '0',
-  `filter` text,
+  `onthefly_register` tinyint(1) NOT NULL DEFAULT 0,
+  `tls` tinyint(1) NOT NULL DEFAULT 0,
+  `filter` text DEFAULT NULL,
   `timeout` int(11) DEFAULT NULL,
-  `verify_peer` tinyint(1) NOT NULL DEFAULT '1',
+  `verify_peer` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   KEY `index_auth_sources_on_id_and_type` (`id`,`type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -36,21 +36,21 @@ CREATE TABLE `auth_sources` (
 | 名前                | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
 | ----------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
 | id                | int(11)      |              | false    | auto_increment   |            |            |          |
-| type              | varchar(30)  |              | false    |                  |            |            |          |
-| name              | varchar(60)  |              | false    |                  |            |            |          |
-| host              | varchar(60)  |              | true     |                  |            |            |          |
-| port              | int(11)      |              | true     |                  |            |            |          |
-| account           | varchar(255) |              | true     |                  |            |            |          |
-| account_password  | varchar(255) |              | true     |                  |            |            |          |
-| base_dn           | varchar(255) |              | true     |                  |            |            |          |
-| attr_login        | varchar(30)  |              | true     |                  |            |            |          |
-| attr_firstname    | varchar(30)  |              | true     |                  |            |            |          |
-| attr_lastname     | varchar(30)  |              | true     |                  |            |            |          |
-| attr_mail         | varchar(30)  |              | true     |                  |            |            |          |
+| type              | varchar(30)  | ''           | false    |                  |            |            |          |
+| name              | varchar(60)  | ''           | false    |                  |            |            |          |
+| host              | varchar(60)  | NULL         | true     |                  |            |            |          |
+| port              | int(11)      | NULL         | true     |                  |            |            |          |
+| account           | varchar(255) | NULL         | true     |                  |            |            |          |
+| account_password  | varchar(255) | ''           | true     |                  |            |            |          |
+| base_dn           | varchar(255) | NULL         | true     |                  |            |            |          |
+| attr_login        | varchar(30)  | NULL         | true     |                  |            |            |          |
+| attr_firstname    | varchar(30)  | NULL         | true     |                  |            |            |          |
+| attr_lastname     | varchar(30)  | NULL         | true     |                  |            |            |          |
+| attr_mail         | varchar(30)  | NULL         | true     |                  |            |            |          |
 | onthefly_register | tinyint(1)   | 0            | false    |                  |            |            |          |
 | tls               | tinyint(1)   | 0            | false    |                  |            |            |          |
-| filter            | text         |              | true     |                  |            |            |          |
-| timeout           | int(11)      |              | true     |                  |            |            |          |
+| filter            | text         | NULL         | true     |                  |            |            |          |
+| timeout           | int(11)      | NULL         | true     |                  |            |            |          |
 | verify_peer       | tinyint(1)   | 1            | false    |                  |            |            |          |
 
 ## 制約一覧

@@ -16,7 +16,7 @@ CREATE TABLE `wiki_redirects` (
   PRIMARY KEY (`id`),
   KEY `wiki_redirects_wiki_id_title` (`wiki_id`,`title`),
   KEY `index_wiki_redirects_on_wiki_id` (`wiki_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -27,8 +27,8 @@ CREATE TABLE `wiki_redirects` (
 | -------------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
 | id                   | int(11)      |              | false    | auto_increment   |            |                   |          |
 | wiki_id              | int(11)      |              | false    |                  |            | [wikis](wikis.md) |          |
-| title                | varchar(255) |              | true     |                  |            |                   |          |
-| redirects_to         | varchar(255) |              | true     |                  |            |                   |          |
+| title                | varchar(255) | NULL         | true     |                  |            |                   |          |
+| redirects_to         | varchar(255) | NULL         | true     |                  |            |                   |          |
 | created_on           | datetime     |              | false    |                  |            |                   |          |
 | redirects_to_wiki_id | int(11)      |              | false    |                  |            | [wikis](wikis.md) |          |
 

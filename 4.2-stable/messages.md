@@ -11,21 +11,21 @@ CREATE TABLE `messages` (
   `board_id` int(11) NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `subject` varchar(255) NOT NULL DEFAULT '',
-  `content` text,
+  `content` text DEFAULT NULL,
   `author_id` int(11) DEFAULT NULL,
-  `replies_count` int(11) NOT NULL DEFAULT '0',
+  `replies_count` int(11) NOT NULL DEFAULT 0,
   `last_reply_id` int(11) DEFAULT NULL,
   `created_on` datetime NOT NULL,
   `updated_on` datetime NOT NULL,
-  `locked` tinyint(1) DEFAULT '0',
-  `sticky` int(11) DEFAULT '0',
+  `locked` tinyint(1) DEFAULT 0,
+  `sticky` int(11) DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `messages_board_id` (`board_id`),
   KEY `messages_parent_id` (`parent_id`),
   KEY `index_messages_on_last_reply_id` (`last_reply_id`),
   KEY `index_messages_on_author_id` (`author_id`),
   KEY `index_messages_on_created_on` (`created_on`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -36,12 +36,12 @@ CREATE TABLE `messages` (
 | ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
 | id            | int(11)      |              | false    | auto_increment   |            |                   |          |
 | board_id      | int(11)      |              | false    |                  |            |                   |          |
-| parent_id     | int(11)      |              | true     |                  |            |                   |          |
-| subject       | varchar(255) |              | false    |                  |            |                   |          |
-| content       | text         |              | true     |                  |            |                   |          |
-| author_id     | int(11)      |              | true     |                  |            | [users](users.md) |          |
+| parent_id     | int(11)      | NULL         | true     |                  |            |                   |          |
+| subject       | varchar(255) | ''           | false    |                  |            |                   |          |
+| content       | text         | NULL         | true     |                  |            |                   |          |
+| author_id     | int(11)      | NULL         | true     |                  |            | [users](users.md) |          |
 | replies_count | int(11)      | 0            | false    |                  |            |                   |          |
-| last_reply_id | int(11)      |              | true     |                  |            |                   |          |
+| last_reply_id | int(11)      | NULL         | true     |                  |            |                   |          |
 | created_on    | datetime     |              | false    |                  |            |                   |          |
 | updated_on    | datetime     |              | false    |                  |            |                   |          |
 | locked        | tinyint(1)   | 0            | true     |                  |            |                   |          |

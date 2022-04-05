@@ -10,12 +10,12 @@
 ```sql
 CREATE TABLE `workflows` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tracker_id` int(11) NOT NULL DEFAULT '0',
-  `old_status_id` int(11) NOT NULL DEFAULT '0',
-  `new_status_id` int(11) NOT NULL DEFAULT '0',
-  `role_id` int(11) NOT NULL DEFAULT '0',
-  `assignee` tinyint(1) NOT NULL DEFAULT '0',
-  `author` tinyint(1) NOT NULL DEFAULT '0',
+  `tracker_id` int(11) NOT NULL DEFAULT 0,
+  `old_status_id` int(11) NOT NULL DEFAULT 0,
+  `new_status_id` int(11) NOT NULL DEFAULT 0,
+  `role_id` int(11) NOT NULL DEFAULT 0,
+  `assignee` tinyint(1) NOT NULL DEFAULT 0,
+  `author` tinyint(1) NOT NULL DEFAULT 0,
   `type` varchar(30) DEFAULT NULL,
   `field_name` varchar(30) DEFAULT NULL,
   `rule` varchar(30) DEFAULT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE `workflows` (
   KEY `index_workflows_on_role_id` (`role_id`),
   KEY `index_workflows_on_new_status_id` (`new_status_id`),
   KEY `index_workflows_on_tracker_id` (`tracker_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -41,9 +41,9 @@ CREATE TABLE `workflows` (
 | role_id       | int(11)     | 0            | false    |                  |            |                                     |          |
 | assignee      | tinyint(1)  | 0            | false    |                  |            |                                     |          |
 | author        | tinyint(1)  | 0            | false    |                  |            |                                     |          |
-| type          | varchar(30) |              | true     |                  |            |                                     |          |
-| field_name    | varchar(30) |              | true     |                  |            |                                     |          |
-| rule          | varchar(30) |              | true     |                  |            |                                     |          |
+| type          | varchar(30) | NULL         | true     |                  |            |                                     |          |
+| field_name    | varchar(30) | NULL         | true     |                  |            |                                     |          |
+| rule          | varchar(30) | NULL         | true     |                  |            |                                     |          |
 
 ## 制約一覧
 

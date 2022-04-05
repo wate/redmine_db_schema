@@ -11,13 +11,13 @@ CREATE TABLE `changes` (
   `changeset_id` int(11) NOT NULL,
   `action` varchar(1) NOT NULL DEFAULT '',
   `path` text NOT NULL,
-  `from_path` text,
+  `from_path` text DEFAULT NULL,
   `from_revision` varchar(255) DEFAULT NULL,
   `revision` varchar(255) DEFAULT NULL,
   `branch` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `changesets_changeset_id` (`changeset_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -28,12 +28,12 @@ CREATE TABLE `changes` (
 | ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
 | id            | int(11)      |              | false    | auto_increment   |            |            |          |
 | changeset_id  | int(11)      |              | false    |                  |            |            |          |
-| action        | varchar(1)   |              | false    |                  |            |            |          |
+| action        | varchar(1)   | ''           | false    |                  |            |            |          |
 | path          | text         |              | false    |                  |            |            |          |
-| from_path     | text         |              | true     |                  |            |            |          |
-| from_revision | varchar(255) |              | true     |                  |            |            |          |
-| revision      | varchar(255) |              | true     |                  |            |            |          |
-| branch        | varchar(255) |              | true     |                  |            |            |          |
+| from_path     | text         | NULL         | true     |                  |            |            |          |
+| from_revision | varchar(255) | NULL         | true     |                  |            |            |          |
+| revision      | varchar(255) | NULL         | true     |                  |            |            |          |
+| branch        | varchar(255) | NULL         | true     |                  |            |            |          |
 
 ## 制約一覧
 

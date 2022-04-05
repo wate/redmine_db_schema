@@ -11,13 +11,13 @@
 CREATE TABLE `issue_statuses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) NOT NULL DEFAULT '',
-  `is_closed` tinyint(1) NOT NULL DEFAULT '0',
+  `is_closed` tinyint(1) NOT NULL DEFAULT 0,
   `position` int(11) DEFAULT NULL,
   `default_done_ratio` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_issue_statuses_on_position` (`position`),
   KEY `index_issue_statuses_on_is_closed` (`is_closed`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -27,10 +27,10 @@ CREATE TABLE `issue_statuses` (
 | 名前                 | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                                                 | 親テーブル      | コメント     |
 | ------------------ | ----------- | ------------ | -------- | ---------------- | --------------------------------------------------------------------- | ---------- | -------- |
 | id                 | int(11)     |              | false    | auto_increment   | [trackers](trackers.md) [workflows](workflows.md) [issues](issues.md) |            |          |
-| name               | varchar(30) |              | false    |                  |                                                                       |            |          |
+| name               | varchar(30) | ''           | false    |                  |                                                                       |            |          |
 | is_closed          | tinyint(1)  | 0            | false    |                  |                                                                       |            |          |
-| position           | int(11)     |              | true     |                  |                                                                       |            |          |
-| default_done_ratio | int(11)     |              | true     |                  |                                                                       |            |          |
+| position           | int(11)     | NULL         | true     |                  |                                                                       |            |          |
+| default_done_ratio | int(11)     | NULL         | true     |                  |                                                                       |            |          |
 
 ## 制約一覧
 

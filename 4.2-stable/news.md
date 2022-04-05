@@ -13,15 +13,15 @@ CREATE TABLE `news` (
   `project_id` int(11) DEFAULT NULL,
   `title` varchar(60) NOT NULL DEFAULT '',
   `summary` varchar(255) DEFAULT '',
-  `description` text,
-  `author_id` int(11) NOT NULL DEFAULT '0',
+  `description` text DEFAULT NULL,
+  `author_id` int(11) NOT NULL DEFAULT 0,
   `created_on` timestamp NULL DEFAULT NULL,
-  `comments_count` int(11) NOT NULL DEFAULT '0',
+  `comments_count` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `news_project_id` (`project_id`),
   KEY `index_news_on_author_id` (`author_id`),
   KEY `index_news_on_created_on` (`created_on`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -31,12 +31,12 @@ CREATE TABLE `news` (
 | 名前             | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント     |
 | -------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
 | id             | int(11)      |              | false    | auto_increment   |            |                         |          |
-| project_id     | int(11)      |              | true     |                  |            | [projects](projects.md) |          |
-| title          | varchar(60)  |              | false    |                  |            |                         |          |
-| summary        | varchar(255) |              | true     |                  |            |                         |          |
-| description    | text         |              | true     |                  |            |                         |          |
+| project_id     | int(11)      | NULL         | true     |                  |            | [projects](projects.md) |          |
+| title          | varchar(60)  | ''           | false    |                  |            |                         |          |
+| summary        | varchar(255) | ''           | true     |                  |            |                         |          |
+| description    | text         | NULL         | true     |                  |            |                         |          |
 | author_id      | int(11)      | 0            | false    |                  |            | [users](users.md)       |          |
-| created_on     | timestamp    |              | true     |                  |            |                         |          |
+| created_on     | timestamp    | NULL         | true     |                  |            |                         |          |
 | comments_count | int(11)      | 0            | false    |                  |            |                         |          |
 
 ## 制約一覧

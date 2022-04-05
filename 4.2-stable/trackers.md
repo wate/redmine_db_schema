@@ -12,13 +12,13 @@ CREATE TABLE `trackers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) NOT NULL DEFAULT '',
   `description` varchar(255) DEFAULT NULL,
-  `is_in_chlog` tinyint(1) NOT NULL DEFAULT '0',
+  `is_in_chlog` tinyint(1) NOT NULL DEFAULT 0,
   `position` int(11) DEFAULT NULL,
-  `is_in_roadmap` tinyint(1) NOT NULL DEFAULT '1',
-  `fields_bits` int(11) DEFAULT '0',
+  `is_in_roadmap` tinyint(1) NOT NULL DEFAULT 1,
+  `fields_bits` int(11) DEFAULT 0,
   `default_status_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -28,13 +28,13 @@ CREATE TABLE `trackers` (
 | 名前                | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                                                                                                                       | 親テーブル                               | コメント     |
 | ----------------- | ------------ | ------------ | -------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | -------- |
 | id                | int(11)      |              | false    | auto_increment   | [workflows](workflows.md) [custom_fields_trackers](custom_fields_trackers.md) [projects_trackers](projects_trackers.md) [issues](issues.md) |                                     |          |
-| name              | varchar(30)  |              | false    |                  |                                                                                                                                             |                                     |          |
-| description       | varchar(255) |              | true     |                  |                                                                                                                                             |                                     |          |
+| name              | varchar(30)  | ''           | false    |                  |                                                                                                                                             |                                     |          |
+| description       | varchar(255) | NULL         | true     |                  |                                                                                                                                             |                                     |          |
 | is_in_chlog       | tinyint(1)   | 0            | false    |                  |                                                                                                                                             |                                     |          |
-| position          | int(11)      |              | true     |                  |                                                                                                                                             |                                     |          |
+| position          | int(11)      | NULL         | true     |                  |                                                                                                                                             |                                     |          |
 | is_in_roadmap     | tinyint(1)   | 1            | false    |                  |                                                                                                                                             |                                     |          |
 | fields_bits       | int(11)      | 0            | true     |                  |                                                                                                                                             |                                     |          |
-| default_status_id | int(11)      |              | true     |                  |                                                                                                                                             | [issue_statuses](issue_statuses.md) |          |
+| default_status_id | int(11)      | NULL         | true     |                  |                                                                                                                                             | [issue_statuses](issue_statuses.md) |          |
 
 ## 制約一覧
 

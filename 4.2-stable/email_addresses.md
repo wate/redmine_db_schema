@@ -12,13 +12,13 @@ CREATE TABLE `email_addresses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `is_default` tinyint(1) NOT NULL DEFAULT '0',
-  `notify` tinyint(1) NOT NULL DEFAULT '1',
+  `is_default` tinyint(1) NOT NULL DEFAULT 0,
+  `notify` tinyint(1) NOT NULL DEFAULT 1,
   `created_on` datetime NOT NULL,
   `updated_on` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_email_addresses_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

@@ -14,14 +14,14 @@ CREATE TABLE `boards` (
   `name` varchar(255) NOT NULL DEFAULT '',
   `description` varchar(255) DEFAULT NULL,
   `position` int(11) DEFAULT NULL,
-  `topics_count` int(11) NOT NULL DEFAULT '0',
-  `messages_count` int(11) NOT NULL DEFAULT '0',
+  `topics_count` int(11) NOT NULL DEFAULT 0,
+  `messages_count` int(11) NOT NULL DEFAULT 0,
   `last_message_id` int(11) DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `boards_project_id` (`project_id`),
   KEY `index_boards_on_last_message_id` (`last_message_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -32,13 +32,13 @@ CREATE TABLE `boards` (
 | --------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
 | id              | int(11)      |              | false    | auto_increment   |            |                         |          |
 | project_id      | int(11)      |              | false    |                  |            | [projects](projects.md) |          |
-| name            | varchar(255) |              | false    |                  |            |                         |          |
-| description     | varchar(255) |              | true     |                  |            |                         |          |
-| position        | int(11)      |              | true     |                  |            |                         |          |
+| name            | varchar(255) | ''           | false    |                  |            |                         |          |
+| description     | varchar(255) | NULL         | true     |                  |            |                         |          |
+| position        | int(11)      | NULL         | true     |                  |            |                         |          |
 | topics_count    | int(11)      | 0            | false    |                  |            |                         |          |
 | messages_count  | int(11)      | 0            | false    |                  |            |                         |          |
-| last_message_id | int(11)      |              | true     |                  |            |                         |          |
-| parent_id       | int(11)      |              | true     |                  |            |                         |          |
+| last_message_id | int(11)      | NULL         | true     |                  |            |                         |          |
+| parent_id       | int(11)      | NULL         | true     |                  |            |                         |          |
 
 ## 制約一覧
 

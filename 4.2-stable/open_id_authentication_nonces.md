@@ -12,7 +12,7 @@ CREATE TABLE `open_id_authentication_nonces` (
   `server_url` varchar(255) DEFAULT NULL,
   `salt` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -23,7 +23,7 @@ CREATE TABLE `open_id_authentication_nonces` (
 | ---------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
 | id         | int(11)      |              | false    | auto_increment   |            |            |          |
 | timestamp  | int(11)      |              | false    |                  |            |            |          |
-| server_url | varchar(255) |              | true     |                  |            |            |          |
+| server_url | varchar(255) | NULL         | true     |                  |            |            |          |
 | salt       | varchar(255) |              | false    |                  |            |            |          |
 
 ## 制約一覧
