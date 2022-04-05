@@ -111,8 +111,6 @@ comments:
   - table: messages
   - table: news
     tableComment: ニュース
-  - table: open_id_authentication_associations
-  - table: open_id_authentication_nonces
   - table: projects
     tableComment: プロジェクト
   - table: projects_trackers
