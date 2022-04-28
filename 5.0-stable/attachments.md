@@ -25,7 +25,7 @@ CREATE TABLE `attachments` (
   KEY `index_attachments_on_created_on` (`created_on`),
   KEY `index_attachments_on_container_id_and_container_type` (`container_id`,`container_type`),
   KEY `index_attachments_on_disk_filename` (`disk_filename`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

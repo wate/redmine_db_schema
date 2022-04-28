@@ -296,6 +296,12 @@ relations:
     parentTable: users
     parentColumns:
       - id
+  - table: projects
+    columns:
+      - default_issue_query_id
+    parentTable: queries
+    parentColumns:
+      - id
   ## projects_trackers
   - table: projects_trackers
     <<: *relation_project_id

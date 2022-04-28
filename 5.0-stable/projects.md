@@ -28,7 +28,7 @@ CREATE TABLE `projects` (
   PRIMARY KEY (`id`),
   KEY `index_projects_on_lft` (`lft`),
   KEY `index_projects_on_rgt` (`rgt`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -52,7 +52,7 @@ CREATE TABLE `projects` (
 | inherit_members        | tinyint(1)   | 0            | false    |                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                         |          |
 | default_version_id     | int(11)      | NULL         | true     |                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [versions](versions.md) |          |
 | default_assigned_to_id | int(11)      | NULL         | true     |                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [users](users.md)       |          |
-| default_issue_query_id | int(11)      | NULL         | true     |                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                         |          |
+| default_issue_query_id | int(11)      | NULL         | true     |                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [queries](queries.md)   |          |
 
 ## 制約一覧
 

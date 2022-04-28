@@ -30,19 +30,19 @@ CREATE TABLE `queries` (
 
 ## カラム一覧
 
-| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                             | 親テーブル                   | コメント     |
-| ------------- | ------------ | ------------ | -------- | ---------------- | --------------------------------- | ----------------------- | -------- |
-| id            | int(11)      |              | false    | auto_increment   | [queries_roles](queries_roles.md) |                         |          |
-| project_id    | int(11)      | NULL         | true     |                  |                                   | [projects](projects.md) |          |
-| name          | varchar(255) | ''           | false    |                  |                                   |                         |          |
-| filters       | text         | NULL         | true     |                  |                                   |                         |          |
-| user_id       | int(11)      | 0            | false    |                  |                                   |                         |          |
-| column_names  | text         | NULL         | true     |                  |                                   |                         |          |
-| sort_criteria | text         | NULL         | true     |                  |                                   |                         |          |
-| group_by      | varchar(255) | NULL         | true     |                  |                                   |                         |          |
-| type          | varchar(255) | NULL         | true     |                  |                                   |                         |          |
-| visibility    | int(11)      | 0            | true     |                  |                                   |                         |          |
-| options       | text         | NULL         | true     |                  |                                   |                         |          |
+| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                                     | 親テーブル                   | コメント     |
+| ------------- | ------------ | ------------ | -------- | ---------------- | --------------------------------------------------------- | ----------------------- | -------- |
+| id            | int(11)      |              | false    | auto_increment   | [projects](projects.md) [queries_roles](queries_roles.md) |                         |          |
+| project_id    | int(11)      | NULL         | true     |                  |                                                           | [projects](projects.md) |          |
+| name          | varchar(255) | ''           | false    |                  |                                                           |                         |          |
+| filters       | text         | NULL         | true     |                  |                                                           |                         |          |
+| user_id       | int(11)      | 0            | false    |                  |                                                           |                         |          |
+| column_names  | text         | NULL         | true     |                  |                                                           |                         |          |
+| sort_criteria | text         | NULL         | true     |                  |                                                           |                         |          |
+| group_by      | varchar(255) | NULL         | true     |                  |                                                           |                         |          |
+| type          | varchar(255) | NULL         | true     |                  |                                                           |                         |          |
+| visibility    | int(11)      | 0            | true     |                  |                                                           |                         |          |
+| options       | text         | NULL         | true     |                  |                                                           |                         |          |
 
 ## 制約一覧
 
