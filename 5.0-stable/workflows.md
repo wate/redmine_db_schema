@@ -38,7 +38,7 @@ CREATE TABLE `workflows` (
 | tracker_id    | int(11)     | 0            | false    |                  |            | [trackers](trackers.md)             |          |
 | old_status_id | int(11)     | 0            | false    |                  |            | [issue_statuses](issue_statuses.md) |          |
 | new_status_id | int(11)     | 0            | false    |                  |            | [issue_statuses](issue_statuses.md) |          |
-| role_id       | int(11)     | 0            | false    |                  |            |                                     |          |
+| role_id       | int(11)     | 0            | false    |                  |            | [roles](roles.md)                   |          |
 | assignee      | tinyint(1)  | 0            | false    |                  |            |                                     |          |
 | author        | tinyint(1)  | 0            | false    |                  |            |                                     |          |
 | type          | varchar(30) | NULL         | true     |                  |            |                                     |          |

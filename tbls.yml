@@ -192,12 +192,6 @@ common_relations:
     parentTable: users
     parentColumns:
       - id
-  role: &relation_role_id
-    columns:
-      - role_id
-    parentTable: roles
-    parentColumns:
-      - id
   custom_field_id: &relation_custom_field_id
     columns:
       - custom_field_id
@@ -244,6 +238,8 @@ relations:
   ## workflows
   - table: workflows
     <<: *relation_tracker_id
+  - table: workflows
+    <<: *relation_role_id
   - table: workflows
     columns:
       - old_status_id
