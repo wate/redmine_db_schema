@@ -16,7 +16,7 @@ CREATE TABLE `tokens` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `tokens_value` (`value`),
   KEY `index_tokens_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
