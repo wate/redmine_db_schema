@@ -1,8 +1,9 @@
+---
 ## -------------
 ## tbls setting
 ## https://github.com/k1LoW/tbls
 ## -------------
-name: Redmine
+name: Redmine Database Schema
 er:
   format: svg
   comment: true
@@ -38,6 +39,9 @@ lint:
       - id
       - created_on
       - updated_on
+## ------------
+## コメント
+## ------------
 comments:
   - table: ar_internal_metadata
   - table: attachments
@@ -160,7 +164,7 @@ comments:
   - table: workflows
     tableComment: ワークフロー
 
-## 外部参照
+## 外部参照制約の共通定義
 common_relations:
   author_id: &relation_author_id
     columns:
@@ -211,7 +215,13 @@ common_relations:
     parentColumns:
       - id
 
-## 外部参照
+### Automatically detect relations
+detectVirtualRelations:
+  enabled: true
+  strategy: default
+## ------------
+## 外部参照制約
+## ------------
 relations:
   ## user_preferences
   - table: user_preferences
@@ -375,13 +385,13 @@ relations:
     <<: *relation_project_id
   ## wiki_pages
   - table: wiki_pages
-    columns :
+    columns:
       - wiki_id
     parentTable: wikis
     parentColumns:
       - id
   - table: wiki_pages
-    columns :
+    columns:
       - parent_id
     parentTable: wiki_pages
     parentColumns:
@@ -390,7 +400,7 @@ relations:
   - table: wiki_contents
     <<: *relation_author_id
   - table: wiki_contents
-    columns :
+    columns:
       - page_id
     parentTable: wiki_pages
     parentColumns:
