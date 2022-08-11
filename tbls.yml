@@ -1,8 +1,9 @@
+---
 ## -------------
 ## tbls setting
 ## https://github.com/k1LoW/tbls
 ## -------------
-name: Redmine
+name: Redmine Database Schema
 er:
   format: svg
   comment: true
@@ -212,6 +213,9 @@ common_relations:
       - id
 
 ## 外部参照
+detectVirtualRelations:
+  enabled: true
+  strategy: default
 relations:
   ## user_preferences
   - table: user_preferences
@@ -290,12 +294,6 @@ relations:
     columns:
       - default_assigned_to_id
     parentTable: users
-    parentColumns:
-      - id
-  - table: projects
-    columns:
-      - default_issue_query_id
-    parentTable: queries
     parentColumns:
       - id
   ## projects_trackers
