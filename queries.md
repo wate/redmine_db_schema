@@ -23,7 +23,7 @@ CREATE TABLE `queries` (
   PRIMARY KEY (`id`),
   KEY `index_queries_on_project_id` (`project_id`),
   KEY `index_queries_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
@@ -36,7 +36,7 @@ CREATE TABLE `queries` (
 | project_id    | int(11)      | NULL         | true     |                  |                                   | [projects](projects.md) |          |
 | name          | varchar(255) | ''           | false    |                  |                                   |                         |          |
 | filters       | text         | NULL         | true     |                  |                                   |                         |          |
-| user_id       | int(11)      | 0            | false    |                  |                                   |                         |          |
+| user_id       | int(11)      | 0            | false    |                  |                                   | [users](users.md)       |          |
 | column_names  | text         | NULL         | true     |                  |                                   |                         |          |
 | sort_criteria | text         | NULL         | true     |                  |                                   |                         |          |
 | group_by      | varchar(255) | NULL         | true     |                  |                                   |                         |          |

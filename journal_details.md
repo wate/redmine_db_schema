@@ -22,14 +22,14 @@ CREATE TABLE `journal_details` (
 
 ## カラム一覧
 
-| 名前         | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ---------- | ----------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id         | int(11)     |              | false    | auto_increment   |            |            |          |
-| journal_id | int(11)     | 0            | false    |                  |            |            |          |
-| property   | varchar(30) | ''           | false    |                  |            |            |          |
-| prop_key   | varchar(30) | ''           | false    |                  |            |            |          |
-| old_value  | longtext    | NULL         | true     |                  |            |            |          |
-| value      | longtext    | NULL         | true     |                  |            |            |          |
+| 名前         | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント     |
+| ---------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
+| id         | int(11)     |              | false    | auto_increment   |            |                         |          |
+| journal_id | int(11)     | 0            | false    |                  |            | [journals](journals.md) |          |
+| property   | varchar(30) | ''           | false    |                  |            |                         |          |
+| prop_key   | varchar(30) | ''           | false    |                  |            |                         |          |
+| old_value  | longtext    | NULL         | true     |                  |            |                         |          |
+| value      | longtext    | NULL         | true     |                  |            |                         |          |
 
 ## 制約一覧
 

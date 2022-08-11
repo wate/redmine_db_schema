@@ -33,25 +33,25 @@ CREATE TABLE `auth_sources` (
 
 ## カラム一覧
 
-| 名前                | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ----------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id                | int(11)      |              | false    | auto_increment   |            |            |          |
-| type              | varchar(30)  | ''           | false    |                  |            |            |          |
-| name              | varchar(60)  | ''           | false    |                  |            |            |          |
-| host              | varchar(60)  | NULL         | true     |                  |            |            |          |
-| port              | int(11)      | NULL         | true     |                  |            |            |          |
-| account           | varchar(255) | NULL         | true     |                  |            |            |          |
-| account_password  | varchar(255) | ''           | true     |                  |            |            |          |
-| base_dn           | varchar(255) | NULL         | true     |                  |            |            |          |
-| attr_login        | varchar(30)  | NULL         | true     |                  |            |            |          |
-| attr_firstname    | varchar(30)  | NULL         | true     |                  |            |            |          |
-| attr_lastname     | varchar(30)  | NULL         | true     |                  |            |            |          |
-| attr_mail         | varchar(30)  | NULL         | true     |                  |            |            |          |
-| onthefly_register | tinyint(1)   | 0            | false    |                  |            |            |          |
-| tls               | tinyint(1)   | 0            | false    |                  |            |            |          |
-| filter            | text         | NULL         | true     |                  |            |            |          |
-| timeout           | int(11)      | NULL         | true     |                  |            |            |          |
-| verify_peer       | tinyint(1)   | 1            | false    |                  |            |            |          |
+| 名前                | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル             | 親テーブル      | コメント     |
+| ----------------- | ------------ | ------------ | -------- | ---------------- | ----------------- | ---------- | -------- |
+| id                | int(11)      |              | false    | auto_increment   | [users](users.md) |            |          |
+| type              | varchar(30)  | ''           | false    |                  |                   |            |          |
+| name              | varchar(60)  | ''           | false    |                  |                   |            |          |
+| host              | varchar(60)  | NULL         | true     |                  |                   |            |          |
+| port              | int(11)      | NULL         | true     |                  |                   |            |          |
+| account           | varchar(255) | NULL         | true     |                  |                   |            |          |
+| account_password  | varchar(255) | ''           | true     |                  |                   |            |          |
+| base_dn           | varchar(255) | NULL         | true     |                  |                   |            |          |
+| attr_login        | varchar(30)  | NULL         | true     |                  |                   |            |          |
+| attr_firstname    | varchar(30)  | NULL         | true     |                  |                   |            |          |
+| attr_lastname     | varchar(30)  | NULL         | true     |                  |                   |            |          |
+| attr_mail         | varchar(30)  | NULL         | true     |                  |                   |            |          |
+| onthefly_register | tinyint(1)   | 0            | false    |                  |                   |            |          |
+| tls               | tinyint(1)   | 0            | false    |                  |                   |            |          |
+| filter            | text         | NULL         | true     |                  |                   |            |          |
+| timeout           | int(11)      | NULL         | true     |                  |                   |            |          |
+| verify_peer       | tinyint(1)   | 1            | false    |                  |                   |            |          |
 
 ## 制約一覧
 

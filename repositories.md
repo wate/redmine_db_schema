@@ -31,21 +31,21 @@ CREATE TABLE `repositories` (
 
 ## カラム一覧
 
-| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント     |
-| ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
-| id            | int(11)      |              | false    | auto_increment   |            |                         |          |
-| project_id    | int(11)      | 0            | false    |                  |            | [projects](projects.md) |          |
-| url           | varchar(255) | ''           | false    |                  |            |                         |          |
-| login         | varchar(60)  | ''           | true     |                  |            |                         |          |
-| password      | varchar(255) | ''           | true     |                  |            |                         |          |
-| root_url      | varchar(255) | ''           | true     |                  |            |                         |          |
-| type          | varchar(255) | NULL         | true     |                  |            |                         |          |
-| path_encoding | varchar(64)  | NULL         | true     |                  |            |                         |          |
-| log_encoding  | varchar(64)  | NULL         | true     |                  |            |                         |          |
-| extra_info    | longtext     | NULL         | true     |                  |            |                         |          |
-| identifier    | varchar(255) | NULL         | true     |                  |            |                         |          |
-| is_default    | tinyint(1)   | 0            | true     |                  |            |                         |          |
-| created_on    | timestamp    | NULL         | true     |                  |            |                         |          |
+| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                       | 親テーブル                   | コメント     |
+| ------------- | ------------ | ------------ | -------- | ---------------- | --------------------------- | ----------------------- | -------- |
+| id            | int(11)      |              | false    | auto_increment   | [changesets](changesets.md) |                         |          |
+| project_id    | int(11)      | 0            | false    |                  |                             | [projects](projects.md) |          |
+| url           | varchar(255) | ''           | false    |                  |                             |                         |          |
+| login         | varchar(60)  | ''           | true     |                  |                             |                         |          |
+| password      | varchar(255) | ''           | true     |                  |                             |                         |          |
+| root_url      | varchar(255) | ''           | true     |                  |                             |                         |          |
+| type          | varchar(255) | NULL         | true     |                  |                             |                         |          |
+| path_encoding | varchar(64)  | NULL         | true     |                  |                             |                         |          |
+| log_encoding  | varchar(64)  | NULL         | true     |                  |                             |                         |          |
+| extra_info    | longtext     | NULL         | true     |                  |                             |                         |          |
+| identifier    | varchar(255) | NULL         | true     |                  |                             |                         |          |
+| is_default    | tinyint(1)   | 0            | true     |                  |                             |                         |          |
+| created_on    | timestamp    | NULL         | true     |                  |                             |                         |          |
 
 ## 制約一覧
 

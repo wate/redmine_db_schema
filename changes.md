@@ -24,16 +24,16 @@ CREATE TABLE `changes` (
 
 ## カラム一覧
 
-| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id            | int(11)      |              | false    | auto_increment   |            |            |          |
-| changeset_id  | int(11)      |              | false    |                  |            |            |          |
-| action        | varchar(1)   | ''           | false    |                  |            |            |          |
-| path          | text         |              | false    |                  |            |            |          |
-| from_path     | text         | NULL         | true     |                  |            |            |          |
-| from_revision | varchar(255) | NULL         | true     |                  |            |            |          |
-| revision      | varchar(255) | NULL         | true     |                  |            |            |          |
-| branch        | varchar(255) | NULL         | true     |                  |            |            |          |
+| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                       | コメント     |
+| ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | --------------------------- | -------- |
+| id            | int(11)      |              | false    | auto_increment   |            |                             |          |
+| changeset_id  | int(11)      |              | false    |                  |            | [changesets](changesets.md) |          |
+| action        | varchar(1)   | ''           | false    |                  |            |                             |          |
+| path          | text         |              | false    |                  |            |                             |          |
+| from_path     | text         | NULL         | true     |                  |            |                             |          |
+| from_revision | varchar(255) | NULL         | true     |                  |            |                             |          |
+| revision      | varchar(255) | NULL         | true     |                  |            |                             |          |
+| branch        | varchar(255) | NULL         | true     |                  |            |                             |          |
 
 ## 制約一覧
 

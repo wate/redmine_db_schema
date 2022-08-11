@@ -26,15 +26,15 @@ CREATE TABLE `journals` (
 
 ## カラム一覧
 
-| 名前               | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル      | コメント     |
-| ---------------- | ----------- | ------------ | -------- | ---------------- | ---------- | ---------- | -------- |
-| id               | int(11)     |              | false    | auto_increment   |            |            |          |
-| journalized_id   | int(11)     | 0            | false    |                  |            |            |          |
-| journalized_type | varchar(30) | ''           | false    |                  |            |            |          |
-| user_id          | int(11)     | 0            | false    |                  |            |            |          |
-| notes            | longtext    | NULL         | true     |                  |            |            |          |
-| created_on       | datetime    |              | false    |                  |            |            |          |
-| private_notes    | tinyint(1)  | 0            | false    |                  |            |            |          |
+| 名前               | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                 | 親テーブル             | コメント     |
+| ---------------- | ----------- | ------------ | -------- | ---------------- | ------------------------------------- | ----------------- | -------- |
+| id               | int(11)     |              | false    | auto_increment   | [journal_details](journal_details.md) |                   |          |
+| journalized_id   | int(11)     | 0            | false    |                  |                                       |                   |          |
+| journalized_type | varchar(30) | ''           | false    |                  |                                       |                   |          |
+| user_id          | int(11)     | 0            | false    |                  |                                       | [users](users.md) |          |
+| notes            | longtext    | NULL         | true     |                  |                                       |                   |          |
+| created_on       | datetime    |              | false    |                  |                                       |                   |          |
+| private_notes    | tinyint(1)  | 0            | false    |                  |                                       |                   |          |
 
 ## 制約一覧
 

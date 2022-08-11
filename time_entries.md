@@ -41,8 +41,8 @@ CREATE TABLE `time_entries` (
 | id          | int(11)       |              | false    | auto_increment   |            |                         |          |
 | project_id  | int(11)       |              | false    |                  |            | [projects](projects.md) |          |
 | author_id   | int(11)       | NULL         | true     |                  |            | [users](users.md)       |          |
-| user_id     | int(11)       |              | false    |                  |            |                         |          |
-| issue_id    | int(11)       | NULL         | true     |                  |            |                         |          |
+| user_id     | int(11)       |              | false    |                  |            | [users](users.md)       |          |
+| issue_id    | int(11)       | NULL         | true     |                  |            | [issues](issues.md)     |          |
 | hours       | float         |              | false    |                  |            |                         |          |
 | comments    | varchar(1024) | NULL         | true     |                  |            |                         |          |
 | activity_id | int(11)       |              | false    |                  |            |                         |          |
