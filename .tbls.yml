@@ -7,6 +7,7 @@ name: Redmine Database Schema
 er:
   format: svg
   comment: true
+  # distance: 2
 format:
   adjust: true
 templates:
@@ -76,7 +77,10 @@ comments:
   - table: enumerations
     tableComment: 選択肢の値
     columnComments:
-      type: IssuePriority:チケットの優先度 / DocumentCategory:文書カテゴリ / TimeEntryActivity:作業分類 (時間管理)
+      type: |
+        IssuePriority:チケットの優先度
+        DocumentCategory:文書カテゴリ
+        TimeEntryActivity:作業分類 (時間管理)
   - table: groups_users
     tableComment: グループ⇔ユーザー
   - table: import_items
@@ -155,7 +159,9 @@ comments:
       mail_notification: メール通知
       hashed_password: パスワード(ハッシュ化済み)
       must_change_passwd: 次回ログイン時にパスワード変更を強制
-      type: User:ユーザー / Group:グループ
+      type: |
+        User:ユーザー
+        Group:グループ
   - table: versions
     tableComment: バージョン
   - table: watchers
@@ -168,6 +174,10 @@ comments:
   - table: wikis
   - table: workflows
     tableComment: ワークフロー
+    columnComments:
+      type: |
+        WorkflowTransition:ステータスの遷移
+        WorkflowPermission:フィールドに対する権限
 
 # ------------
 # 外部参照制約の共通定義部
