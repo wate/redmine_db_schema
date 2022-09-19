@@ -1,14 +1,18 @@
 ---
-## -------------
-## tbls setting
-## https://github.com/k1LoW/tbls
-## -------------
+# -------------
+# tbls setting
+# https://github.com/k1LoW/tbls
+# -------------
 name: Redmine Database Schema
 er:
   format: svg
   comment: true
 format:
   adjust: true
+templates:
+  md:
+    index: 'templates/index.md.tmpl'
+    table: 'templates/table.md.tmpl'
 dict:
   Tables: テーブル一覧
   Description: 概要
@@ -39,12 +43,13 @@ lint:
       - id
       - created_on
       - updated_on
-## ------------
-## コメント
-## ------------
+# ------------
+# コメント
+# ------------
 comments:
   - table: ar_internal_metadata
   - table: attachments
+    tableComment: 添付ファイル
   - table: auth_sources
   - table: boards
     tableComment: フォーラム
@@ -164,7 +169,9 @@ comments:
   - table: workflows
     tableComment: ワークフロー
 
-## 外部参照制約の共通定義
+# ------------
+# 外部参照制約の共通定義部
+# ------------
 common_relations:
   author_id: &relation_author_id
     columns:
@@ -208,28 +215,24 @@ common_relations:
     parentTable: users
     parentColumns:
       - id
-  page_id: &relation_page_id
-    columns:
-      - page_id
-    parentTable: wiki_pages
-    parentColumns:
-      - id
 
-### Automatically detect relations
+# ------------
+# Automatically detect relations
+# ------------
 detectVirtualRelations:
   enabled: true
   strategy: default
-## ------------
-## 外部参照制約
-## ------------
+# ------------
+# 外部参照制約
+# ------------
 relations:
-  ## user_preferences
+  # user_preferences
   - table: user_preferences
     <<: *relation_user_id
-  ## email_addresses
+  # email_addresses
   - table: email_addresses
     <<: *relation_user_id
-  ## groups_users
+  # groups_users
   - table: groups_users
     <<: *relation_user_id
   - table: groups_users
@@ -238,14 +241,14 @@ relations:
     parentTable: users
     parentColumns:
       - id
-  ## trackers
+  # trackers
   - table: trackers
     columns:
       - default_status_id
     parentTable: issue_statuses
     parentColumns:
       - id
-  ## workflows
+  # workflows
   - table: workflows
     <<: *relation_tracker_id
   - table: workflows
@@ -262,28 +265,28 @@ relations:
     parentTable: issue_statuses
     parentColumns:
       - id
-  ## custom_fields_roles
+  # custom_fields_roles
   - table: custom_fields_roles
     <<: *relation_custom_field_id
   - table: custom_fields_roles
     <<: *relation_role_id
-  ## custom_fields_projects
+  # custom_fields_projects
   - table: custom_fields_projects
     <<: *relation_custom_field_id
   - table: custom_fields_projects
     <<: *relation_project_id
-  ## custom_fields_trackers
+  # custom_fields_trackers
   - table: custom_fields_trackers
     <<: *relation_custom_field_id
   - table: custom_fields_trackers
     <<: *relation_tracker_id
-  ## custom_field_enumerations
+  # custom_field_enumerations
   - table: custom_field_enumerations
     <<: *relation_custom_field_id
-  ## custom_values
+  # custom_values
   - table: custom_values
     <<: *relation_custom_field_id
-  ## projects
+  # projects
   - table: projects
     columns:
       - parent_id
@@ -308,15 +311,15 @@ relations:
     parentTable: queries
     parentColumns:
       - id
-  ## projects_trackers
+  # projects_trackers
   - table: projects_trackers
     <<: *relation_project_id
   - table: projects_trackers
     <<: *relation_tracker_id
-  ## versions
+  # versions
   - table: versions
     <<: *relation_project_id
-  ## issues
+  # issues
   - table: issues
     <<: *relation_project_id
   - table: issues
@@ -355,7 +358,7 @@ relations:
     parentTable: issues
     parentColumns:
       - id
-  ## issue_relations
+  # issue_relations
   - table: issue_relations
     columns:
       - issue_from_id
@@ -368,22 +371,22 @@ relations:
     parentTable: issues
     parentColumns:
       - id
-  ## import_items
+  # import_items
   - table: import_items
     columns:
       - import_id
     parentTable: imports
     parentColumns:
       - id
-  ## issue_categories
+  # issue_categories
   - table: issue_categories
     <<: *relation_project_id
   - table: issue_categories
     <<: *relation_assigned_to_id
-  ## wikis
+  # wikis
   - table: wikis
     <<: *relation_project_id
-  ## wiki_pages
+  # wiki_pages
   - table: wiki_pages
     columns:
       - wiki_id
@@ -396,7 +399,7 @@ relations:
     parentTable: wiki_pages
     parentColumns:
       - id
-  ## wiki_contents
+  # wiki_contents
   - table: wiki_contents
     <<: *relation_author_id
   - table: wiki_contents
@@ -405,18 +408,22 @@ relations:
     parentTable: wiki_pages
     parentColumns:
       - id
-  ## wiki_content_versions
+  # wiki_content_versions
   - table: wiki_content_versions
     <<: *relation_author_id
   - table: wiki_content_versions
-    <<: *relation_page_id
+    columns:
+      - page_id
+    parentTable: wiki_pages
+    parentColumns:
+      - id
   - table: wiki_content_versions
     columns:
       - wiki_content_id
     parentTable: wiki_contents
     parentColumns:
       - id
-  ## wiki_redirects
+  # wiki_redirects
   - table: wiki_redirects
     columns:
       - wiki_id
@@ -429,40 +436,40 @@ relations:
     parentTable: wikis
     parentColumns:
       - id
-  ## news
+  # news
   - table: news
     <<: *relation_project_id
   - table: news
     <<: *relation_author_id
-  ## repositories
+  # repositories
   - table: repositories
     <<: *relation_project_id
-  ## queries
+  # queries
   - table: queries
     <<: *relation_project_id
-  ## boards
+  # boards
   - table: boards
     <<: *relation_project_id
-  ## projects_trackers
+  # projects_trackers
   - table: projects_trackers
     <<: *relation_project_id
-  ## members
+  # members
   - table: members
     <<: *relation_project_id
   - table: members
     <<: *relation_user_id
-  ## enabled_modules
+  # enabled_modules
   - table: enabled_modules
     <<: *relation_project_id
-  ## time_entries
+  # time_entries
   - table: time_entries
     <<: *relation_project_id
   - table: time_entries
     <<: *relation_author_id
-  ## enumerations
+  # enumerations
   - table: enumerations
     <<: *relation_project_id
-  ## documents
+  # documents
   - table: documents
     <<: *relation_project_id
   - table: documents
@@ -471,22 +478,22 @@ relations:
     parentTable: enumerations
     parentColumns:
       - id
-  ## attachments
+  # attachments
   - table: attachments
     <<: *relation_author_id
-  ## messages
+  # messages
   - table: messages
     <<: *relation_author_id
-  ## comments
+  # comments
   - table: comments
     <<: *relation_author_id
-  ## watchers
+  # watchers
   - table: watchers
     <<: *relation_user_id
-  ## tokens
+  # tokens
   - table: tokens
     <<: *relation_user_id
-  ## queries_roles
+  # queries_roles
   - table: queries_roles
     <<: *relation_role_id
   - table: queries_roles
@@ -495,7 +502,7 @@ relations:
     parentTable: queries
     parentColumns:
       - id
-  ## member_roles
+  # member_roles
   - table: member_roles
     <<: *relation_role_id
   - table: member_roles
@@ -504,6 +511,6 @@ relations:
     parentTable: members
     parentColumns:
       - id
-  ## roles_managed_roles
+  # roles_managed_roles
   - table: roles_managed_roles
     <<: *relation_role_id
