@@ -163,7 +163,7 @@
 <polygon fill="none" stroke="#000000" points="356.5,-283 356.5,-313 838.5,-313 838.5,-283 356.5,-283"/>
 <text text-anchor="start" x="363.5" y="-294.4" font-family="Arial" font-size="14.00" fill="#000000">type </text>
 <text text-anchor="start" x="393.8464" y="-294.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
-<text text-anchor="start" x="480.9656" y="-294.4" font-family="Arial" font-size="14.00" fill="#000000"> User:ユーザー / Group:グループ</text>
+<text text-anchor="start" x="480.9656" y="-294.4" font-family="Arial" font-size="14.00" fill="#000000"> User:ユーザー Group:グループ </text>
 <polygon fill="none" stroke="#000000" points="356.5,-253 356.5,-283 838.5,-283 838.5,-253 356.5,-253"/>
 <text text-anchor="start" x="363.5" y="-264.4" font-family="Arial" font-size="14.00" fill="#000000">mail_notification </text>
 <text text-anchor="start" x="467.7342" y="-264.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>

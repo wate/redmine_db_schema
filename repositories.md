@@ -1,3 +1,6 @@
+---
+title: リポジトリ
+---
 # repositories
 
 ## 概要

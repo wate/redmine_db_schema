@@ -1,3 +1,6 @@
+---
+title: ワークフロー
+---
 # workflows
 
 ## 概要
@@ -25,25 +28,25 @@ CREATE TABLE `workflows` (
   KEY `index_workflows_on_role_id` (`role_id`),
   KEY `index_workflows_on_new_status_id` (`new_status_id`),
   KEY `index_workflows_on_tracker_id` (`tracker_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
 
 ## カラム一覧
 
-| 名前            | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                               | コメント     |
-| ------------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------------------------- | -------- |
-| id            | int(11)     |              | false    | auto_increment   |            |                                     |          |
-| tracker_id    | int(11)     | 0            | false    |                  |            | [trackers](trackers.md)             |          |
-| old_status_id | int(11)     | 0            | false    |                  |            | [issue_statuses](issue_statuses.md) |          |
-| new_status_id | int(11)     | 0            | false    |                  |            | [issue_statuses](issue_statuses.md) |          |
-| role_id       | int(11)     | 0            | false    |                  |            | [roles](roles.md)                   |          |
-| assignee      | tinyint(1)  | 0            | false    |                  |            |                                     |          |
-| author        | tinyint(1)  | 0            | false    |                  |            |                                     |          |
-| type          | varchar(30) | NULL         | true     |                  |            |                                     |          |
-| field_name    | varchar(30) | NULL         | true     |                  |            |                                     |          |
-| rule          | varchar(30) | NULL         | true     |                  |            |                                     |          |
+| 名前            | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                               | コメント                                                                                     |
+| ------------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------------------------- | ---------------------------------------------------------------------------------------- |
+| id            | int(11)     |              | false    | auto_increment   |            |                                     |                                                                                          |
+| tracker_id    | int(11)     | 0            | false    |                  |            | [trackers](trackers.md)             |                                                                                          |
+| old_status_id | int(11)     | 0            | false    |                  |            | [issue_statuses](issue_statuses.md) |                                                                                          |
+| new_status_id | int(11)     | 0            | false    |                  |            | [issue_statuses](issue_statuses.md) |                                                                                          |
+| role_id       | int(11)     | 0            | false    |                  |            | [roles](roles.md)                   |                                                                                          |
+| assignee      | tinyint(1)  | 0            | false    |                  |            |                                     |                                                                                          |
+| author        | tinyint(1)  | 0            | false    |                  |            |                                     |                                                                                          |
+| type          | varchar(30) | NULL         | true     |                  |            |                                     | WorkflowTransition:ステータスの遷移<br>WorkflowPermission:フィールドに対する権限<br><br>                    |
+| field_name    | varchar(30) | NULL         | true     |                  |            |                                     |                                                                                          |
+| rule          | varchar(30) | NULL         | true     |                  |            |                                     |                                                                                          |
 
 ## 制約一覧
 

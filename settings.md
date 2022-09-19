@@ -1,3 +1,6 @@
+---
+title: 設定
+---
 # settings
 
 ## 概要

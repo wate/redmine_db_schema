@@ -1,3 +1,6 @@
+---
+title: メールアドレス
+---
 # email_addresses
 
 ## 概要

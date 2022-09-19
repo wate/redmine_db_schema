@@ -1,3 +1,6 @@
+---
+title: カテゴリー
+---
 # issue_categories
 
 ## 概要

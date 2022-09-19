@@ -1,3 +1,6 @@
+---
+title: Wikiページ
+---
 # wiki_pages
 
 ## 概要
