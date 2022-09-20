@@ -28,7 +28,7 @@ CREATE TABLE `workflows` (
   KEY `index_workflows_on_role_id` (`role_id`),
   KEY `index_workflows_on_new_status_id` (`new_status_id`),
   KEY `index_workflows_on_tracker_id` (`tracker_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

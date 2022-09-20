@@ -27,12 +27,12 @@ CREATE TABLE `watchers` (
 
 ## カラム一覧
 
-| 名前             | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
-| -------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
-| id             | int(11)      |              | false    | auto_increment   |            |                   |          |
-| watchable_type | varchar(255) | ''           | false    |                  |            |                   |          |
-| watchable_id   | int(11)      | 0            | false    |                  |            |                   |          |
-| user_id        | int(11)      | NULL         | true     |                  |            | [users](users.md) |          |
+| 名前             | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント                                                                                                                                                       |
+| -------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id             | int(11)      |              | false    | auto_increment   |            |                   |                                                                                                                                                            |
+| watchable_type | varchar(255) | ''           | false    |                  |            |                   | Issue: チケット<br>WikiPage: Wikiページ<br>EnabledModule: ニュース(全体)<br>News: ニュース(単一)<br>Board:フォーラム(全体)<br>Message:フォーラム(単一)<br>                                  |
+| watchable_id   | int(11)      | 0            | false    |                  |            |                   |                                                                                                                                                            |
+| user_id        | int(11)      | NULL         | true     |                  |            | [users](users.md) |                                                                                                                                                            |
 
 ## 制約一覧
 

@@ -1,6 +1,11 @@
+---
+title: モジュールの有効化
+---
 # enabled_modules
 
 ## 概要
+
+モジュールの有効化
 
 <details>
 <summary><strong>テーブル定義</strong></summary>

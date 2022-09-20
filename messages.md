@@ -1,6 +1,11 @@
+---
+title: フォーラムメッセージ
+---
 # messages
 
 ## 概要
+
+フォーラムメッセージ
 
 <details>
 <summary><strong>テーブル定義</strong></summary>

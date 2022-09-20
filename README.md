@@ -18,10 +18,10 @@
 | [custom_fields_roles](custom_fields_roles.md)             | 2          | カスタムフィールド⇔ロール                   | BASE TABLE |
 | [custom_fields_trackers](custom_fields_trackers.md)       | 2          | カスタムフィールド⇔トラッカー                 | BASE TABLE |
 | [custom_field_enumerations](custom_field_enumerations.md) | 5          |                                 | BASE TABLE |
-| [custom_values](custom_values.md)                         | 5          |                                 | BASE TABLE |
+| [custom_values](custom_values.md)                         | 5          | カスタムフィールドの値                     | BASE TABLE |
 | [documents](documents.md)                                 | 6          | 文書                              | BASE TABLE |
 | [email_addresses](email_addresses.md)                     | 7          | メールアドレス                         | BASE TABLE |
-| [enabled_modules](enabled_modules.md)                     | 3          |                                 | BASE TABLE |
+| [enabled_modules](enabled_modules.md)                     | 3          | モジュールの有効化                       | BASE TABLE |
 | [enumerations](enumerations.md)                           | 9          | 選択肢の値                           | BASE TABLE |
 | [groups_users](groups_users.md)                           | 2          | グループ⇔ユーザー                       | BASE TABLE |
 | [imports](imports.md)                                     | 9          | インポート                           | BASE TABLE |
@@ -34,18 +34,18 @@
 | [journal_details](journal_details.md)                     | 6          |                                 | BASE TABLE |
 | [members](members.md)                                     | 5          |                                 | BASE TABLE |
 | [member_roles](member_roles.md)                           | 4          |                                 | BASE TABLE |
-| [messages](messages.md)                                   | 12         |                                 | BASE TABLE |
+| [messages](messages.md)                                   | 12         | フォーラムメッセージ                      | BASE TABLE |
 | [news](news.md)                                           | 8          | ニュース                            | BASE TABLE |
 | [projects](projects.md)                                   | 16         | プロジェクト                          | BASE TABLE |
 | [projects_trackers](projects_trackers.md)                 | 2          | プロジェクト⇔トラッカー                    | BASE TABLE |
 | [queries](queries.md)                                     | 11         | カスタムクエリ                         | BASE TABLE |
-| [queries_roles](queries_roles.md)                         | 2          |                                 | BASE TABLE |
+| [queries_roles](queries_roles.md)                         | 2          | カスタムクエリ⇔ロール                     | BASE TABLE |
 | [repositories](repositories.md)                           | 13         | リポジトリ                           | BASE TABLE |
 | [roles](roles.md)                                         | 11         | ロール                             | BASE TABLE |
 | [roles_managed_roles](roles_managed_roles.md)             | 2          |                                 | BASE TABLE |
 | [settings](settings.md)                                   | 4          | 設定                              | BASE TABLE |
 | [time_entries](time_entries.md)                           | 14         | 時間管理                            | BASE TABLE |
-| [tokens](tokens.md)                                       | 6          |                                 | BASE TABLE |
+| [tokens](tokens.md)                                       | 6          | 各種トークン                          | BASE TABLE |
 | [trackers](trackers.md)                                   | 7          | トラッカー                           | BASE TABLE |
 | [users](users.md)                                         | 21         | ユーザー / グループ                     | BASE TABLE |
 | [user_preferences](user_preferences.md)                   | 5          | ユーザー設定                          | BASE TABLE |

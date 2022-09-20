@@ -670,27 +670,28 @@
 <!-- enabled_modules -->
 <g id="node13" class="node">
 <title>enabled_modules</title>
-<polygon fill="#efefef" stroke="transparent" points="2975,-1905 2975,-1940 3228,-1940 3228,-1905 2975,-1905"/>
-<polygon fill="none" stroke="#000000" points="2975,-1905 2975,-1940 3228,-1940 3228,-1905 2975,-1905"/>
-<text text-anchor="start" x="2981.8487" y="-1917.8" font-family="Arial Bold" font-size="18.00" fill="#000000">enabled_modules</text>
-<text text-anchor="start" x="3123.8975" y="-1917.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
-<text text-anchor="start" x="3127.7881" y="-1917.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="2975,-1875 2975,-1905 3228,-1905 3228,-1875 2975,-1875"/>
-<text text-anchor="start" x="2982" y="-1886.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
-<text text-anchor="start" x="2996.7798" y="-1886.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="2975,-1845 2975,-1875 3228,-1875 3228,-1845 2975,-1845"/>
-<text text-anchor="start" x="2982" y="-1856.4" font-family="Arial" font-size="14.00" fill="#000000">project_id </text>
-<text text-anchor="start" x="3046.568" y="-1856.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="2975,-1815 2975,-1845 3228,-1845 3228,-1815 2975,-1815"/>
-<text text-anchor="start" x="2982" y="-1826.4" font-family="Arial" font-size="14.00" fill="#000000">name </text>
-<text text-anchor="start" x="3020.899" y="-1826.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
+<polygon fill="#efefef" stroke="transparent" points="2975,-1900 2975,-1946 3228,-1946 3228,-1900 2975,-1900"/>
+<polygon fill="none" stroke="#000000" points="2975,-1900 2975,-1946 3228,-1946 3228,-1900 2975,-1900"/>
+<text text-anchor="start" x="2981.8487" y="-1923.8" font-family="Arial Bold" font-size="18.00" fill="#000000">enabled_modules</text>
+<text text-anchor="start" x="3123.8975" y="-1923.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
+<text text-anchor="start" x="3127.7881" y="-1923.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<text text-anchor="start" x="3032.6725" y="-1909.4" font-family="Arial" font-size="14.00" fill="#333333">モジュールの有効化</text>
+<polygon fill="none" stroke="#000000" points="2975,-1870 2975,-1900 3228,-1900 3228,-1870 2975,-1870"/>
+<text text-anchor="start" x="2982" y="-1881.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
+<text text-anchor="start" x="2996.7798" y="-1881.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="2975,-1840 2975,-1870 3228,-1870 3228,-1840 2975,-1840"/>
+<text text-anchor="start" x="2982" y="-1851.4" font-family="Arial" font-size="14.00" fill="#000000">project_id </text>
+<text text-anchor="start" x="3046.568" y="-1851.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="2975,-1810 2975,-1840 3228,-1840 3228,-1810 2975,-1810"/>
+<text text-anchor="start" x="2982" y="-1821.4" font-family="Arial" font-size="14.00" fill="#000000">name </text>
+<text text-anchor="start" x="3020.899" y="-1821.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
 </g>
 <!-- enabled_modules&#45;&gt;projects -->
 <g id="edge14" class="edge">
 <title>enabled_modules:project_id&#45;&gt;projects:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2964.6977,-1858.3188C2891.5998,-1832.4446 2982.2276,-1515.7193 2922,-1452 2803.652,-1326.7907 2332.2893,-1309 2160,-1309"/>
-<polygon fill="#000000" stroke="#000000" points="2965.1306,-1858.3893 2974.2752,-1864.4413 2970.0653,-1859.1947 2975,-1860 2975,-1860 2975,-1860 2970.0653,-1859.1947 2975.7248,-1855.5587 2965.1306,-1858.3893 2965.1306,-1858.3893"/>
-<text text-anchor="start" x="2885.3245" y="-1870" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2964.819,-1853.3392C2892.5576,-1827.7795 2981.5517,-1514.9043 2922,-1452 2803.5529,-1326.8845 2332.2893,-1309 2160,-1309"/>
+<polygon fill="#000000" stroke="#000000" points="2965.1305,-1853.3899 2974.2755,-1859.4413 2970.0652,-1854.195 2975,-1855 2975,-1855 2975,-1855 2970.0652,-1854.195 2975.7245,-1850.5587 2965.1305,-1853.3899 2965.1305,-1853.3899"/>
+<text text-anchor="start" x="2885.3245" y="-1865" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
 </g>
 <!-- time_entries -->
 <g id="node14" class="node">

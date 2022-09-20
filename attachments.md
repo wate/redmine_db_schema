@@ -37,21 +37,21 @@ CREATE TABLE `attachments` (
 
 ## カラム一覧
 
-| 名前             | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
-| -------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
-| id             | int(11)      |              | false    | auto_increment   |            |                   |          |
-| container_id   | int(11)      | NULL         | true     |                  |            |                   |          |
-| container_type | varchar(30)  | NULL         | true     |                  |            |                   |          |
-| filename       | varchar(255) | ''           | false    |                  |            |                   |          |
-| disk_filename  | varchar(255) | ''           | false    |                  |            |                   |          |
-| filesize       | bigint(20)   | 0            | false    |                  |            |                   |          |
-| content_type   | varchar(255) | ''           | true     |                  |            |                   |          |
-| digest         | varchar(64)  | ''           | false    |                  |            |                   |          |
-| downloads      | int(11)      | 0            | false    |                  |            |                   |          |
-| author_id      | int(11)      | 0            | false    |                  |            | [users](users.md) |          |
-| created_on     | timestamp    | NULL         | true     |                  |            |                   |          |
-| description    | varchar(255) | NULL         | true     |                  |            |                   |          |
-| disk_directory | varchar(255) | NULL         | true     |                  |            |                   |          |
+| 名前             | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント                                                                                                                                                                                     |
+| -------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id             | int(11)      |              | false    | auto_increment   |            |                   |                                                                                                                                                                                          |
+| container_id   | int(11)      | NULL         | true     |                  |            |                   |                                                                                                                                                                                          |
+| container_type | varchar(30)  | NULL         | true     |                  |            |                   |                                                                                                                                                                                          |
+| filename       | varchar(255) | ''           | false    |                  |            |                   |                                                                                                                                                                                          |
+| disk_filename  | varchar(255) | ''           | false    |                  |            |                   |                                                                                                                                                                                          |
+| filesize       | bigint(20)   | 0            | false    |                  |            |                   |                                                                                                                                                                                          |
+| content_type   | varchar(255) | ''           | true     |                  |            |                   | Project:プロジェクト<br>Issue:文書<br>WikiPage: Wikiページ<br>Version:バージョン<br>News:ニュース<br>Document:文書<br>Message:フォーラムメッセージ<br>CustomValue:カスタムフィールド<br>                                          |
+| digest         | varchar(64)  | ''           | false    |                  |            |                   |                                                                                                                                                                                          |
+| downloads      | int(11)      | 0            | false    |                  |            |                   |                                                                                                                                                                                          |
+| author_id      | int(11)      | 0            | false    |                  |            | [users](users.md) |                                                                                                                                                                                          |
+| created_on     | timestamp    | NULL         | true     |                  |            |                   |                                                                                                                                                                                          |
+| description    | varchar(255) | NULL         | true     |                  |            |                   |                                                                                                                                                                                          |
+| disk_directory | varchar(255) | NULL         | true     |                  |            |                   |                                                                                                                                                                                          |
 
 ## 制約一覧
 

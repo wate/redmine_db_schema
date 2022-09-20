@@ -1,6 +1,11 @@
+---
+title: 各種トークン
+---
 # tokens
 
 ## 概要
+
+各種トークン
 
 <details>
 <summary><strong>テーブル定義</strong></summary>
@@ -16,21 +21,21 @@ CREATE TABLE `tokens` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `tokens_value` (`value`),
   KEY `index_tokens_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
 
 ## カラム一覧
 
-| 名前         | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
-| ---------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
-| id         | int(11)     |              | false    | auto_increment   |            |                   |          |
-| user_id    | int(11)     | 0            | false    |                  |            | [users](users.md) |          |
-| action     | varchar(30) | ''           | false    |                  |            |                   |          |
-| value      | varchar(40) | ''           | false    |                  |            |                   |          |
-| created_on | datetime    |              | false    |                  |            |                   |          |
-| updated_on | timestamp   | NULL         | true     |                  |            |                   |          |
+| 名前         | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント                                                                    |
+| ---------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------- | ----------------------------------------------------------------------- |
+| id         | int(11)     |              | false    | auto_increment   |            |                   |                                                                         |
+| user_id    | int(11)     | 0            | false    |                  |            | [users](users.md) |                                                                         |
+| action     | varchar(30) | ''           | false    |                  |            |                   | session:セッション<br>api:APIアクセスキー<br>feeds:Atomアクセスキー<br>                  |
+| value      | varchar(40) | ''           | false    |                  |            |                   | トークン                                                                    |
+| created_on | datetime    |              | false    |                  |            |                   |                                                                         |
+| updated_on | timestamp   | NULL         | true     |                  |            |                   |                                                                         |
 
 ## 制約一覧
 

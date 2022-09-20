@@ -127,24 +127,25 @@
 <!-- queries_roles -->
 <g id="node4" class="node">
 <title>queries_roles</title>
-<polygon fill="#efefef" stroke="transparent" points="1224,-732 1224,-767 1443,-767 1443,-732 1224,-732"/>
-<polygon fill="none" stroke="#000000" points="1224,-732 1224,-767 1443,-767 1443,-732 1224,-732"/>
-<text text-anchor="start" x="1230.865" y="-744.8" font-family="Arial Bold" font-size="18.00" fill="#000000">queries_roles</text>
-<text text-anchor="start" x="1338.8812" y="-744.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
-<text text-anchor="start" x="1342.7718" y="-744.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="1224,-702 1224,-732 1443,-732 1443,-702 1224,-702"/>
-<text text-anchor="start" x="1231" y="-713.4" font-family="Arial" font-size="14.00" fill="#000000">query_id </text>
-<text text-anchor="start" x="1288.5708" y="-713.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="1224,-672 1224,-702 1443,-702 1443,-672 1224,-672"/>
-<text text-anchor="start" x="1231" y="-683.4" font-family="Arial" font-size="14.00" fill="#000000">role_id </text>
-<text text-anchor="start" x="1276.8948" y="-683.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="#efefef" stroke="transparent" points="1224,-727 1224,-773 1443,-773 1443,-727 1224,-727"/>
+<polygon fill="none" stroke="#000000" points="1224,-727 1224,-773 1443,-773 1443,-727 1224,-727"/>
+<text text-anchor="start" x="1230.865" y="-750.8" font-family="Arial Bold" font-size="18.00" fill="#000000">queries_roles</text>
+<text text-anchor="start" x="1338.8812" y="-750.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
+<text text-anchor="start" x="1342.7718" y="-750.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<text text-anchor="start" x="1246.9317" y="-736.4" font-family="Arial" font-size="14.00" fill="#333333">カスタムクエリ⇔ロール</text>
+<polygon fill="none" stroke="#000000" points="1224,-697 1224,-727 1443,-727 1443,-697 1224,-697"/>
+<text text-anchor="start" x="1231" y="-708.4" font-family="Arial" font-size="14.00" fill="#000000">query_id </text>
+<text text-anchor="start" x="1288.5708" y="-708.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="1224,-667 1224,-697 1443,-697 1443,-667 1224,-667"/>
+<text text-anchor="start" x="1231" y="-678.4" font-family="Arial" font-size="14.00" fill="#000000">role_id </text>
+<text text-anchor="start" x="1276.8948" y="-678.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
 </g>
 <!-- queries_roles&#45;&gt;roles -->
 <g id="edge3" class="edge">
 <title>queries_roles:role_id&#45;&gt;roles:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1333.7126,-661.9718C1328.1863,-567.8574 1244.5438,-565.3287 1219,-468 1206.928,-422.0022 1171.4444,-361 1219,-361"/>
-<polygon fill="#000000" stroke="#000000" points="1333.7134,-662.0041 1329.5018,-672.129 1333.8567,-667.0021 1334,-672 1334,-672 1334,-672 1333.8567,-667.0021 1338.4982,-671.871 1333.7134,-662.0041 1333.7134,-662.0041"/>
-<text text-anchor="start" x="1317.0745" y="-656" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1333.6957,-656.8818C1328.0199,-564.856 1244.5541,-563.2923 1219,-468 1206.6824,-422.0673 1171.4444,-361 1219,-361"/>
+<polygon fill="#000000" stroke="#000000" points="1333.6993,-657.0045 1329.502,-667.1353 1333.8496,-662.0023 1334,-667 1334,-667 1334,-667 1333.8496,-662.0023 1338.498,-666.8647 1333.6993,-657.0045 1333.6993,-657.0045"/>
+<text text-anchor="start" x="1317.0745" y="-651" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
 </g>
 <!-- member_roles -->
 <g id="node5" class="node">

@@ -18,7 +18,7 @@ CREATE TABLE `settings` (
   `updated_on` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_settings_on_name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

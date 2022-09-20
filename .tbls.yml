@@ -51,6 +51,16 @@ comments:
   - table: ar_internal_metadata
   - table: attachments
     tableComment: 添付ファイル
+    columnComments:
+      content_type: |
+        Project:プロジェクト
+        Issue:文書
+        WikiPage: Wikiページ
+        Version:バージョン
+        News:ニュース
+        Document:文書
+        Message:フォーラムメッセージ
+        CustomValue:カスタムフィールド
   - table: auth_sources
   - table: boards
     tableComment: フォーラム
@@ -69,11 +79,13 @@ comments:
   - table: custom_fields_trackers
     tableComment: カスタムフィールド⇔トラッカー
   - table: custom_values
+    tableComment: カスタムフィールドの値
   - table: documents
     tableComment: 文書
   - table: email_addresses
     tableComment: メールアドレス
   - table: enabled_modules
+    tableComment: モジュールの有効化
   - table: enumerations
     tableComment: 選択肢の値
     columnComments:
@@ -117,11 +129,16 @@ comments:
       rgt: 右ノードポインタ
       is_private: プライベート
       closed_on: 完了日時
-  - table: journal_details
   - table: journals
+    columnComments:
+      journalized_type: |
+        Issue:チケット
+        Changeset:チェンジセット
+  - table: journal_details
   - table: member_roles
   - table: members
   - table: messages
+    tableComment: フォーラムメッセージ
   - table: news
     tableComment: ニュース
   - table: projects
@@ -131,6 +148,7 @@ comments:
   - table: queries
     tableComment: カスタムクエリ
   - table: queries_roles
+    tableComment: カスタムクエリ⇔ロール
   - table: repositories
     tableComment: リポジトリ
   - table: roles
@@ -141,6 +159,13 @@ comments:
   - table: time_entries
     tableComment: 時間管理
   - table: tokens
+    tableComment: 各種トークン
+    columnComments:
+      action: |
+        session:セッション
+        api:APIアクセスキー
+        feeds:Atomアクセスキー
+      value: トークン
   - table: trackers
     tableComment: トラッカー
   - table: user_preferences
@@ -166,6 +191,14 @@ comments:
     tableComment: バージョン
   - table: watchers
     tableComment: ウォッチャー
+    columnComments:
+      watchable_type: |
+        Issue: チケット
+        WikiPage: Wikiページ
+        EnabledModule: ニュース(全体)
+        News: ニュース(単一)
+        Board:フォーラム(全体)
+        Message:フォーラム(単一)
   - table: wiki_content_versions
   - table: wiki_contents
   - table: wiki_pages
