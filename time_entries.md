@@ -1,6 +1,3 @@
----
-title: 時間管理
----
 # time_entries
 
 ## 概要

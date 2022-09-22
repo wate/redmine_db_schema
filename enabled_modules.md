@@ -1,6 +1,3 @@
----
-title: モジュールの有効化
----
 # enabled_modules
 
 ## 概要

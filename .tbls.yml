@@ -10,10 +10,6 @@ er:
   # distance: 2
 format:
   adjust: true
-templates:
-  md:
-    index: 'templates/index.md.tmpl'
-    table: 'templates/table.md.tmpl'
 dict:
   Tables: テーブル一覧
   Description: 概要

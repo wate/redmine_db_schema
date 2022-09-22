@@ -1,6 +1,3 @@
----
-title: 選択肢の値
----
 # enumerations
 
 ## 概要
@@ -24,7 +21,7 @@ CREATE TABLE `enumerations` (
   PRIMARY KEY (`id`),
   KEY `index_enumerations_on_project_id` (`project_id`),
   KEY `index_enumerations_on_id_and_type` (`id`,`type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

@@ -1,6 +1,3 @@
----
-title: インポート項目
----
 # import_items
 
 ## 概要

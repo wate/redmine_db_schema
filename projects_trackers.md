@@ -1,6 +1,3 @@
----
-title: プロジェクト⇔トラッカー
----
 # projects_trackers
 
 ## 概要

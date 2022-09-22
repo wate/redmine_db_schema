@@ -1,6 +1,3 @@
----
-title: ユーザー設定
----
 # user_preferences
 
 ## 概要

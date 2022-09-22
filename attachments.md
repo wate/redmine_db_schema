@@ -1,6 +1,3 @@
----
-title: 添付ファイル
----
 # attachments
 
 ## 概要

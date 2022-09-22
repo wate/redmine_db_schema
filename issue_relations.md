@@ -1,6 +1,3 @@
----
-title: 関連チケット
----
 # issue_relations
 
 ## 概要
