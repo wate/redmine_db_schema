@@ -30,7 +30,7 @@
 | [issue_categories](issue_categories.md)                   | 4          | カテゴリー                           | BASE TABLE |                        |
 | [issue_relations](issue_relations.md)                     | 5          | 関連チケット                          | BASE TABLE |                        |
 | [issue_statuses](issue_statuses.md)                       | 5          | ステータス                           | BASE TABLE |                        |
-| [journals](journals.md)                                   | 7          |                                 | BASE TABLE |                        |
+| [journals](journals.md)                                   | 7          | ジャーナル                           | BASE TABLE | `ポリモーフィック関連`           |
 | [journal_details](journal_details.md)                     | 6          |                                 | BASE TABLE |                        |
 | [members](members.md)                                     | 5          |                                 | BASE TABLE |                        |
 | [member_roles](member_roles.md)                           | 4          |                                 | BASE TABLE |                        |
@@ -55,8 +55,8 @@
 | [wiki_contents](wiki_contents.md)                         | 7          | Wikiコンテンツ                       | BASE TABLE |                        |
 | [wiki_content_versions](wiki_content_versions.md)         | 9          | Wikiコンテンツバージョン                  | BASE TABLE |                        |
 | [wiki_pages](wiki_pages.md)                               | 6          | Wikiページ                         | BASE TABLE |                        |
-| [wiki_redirects](wiki_redirects.md)                       | 6          |                                 | BASE TABLE |                        |
-| [workflows](workflows.md)                                 | 10         | ワークフロー                          | BASE TABLE |                        |
+| [wiki_redirects](wiki_redirects.md)                       | 6          | Wikiリダイレクト                      | BASE TABLE |                        |
+| [workflows](workflows.md)                                 | 10         | ワークフロー                          | BASE TABLE | `単一テーブル継承`             |
 
 ## ER図
 

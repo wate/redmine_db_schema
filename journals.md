@@ -2,6 +2,8 @@
 
 ## 概要
 
+ジャーナル
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -23,6 +25,10 @@ CREATE TABLE `journals` (
 ```
 
 </details>
+
+## ラベル
+
+`ポリモーフィック関連`
 
 ## カラム一覧
 

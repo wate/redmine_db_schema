@@ -56,7 +56,7 @@
 <polygon fill="none" stroke="#000000" points="43.5,-493 43.5,-523 2446.5,-523 2446.5,-493 43.5,-493"/>
 <text text-anchor="start" x="50.5" y="-504.4" font-family="Arial" font-size="14.00" fill="#000000">field_format </text>
 <text text-anchor="start" x="127.5098" y="-504.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(30)]</text>
-<text text-anchor="start" x="206.8464" y="-504.4" font-family="Arial" font-size="14.00" fill="#000000"> string:テキスト version:バージョン attachment:ファイル user:ユーザー list:リスト link:リンク float 小数 int:整数 整数:日付 bool:真偽値 text:長いテキスト </text>
+<text text-anchor="start" x="206.8464" y="-504.4" font-family="Arial" font-size="14.00" fill="#000000"> string:テキスト version:バージョン attachment:ファイル user:ユーザー list:リスト link:リンク float:小数 int:整数 整数:日付 bool:真偽値 text:長いテキスト </text>
 <polygon fill="none" stroke="#000000" points="43.5,-463 43.5,-493 2446.5,-493 2446.5,-463 43.5,-463"/>
 <text text-anchor="start" x="50.5" y="-474.4" font-family="Arial" font-size="14.00" fill="#000000">possible_values </text>
 <text text-anchor="start" x="153.9712" y="-474.4" font-family="Arial" font-size="14.00" fill="#666666">[text]</text>

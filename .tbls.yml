@@ -96,7 +96,7 @@ comments:
         user:ユーザー
         list:リスト
         link:リンク
-        float 小数
+        float:小数
         int:整数
         整数:日付
         bool:真偽値
@@ -165,6 +165,9 @@ comments:
       is_private: プライベート
       closed_on: 完了日時
   - table: journals
+    tableComment: ジャーナル
+    labels:
+      - ポリモーフィック関連
     columnComments:
       journalized_type: |
         Issue:チケット
@@ -254,10 +257,13 @@ comments:
   - table: wiki_pages
     tableComment: Wikiページ
   - table: wiki_redirects
+    tableComment: Wikiリダイレクト
   - table: wikis
     tableComment: Wiki
   - table: workflows
     tableComment: ワークフロー
+    labels:
+      - 単一テーブル継承
     columnComments:
       type: |
         WorkflowTransition:ステータスの遷移

@@ -685,7 +685,7 @@
 <polygon fill="none" stroke="#000000" points="4496.2653,-2527 4496.2653,-2557 6899.2653,-2557 6899.2653,-2527 4496.2653,-2527"/>
 <text text-anchor="start" x="4503.2653" y="-2538.4" font-family="Arial" font-size="14.00" fill="#000000">field_format </text>
 <text text-anchor="start" x="4580.2751" y="-2538.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(30)]</text>
-<text text-anchor="start" x="4659.6117" y="-2538.4" font-family="Arial" font-size="14.00" fill="#000000"> string:テキスト version:バージョン attachment:ファイル user:ユーザー list:リスト link:リンク float 小数 int:整数 整数:日付 bool:真偽値 text:長いテキスト </text>
+<text text-anchor="start" x="4659.6117" y="-2538.4" font-family="Arial" font-size="14.00" fill="#000000"> string:テキスト version:バージョン attachment:ファイル user:ユーザー list:リスト link:リンク float:小数 int:整数 整数:日付 bool:真偽値 text:長いテキスト </text>
 <polygon fill="none" stroke="#000000" points="4496.2653,-2497 4496.2653,-2527 6899.2653,-2527 6899.2653,-2497 4496.2653,-2497"/>
 <text text-anchor="start" x="4503.2653" y="-2508.4" font-family="Arial" font-size="14.00" fill="#000000">possible_values </text>
 <text text-anchor="start" x="4606.7365" y="-2508.4" font-family="Arial" font-size="14.00" fill="#666666">[text]</text>
@@ -1386,40 +1386,41 @@
 <!-- journals -->
 <g id="node27" class="node">
 <title>journals</title>
-<polygon fill="#efefef" stroke="transparent" points="184.2653,-1824 184.2653,-1859 661.2653,-1859 661.2653,-1824 184.2653,-1824"/>
-<polygon fill="none" stroke="#000000" points="184.2653,-1824 184.2653,-1859 661.2653,-1859 661.2653,-1824 184.2653,-1824"/>
-<text text-anchor="start" x="342.6357" y="-1836.8" font-family="Arial Bold" font-size="18.00" fill="#000000">journals</text>
-<text text-anchor="start" x="405.6411" y="-1836.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
-<text text-anchor="start" x="409.5317" y="-1836.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="184.2653,-1794 184.2653,-1824 661.2653,-1824 661.2653,-1794 184.2653,-1794"/>
-<text text-anchor="start" x="191.2653" y="-1805.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
-<text text-anchor="start" x="206.0451" y="-1805.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="184.2653,-1764 184.2653,-1794 661.2653,-1794 661.2653,-1764 184.2653,-1764"/>
-<text text-anchor="start" x="191.2653" y="-1775.4" font-family="Arial" font-size="14.00" fill="#000000">journalized_id </text>
-<text text-anchor="start" x="281.5037" y="-1775.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="184.2653,-1734 184.2653,-1764 661.2653,-1764 661.2653,-1734 184.2653,-1734"/>
-<text text-anchor="start" x="191.2228" y="-1745.4" font-family="Arial" font-size="14.00" fill="#000000">journalized_type </text>
-<text text-anchor="start" x="297.0278" y="-1745.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(30)]</text>
-<text text-anchor="start" x="376.3644" y="-1745.4" font-family="Arial" font-size="14.00" fill="#000000"> Issue:チケット Changeset:チェンジセット </text>
-<polygon fill="none" stroke="#000000" points="184.2653,-1704 184.2653,-1734 661.2653,-1734 661.2653,-1704 184.2653,-1704"/>
-<text text-anchor="start" x="191.2653" y="-1715.4" font-family="Arial" font-size="14.00" fill="#000000">user_id </text>
-<text text-anchor="start" x="241.0535" y="-1715.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="184.2653,-1674 184.2653,-1704 661.2653,-1704 661.2653,-1674 184.2653,-1674"/>
-<text text-anchor="start" x="191.2653" y="-1685.4" font-family="Arial" font-size="14.00" fill="#000000">notes </text>
-<text text-anchor="start" x="229.3943" y="-1685.4" font-family="Arial" font-size="14.00" fill="#666666">[longtext]</text>
-<polygon fill="none" stroke="#000000" points="184.2653,-1644 184.2653,-1674 661.2653,-1674 661.2653,-1644 184.2653,-1644"/>
-<text text-anchor="start" x="191.2653" y="-1655.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
-<text text-anchor="start" x="265.1853" y="-1655.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
-<polygon fill="none" stroke="#000000" points="184.2653,-1614 184.2653,-1644 661.2653,-1644 661.2653,-1614 184.2653,-1614"/>
-<text text-anchor="start" x="191.2653" y="-1625.4" font-family="Arial" font-size="14.00" fill="#000000">private_notes </text>
-<text text-anchor="start" x="279.1825" y="-1625.4" font-family="Arial" font-size="14.00" fill="#666666">[tinyint(1)]</text>
+<polygon fill="#efefef" stroke="transparent" points="184.2653,-1819 184.2653,-1865 661.2653,-1865 661.2653,-1819 184.2653,-1819"/>
+<polygon fill="none" stroke="#000000" points="184.2653,-1819 184.2653,-1865 661.2653,-1865 661.2653,-1819 184.2653,-1819"/>
+<text text-anchor="start" x="342.6357" y="-1842.8" font-family="Arial Bold" font-size="18.00" fill="#000000">journals</text>
+<text text-anchor="start" x="405.6411" y="-1842.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
+<text text-anchor="start" x="409.5317" y="-1842.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<text text-anchor="start" x="381.8111" y="-1828.4" font-family="Arial" font-size="14.00" fill="#333333">ジャーナル</text>
+<polygon fill="none" stroke="#000000" points="184.2653,-1789 184.2653,-1819 661.2653,-1819 661.2653,-1789 184.2653,-1789"/>
+<text text-anchor="start" x="191.2653" y="-1800.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
+<text text-anchor="start" x="206.0451" y="-1800.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="184.2653,-1759 184.2653,-1789 661.2653,-1789 661.2653,-1759 184.2653,-1759"/>
+<text text-anchor="start" x="191.2653" y="-1770.4" font-family="Arial" font-size="14.00" fill="#000000">journalized_id </text>
+<text text-anchor="start" x="281.5037" y="-1770.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="184.2653,-1729 184.2653,-1759 661.2653,-1759 661.2653,-1729 184.2653,-1729"/>
+<text text-anchor="start" x="191.2228" y="-1740.4" font-family="Arial" font-size="14.00" fill="#000000">journalized_type </text>
+<text text-anchor="start" x="297.0278" y="-1740.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(30)]</text>
+<text text-anchor="start" x="376.3644" y="-1740.4" font-family="Arial" font-size="14.00" fill="#000000"> Issue:チケット Changeset:チェンジセット </text>
+<polygon fill="none" stroke="#000000" points="184.2653,-1699 184.2653,-1729 661.2653,-1729 661.2653,-1699 184.2653,-1699"/>
+<text text-anchor="start" x="191.2653" y="-1710.4" font-family="Arial" font-size="14.00" fill="#000000">user_id </text>
+<text text-anchor="start" x="241.0535" y="-1710.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="184.2653,-1669 184.2653,-1699 661.2653,-1699 661.2653,-1669 184.2653,-1669"/>
+<text text-anchor="start" x="191.2653" y="-1680.4" font-family="Arial" font-size="14.00" fill="#000000">notes </text>
+<text text-anchor="start" x="229.3943" y="-1680.4" font-family="Arial" font-size="14.00" fill="#666666">[longtext]</text>
+<polygon fill="none" stroke="#000000" points="184.2653,-1639 184.2653,-1669 661.2653,-1669 661.2653,-1639 184.2653,-1639"/>
+<text text-anchor="start" x="191.2653" y="-1650.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
+<text text-anchor="start" x="265.1853" y="-1650.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<polygon fill="none" stroke="#000000" points="184.2653,-1609 184.2653,-1639 661.2653,-1639 661.2653,-1609 184.2653,-1609"/>
+<text text-anchor="start" x="191.2653" y="-1620.4" font-family="Arial" font-size="14.00" fill="#000000">private_notes </text>
+<text text-anchor="start" x="279.1825" y="-1620.4" font-family="Arial" font-size="14.00" fill="#666666">[tinyint(1)]</text>
 </g>
 <!-- journals&#45;&gt;users -->
 <g id="edge80" class="edge">
 <title>journals:user_id&#45;&gt;users:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M671.5051,-1718.4408C763.1978,-1707.6836 635.7883,-1544.5544 718.2653,-1476 846.7898,-1369.1712 3556.1398,-1336 3723.2653,-1336"/>
-<polygon fill="#000000" stroke="#000000" points="671.2505,-1718.4547 661.0199,-1714.5067 666.2579,-1718.7273 661.2653,-1719 661.2653,-1719 661.2653,-1719 666.2579,-1718.7273 661.5107,-1723.4933 671.2505,-1718.4547 671.2505,-1718.4547"/>
-<text text-anchor="start" x="668.5333" y="-1729" font-family="Arial" font-size="10.00" fill="#000000">Detected Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M671.3086,-1713.452C761.2731,-1702.9089 637.2394,-1543.0293 718.2653,-1476 847.0387,-1369.4713 3556.1398,-1336 3723.2653,-1336"/>
+<polygon fill="#000000" stroke="#000000" points="671.2505,-1713.455 661.0201,-1709.5067 666.2579,-1713.7275 661.2653,-1714 661.2653,-1714 661.2653,-1714 666.2579,-1713.7275 661.5106,-1718.4933 671.2505,-1713.455 671.2505,-1713.455"/>
+<text text-anchor="start" x="668.5333" y="-1724" font-family="Arial" font-size="10.00" fill="#000000">Detected Relation</text>
 </g>
 <!-- journal_details -->
 <g id="node28" class="node">
@@ -1451,8 +1452,8 @@
 <!-- journal_details&#45;&gt;journals -->
 <g id="edge81" class="edge">
 <title>journal_details:journal_id&#45;&gt;journals:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M299.7242,-2408.4588C230.0008,-2359.0411 118.9147,-1809 184.2653,-1809"/>
-<polygon fill="#000000" stroke="#000000" points="299.8902,-2408.5204 307.6995,-2416.2188 304.5778,-2410.2602 309.2653,-2412 309.2653,-2412 309.2653,-2412 304.5778,-2410.2602 310.8312,-2407.7812 299.8902,-2408.5204 299.8902,-2408.5204"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M299.6542,-2408.4294C229.4578,-2358.6019 118.395,-1804 184.2653,-1804"/>
+<polygon fill="#000000" stroke="#000000" points="299.8913,-2408.5175 307.6982,-2416.2183 304.5783,-2410.2587 309.2653,-2412 309.2653,-2412 309.2653,-2412 304.5783,-2410.2587 310.8325,-2407.7817 299.8913,-2408.5175 299.8913,-2408.5175"/>
 <text text-anchor="start" x="223.5333" y="-2422" font-family="Arial" font-size="10.00" fill="#000000">Detected Relation</text>
 </g>
 <!-- members -->
@@ -2259,43 +2260,44 @@
 <!-- wiki_redirects -->
 <g id="node52" class="node">
 <title>wiki_redirects</title>
-<polygon fill="#efefef" stroke="transparent" points="1177.2653,-3828 1177.2653,-3863 1397.2653,-3863 1397.2653,-3828 1177.2653,-3828"/>
-<polygon fill="none" stroke="#000000" points="1177.2653,-3828 1177.2653,-3863 1397.2653,-3863 1397.2653,-3828 1177.2653,-3828"/>
-<text text-anchor="start" x="1184.1443" y="-3840.8" font-family="Arial Bold" font-size="18.00" fill="#000000">wiki_redirects</text>
-<text text-anchor="start" x="1293.1325" y="-3840.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
-<text text-anchor="start" x="1297.0231" y="-3840.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="1177.2653,-3798 1177.2653,-3828 1397.2653,-3828 1397.2653,-3798 1177.2653,-3798"/>
-<text text-anchor="start" x="1184.2653" y="-3809.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
-<text text-anchor="start" x="1199.0451" y="-3809.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="1177.2653,-3768 1177.2653,-3798 1397.2653,-3798 1397.2653,-3768 1177.2653,-3768"/>
-<text text-anchor="start" x="1184.2653" y="-3779.4" font-family="Arial" font-size="14.00" fill="#000000">wiki_id </text>
-<text text-anchor="start" x="1230.1475" y="-3779.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="1177.2653,-3738 1177.2653,-3768 1397.2653,-3768 1397.2653,-3738 1177.2653,-3738"/>
-<text text-anchor="start" x="1184.2653" y="-3749.4" font-family="Arial" font-size="14.00" fill="#000000">title </text>
-<text text-anchor="start" x="1209.9329" y="-3749.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
-<polygon fill="none" stroke="#000000" points="1177.2653,-3708 1177.2653,-3738 1397.2653,-3738 1397.2653,-3708 1177.2653,-3708"/>
-<text text-anchor="start" x="1184.2653" y="-3719.4" font-family="Arial" font-size="14.00" fill="#000000">redirects_to </text>
-<text text-anchor="start" x="1261.2779" y="-3719.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
-<polygon fill="none" stroke="#000000" points="1177.2653,-3678 1177.2653,-3708 1397.2653,-3708 1397.2653,-3678 1177.2653,-3678"/>
-<text text-anchor="start" x="1184.2653" y="-3689.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
-<text text-anchor="start" x="1258.1853" y="-3689.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
-<polygon fill="none" stroke="#000000" points="1177.2653,-3648 1177.2653,-3678 1397.2653,-3678 1397.2653,-3648 1177.2653,-3648"/>
-<text text-anchor="start" x="1184.2653" y="-3659.4" font-family="Arial" font-size="14.00" fill="#000000">redirects_to_wiki_id </text>
-<text text-anchor="start" x="1311.0521" y="-3659.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="#efefef" stroke="transparent" points="1177.2653,-3823 1177.2653,-3869 1397.2653,-3869 1397.2653,-3823 1177.2653,-3823"/>
+<polygon fill="none" stroke="#000000" points="1177.2653,-3823 1177.2653,-3869 1397.2653,-3869 1397.2653,-3823 1177.2653,-3823"/>
+<text text-anchor="start" x="1184.1443" y="-3846.8" font-family="Arial Bold" font-size="18.00" fill="#000000">wiki_redirects</text>
+<text text-anchor="start" x="1293.1325" y="-3846.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
+<text text-anchor="start" x="1297.0231" y="-3846.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<text text-anchor="start" x="1233.6243" y="-3832.4" font-family="Arial" font-size="14.00" fill="#333333">Wikiリダイレクト</text>
+<polygon fill="none" stroke="#000000" points="1177.2653,-3793 1177.2653,-3823 1397.2653,-3823 1397.2653,-3793 1177.2653,-3793"/>
+<text text-anchor="start" x="1184.2653" y="-3804.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
+<text text-anchor="start" x="1199.0451" y="-3804.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="1177.2653,-3763 1177.2653,-3793 1397.2653,-3793 1397.2653,-3763 1177.2653,-3763"/>
+<text text-anchor="start" x="1184.2653" y="-3774.4" font-family="Arial" font-size="14.00" fill="#000000">wiki_id </text>
+<text text-anchor="start" x="1230.1475" y="-3774.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="1177.2653,-3733 1177.2653,-3763 1397.2653,-3763 1397.2653,-3733 1177.2653,-3733"/>
+<text text-anchor="start" x="1184.2653" y="-3744.4" font-family="Arial" font-size="14.00" fill="#000000">title </text>
+<text text-anchor="start" x="1209.9329" y="-3744.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
+<polygon fill="none" stroke="#000000" points="1177.2653,-3703 1177.2653,-3733 1397.2653,-3733 1397.2653,-3703 1177.2653,-3703"/>
+<text text-anchor="start" x="1184.2653" y="-3714.4" font-family="Arial" font-size="14.00" fill="#000000">redirects_to </text>
+<text text-anchor="start" x="1261.2779" y="-3714.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
+<polygon fill="none" stroke="#000000" points="1177.2653,-3673 1177.2653,-3703 1397.2653,-3703 1397.2653,-3673 1177.2653,-3673"/>
+<text text-anchor="start" x="1184.2653" y="-3684.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
+<text text-anchor="start" x="1258.1853" y="-3684.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<polygon fill="none" stroke="#000000" points="1177.2653,-3643 1177.2653,-3673 1397.2653,-3673 1397.2653,-3643 1177.2653,-3643"/>
+<text text-anchor="start" x="1184.2653" y="-3654.4" font-family="Arial" font-size="14.00" fill="#000000">redirects_to_wiki_id </text>
+<text text-anchor="start" x="1311.0521" y="-3654.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
 </g>
 <!-- wiki_redirects&#45;&gt;wikis -->
 <g id="edge47" class="edge">
 <title>wiki_redirects:wiki_id&#45;&gt;wikis:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1406.9823,-3779.0832C1473.356,-3721.7816 1415.182,-3055 1493.2653,-3055"/>
-<polygon fill="#000000" stroke="#000000" points="1406.5402,-3779.2613 1395.5829,-3778.8263 1401.9028,-3781.1307 1397.2653,-3783 1397.2653,-3783 1397.2653,-3783 1401.9028,-3781.1307 1398.9478,-3787.1737 1406.5402,-3779.2613 1406.5402,-3779.2613"/>
-<text text-anchor="start" x="1307.5898" y="-3793" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1406.9202,-3774.1101C1472.8969,-3717.2021 1415.7091,-3055 1493.2653,-3055"/>
+<polygon fill="#000000" stroke="#000000" points="1406.5408,-3774.2629 1395.5836,-3773.826 1401.9031,-3776.1314 1397.2653,-3778 1397.2653,-3778 1397.2653,-3778 1401.9031,-3776.1314 1398.9471,-3782.174 1406.5408,-3774.2629 1406.5408,-3774.2629"/>
+<text text-anchor="start" x="1404.5898" y="-3762" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
 </g>
 <!-- wiki_redirects&#45;&gt;wikis -->
 <g id="edge48" class="edge">
 <title>wiki_redirects:redirects_to_wiki_id&#45;&gt;wikis:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1406.5283,-3658.7928C1461.9352,-3605.0746 1428.2123,-3055 1493.2653,-3055"/>
-<polygon fill="#000000" stroke="#000000" points="1406.3702,-3658.8646 1395.4044,-3658.9028 1401.8178,-3660.9323 1397.2653,-3663 1397.2653,-3663 1397.2653,-3663 1401.8178,-3660.9323 1399.1263,-3667.0972 1406.3702,-3658.8646 1406.3702,-3658.8646"/>
-<text text-anchor="start" x="1404.5898" y="-3673" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1406.4593,-3653.8274C1461.4898,-3600.5509 1428.7343,-3055 1493.2653,-3055"/>
+<polygon fill="#000000" stroke="#000000" points="1406.3714,-3653.8672 1395.4056,-3653.9023 1401.8184,-3655.9336 1397.2653,-3658 1397.2653,-3658 1397.2653,-3658 1401.8184,-3655.9336 1399.1251,-3662.0977 1406.3714,-3653.8672 1406.3714,-3653.8672"/>
+<text text-anchor="start" x="1404.5898" y="-3668" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
 </g>
 <!-- workflows -->
 <g id="node53" class="node">

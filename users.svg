@@ -998,40 +998,41 @@
 <!-- journals -->
 <g id="node20" class="node">
 <title>journals</title>
-<polygon fill="#efefef" stroke="transparent" points="8358,-1995 8358,-2030 8835,-2030 8835,-1995 8358,-1995"/>
-<polygon fill="none" stroke="#000000" points="8358,-1995 8358,-2030 8835,-2030 8835,-1995 8358,-1995"/>
-<text text-anchor="start" x="8516.3704" y="-2007.8" font-family="Arial Bold" font-size="18.00" fill="#000000">journals</text>
-<text text-anchor="start" x="8579.3758" y="-2007.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
-<text text-anchor="start" x="8583.2664" y="-2007.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="8358,-1965 8358,-1995 8835,-1995 8835,-1965 8358,-1965"/>
-<text text-anchor="start" x="8365" y="-1976.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
-<text text-anchor="start" x="8379.7798" y="-1976.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="8358,-1935 8358,-1965 8835,-1965 8835,-1935 8358,-1935"/>
-<text text-anchor="start" x="8365" y="-1946.4" font-family="Arial" font-size="14.00" fill="#000000">journalized_id </text>
-<text text-anchor="start" x="8455.2384" y="-1946.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="8358,-1905 8358,-1935 8835,-1935 8835,-1905 8358,-1905"/>
-<text text-anchor="start" x="8364.9575" y="-1916.4" font-family="Arial" font-size="14.00" fill="#000000">journalized_type </text>
-<text text-anchor="start" x="8470.7625" y="-1916.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(30)]</text>
-<text text-anchor="start" x="8550.0991" y="-1916.4" font-family="Arial" font-size="14.00" fill="#000000"> Issue:チケット Changeset:チェンジセット </text>
-<polygon fill="none" stroke="#000000" points="8358,-1875 8358,-1905 8835,-1905 8835,-1875 8358,-1875"/>
-<text text-anchor="start" x="8365" y="-1886.4" font-family="Arial" font-size="14.00" fill="#000000">user_id </text>
-<text text-anchor="start" x="8414.7882" y="-1886.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="8358,-1845 8358,-1875 8835,-1875 8835,-1845 8358,-1845"/>
-<text text-anchor="start" x="8365" y="-1856.4" font-family="Arial" font-size="14.00" fill="#000000">notes </text>
-<text text-anchor="start" x="8403.129" y="-1856.4" font-family="Arial" font-size="14.00" fill="#666666">[longtext]</text>
-<polygon fill="none" stroke="#000000" points="8358,-1815 8358,-1845 8835,-1845 8835,-1815 8358,-1815"/>
-<text text-anchor="start" x="8365" y="-1826.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
-<text text-anchor="start" x="8438.92" y="-1826.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
-<polygon fill="none" stroke="#000000" points="8358,-1785 8358,-1815 8835,-1815 8835,-1785 8358,-1785"/>
-<text text-anchor="start" x="8365" y="-1796.4" font-family="Arial" font-size="14.00" fill="#000000">private_notes </text>
-<text text-anchor="start" x="8452.9172" y="-1796.4" font-family="Arial" font-size="14.00" fill="#666666">[tinyint(1)]</text>
+<polygon fill="#efefef" stroke="transparent" points="8358,-1990 8358,-2036 8835,-2036 8835,-1990 8358,-1990"/>
+<polygon fill="none" stroke="#000000" points="8358,-1990 8358,-2036 8835,-2036 8835,-1990 8358,-1990"/>
+<text text-anchor="start" x="8516.3704" y="-2013.8" font-family="Arial Bold" font-size="18.00" fill="#000000">journals</text>
+<text text-anchor="start" x="8579.3758" y="-2013.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
+<text text-anchor="start" x="8583.2664" y="-2013.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<text text-anchor="start" x="8555.5458" y="-1999.4" font-family="Arial" font-size="14.00" fill="#333333">ジャーナル</text>
+<polygon fill="none" stroke="#000000" points="8358,-1960 8358,-1990 8835,-1990 8835,-1960 8358,-1960"/>
+<text text-anchor="start" x="8365" y="-1971.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
+<text text-anchor="start" x="8379.7798" y="-1971.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="8358,-1930 8358,-1960 8835,-1960 8835,-1930 8358,-1930"/>
+<text text-anchor="start" x="8365" y="-1941.4" font-family="Arial" font-size="14.00" fill="#000000">journalized_id </text>
+<text text-anchor="start" x="8455.2384" y="-1941.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="8358,-1900 8358,-1930 8835,-1930 8835,-1900 8358,-1900"/>
+<text text-anchor="start" x="8364.9575" y="-1911.4" font-family="Arial" font-size="14.00" fill="#000000">journalized_type </text>
+<text text-anchor="start" x="8470.7625" y="-1911.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(30)]</text>
+<text text-anchor="start" x="8550.0991" y="-1911.4" font-family="Arial" font-size="14.00" fill="#000000"> Issue:チケット Changeset:チェンジセット </text>
+<polygon fill="none" stroke="#000000" points="8358,-1870 8358,-1900 8835,-1900 8835,-1870 8358,-1870"/>
+<text text-anchor="start" x="8365" y="-1881.4" font-family="Arial" font-size="14.00" fill="#000000">user_id </text>
+<text text-anchor="start" x="8414.7882" y="-1881.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="8358,-1840 8358,-1870 8835,-1870 8835,-1840 8358,-1840"/>
+<text text-anchor="start" x="8365" y="-1851.4" font-family="Arial" font-size="14.00" fill="#000000">notes </text>
+<text text-anchor="start" x="8403.129" y="-1851.4" font-family="Arial" font-size="14.00" fill="#666666">[longtext]</text>
+<polygon fill="none" stroke="#000000" points="8358,-1810 8358,-1840 8835,-1840 8835,-1810 8358,-1810"/>
+<text text-anchor="start" x="8365" y="-1821.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
+<text text-anchor="start" x="8438.92" y="-1821.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<polygon fill="none" stroke="#000000" points="8358,-1780 8358,-1810 8835,-1810 8835,-1780 8358,-1780"/>
+<text text-anchor="start" x="8365" y="-1791.4" font-family="Arial" font-size="14.00" fill="#000000">private_notes </text>
+<text text-anchor="start" x="8452.9172" y="-1791.4" font-family="Arial" font-size="14.00" fill="#666666">[tinyint(1)]</text>
 </g>
 <!-- journals&#45;&gt;users -->
 <g id="edge21" class="edge">
 <title>journals:user_id&#45;&gt;users:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M8347.7218,-1888.2942C8274.9913,-1862.0446 8369.9997,-1540.8434 8305,-1482 8206.2958,-1392.6444 3647.1426,-1339 3514,-1339"/>
-<polygon fill="#000000" stroke="#000000" points="8348.1349,-1888.3626 8357.2632,-1894.4393 8353.0675,-1889.1813 8358,-1890 8358,-1890 8358,-1890 8353.0675,-1889.1813 8358.7368,-1885.5607 8348.1349,-1888.3626 8348.1349,-1888.3626"/>
-<text text-anchor="start" x="8272.268" y="-1900" font-family="Arial" font-size="10.00" fill="#000000">Detected Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M8347.8428,-1883.3149C8275.944,-1857.384 8369.2625,-1540.0834 8305,-1482 8206.225,-1392.7226 3647.1426,-1339 3514,-1339"/>
+<polygon fill="#000000" stroke="#000000" points="8348.1348,-1883.3632 8357.2635,-1889.4393 8353.0674,-1884.1816 8358,-1885 8358,-1885 8358,-1885 8353.0674,-1884.1816 8358.7365,-1880.5607 8348.1348,-1883.3632 8348.1348,-1883.3632"/>
+<text text-anchor="start" x="8272.268" y="-1895" font-family="Arial" font-size="10.00" fill="#000000">Detected Relation</text>
 </g>
 <!-- queries -->
 <g id="node21" class="node">

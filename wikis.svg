@@ -135,43 +135,44 @@
 <!-- wiki_redirects -->
 <g id="node3" class="node">
 <title>wiki_redirects</title>
-<polygon fill="#efefef" stroke="transparent" points="347,-1170 347,-1205 567,-1205 567,-1170 347,-1170"/>
-<polygon fill="none" stroke="#000000" points="347,-1170 347,-1205 567,-1205 567,-1170 347,-1170"/>
-<text text-anchor="start" x="353.879" y="-1182.8" font-family="Arial Bold" font-size="18.00" fill="#000000">wiki_redirects</text>
-<text text-anchor="start" x="462.8672" y="-1182.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
-<text text-anchor="start" x="466.7578" y="-1182.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="347,-1140 347,-1170 567,-1170 567,-1140 347,-1140"/>
-<text text-anchor="start" x="354" y="-1151.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
-<text text-anchor="start" x="368.7798" y="-1151.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="347,-1110 347,-1140 567,-1140 567,-1110 347,-1110"/>
-<text text-anchor="start" x="354" y="-1121.4" font-family="Arial" font-size="14.00" fill="#000000">wiki_id </text>
-<text text-anchor="start" x="399.8822" y="-1121.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="347,-1080 347,-1110 567,-1110 567,-1080 347,-1080"/>
-<text text-anchor="start" x="354" y="-1091.4" font-family="Arial" font-size="14.00" fill="#000000">title </text>
-<text text-anchor="start" x="379.6676" y="-1091.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
-<polygon fill="none" stroke="#000000" points="347,-1050 347,-1080 567,-1080 567,-1050 347,-1050"/>
-<text text-anchor="start" x="354" y="-1061.4" font-family="Arial" font-size="14.00" fill="#000000">redirects_to </text>
-<text text-anchor="start" x="431.0126" y="-1061.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
-<polygon fill="none" stroke="#000000" points="347,-1020 347,-1050 567,-1050 567,-1020 347,-1020"/>
-<text text-anchor="start" x="354" y="-1031.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
-<text text-anchor="start" x="427.92" y="-1031.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
-<polygon fill="none" stroke="#000000" points="347,-990 347,-1020 567,-1020 567,-990 347,-990"/>
-<text text-anchor="start" x="354" y="-1001.4" font-family="Arial" font-size="14.00" fill="#000000">redirects_to_wiki_id </text>
-<text text-anchor="start" x="480.7868" y="-1001.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="#efefef" stroke="transparent" points="347,-1165 347,-1211 567,-1211 567,-1165 347,-1165"/>
+<polygon fill="none" stroke="#000000" points="347,-1165 347,-1211 567,-1211 567,-1165 347,-1165"/>
+<text text-anchor="start" x="353.879" y="-1188.8" font-family="Arial Bold" font-size="18.00" fill="#000000">wiki_redirects</text>
+<text text-anchor="start" x="462.8672" y="-1188.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
+<text text-anchor="start" x="466.7578" y="-1188.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<text text-anchor="start" x="403.359" y="-1174.4" font-family="Arial" font-size="14.00" fill="#333333">Wikiリダイレクト</text>
+<polygon fill="none" stroke="#000000" points="347,-1135 347,-1165 567,-1165 567,-1135 347,-1135"/>
+<text text-anchor="start" x="354" y="-1146.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
+<text text-anchor="start" x="368.7798" y="-1146.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="347,-1105 347,-1135 567,-1135 567,-1105 347,-1105"/>
+<text text-anchor="start" x="354" y="-1116.4" font-family="Arial" font-size="14.00" fill="#000000">wiki_id </text>
+<text text-anchor="start" x="399.8822" y="-1116.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="347,-1075 347,-1105 567,-1105 567,-1075 347,-1075"/>
+<text text-anchor="start" x="354" y="-1086.4" font-family="Arial" font-size="14.00" fill="#000000">title </text>
+<text text-anchor="start" x="379.6676" y="-1086.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
+<polygon fill="none" stroke="#000000" points="347,-1045 347,-1075 567,-1075 567,-1045 347,-1045"/>
+<text text-anchor="start" x="354" y="-1056.4" font-family="Arial" font-size="14.00" fill="#000000">redirects_to </text>
+<text text-anchor="start" x="431.0126" y="-1056.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
+<polygon fill="none" stroke="#000000" points="347,-1015 347,-1045 567,-1045 567,-1015 347,-1015"/>
+<text text-anchor="start" x="354" y="-1026.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
+<text text-anchor="start" x="427.92" y="-1026.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<polygon fill="none" stroke="#000000" points="347,-985 347,-1015 567,-1015 567,-985 347,-985"/>
+<text text-anchor="start" x="354" y="-996.4" font-family="Arial" font-size="14.00" fill="#000000">redirects_to_wiki_id </text>
+<text text-anchor="start" x="480.7868" y="-996.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
 </g>
 <!-- wiki_redirects&#45;&gt;wikis -->
 <g id="edge2" class="edge">
 <title>wiki_redirects:wiki_id&#45;&gt;wikis:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M337.0152,-1124.3121C270.7802,-1114.6722 299.5912,-1006.0601 347,-947.5 402.7539,-878.6319 486.2461,-974.8681 542,-906 571.923,-869.0386 589.5556,-799 542,-799"/>
-<polygon fill="#000000" stroke="#000000" points="337.0236,-1124.3126 346.6907,-1129.4894 342.0118,-1124.6563 347,-1125 347,-1125 347,-1125 342.0118,-1124.6563 347.3093,-1120.5106 337.0236,-1124.3126 337.0236,-1124.3126"/>
-<text text-anchor="start" x="257.3245" y="-1109" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M336.9823,-1119.3063C270.4943,-1109.5847 298.6654,-1000.0747 347,-942 403.3782,-874.2608 485.6218,-973.7392 542,-906 572.4217,-869.4479 589.5556,-799 542,-799"/>
+<polygon fill="#000000" stroke="#000000" points="337.0239,-1119.309 346.6891,-1124.4892 342.0119,-1119.6545 347,-1120 347,-1120 347,-1120 342.0119,-1119.6545 347.3109,-1115.5108 337.0239,-1119.309 337.0239,-1119.309"/>
+<text text-anchor="start" x="257.3245" y="-1104" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
 </g>
 <!-- wiki_redirects&#45;&gt;wikis -->
 <g id="edge3" class="edge">
 <title>wiki_redirects:redirects_to_wiki_id&#45;&gt;wikis:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M457.9193,-979.805C465.8567,-939.104 522.969,-951.5632 542,-906 560.3286,-862.1184 589.5556,-799 542,-799"/>
-<polygon fill="#000000" stroke="#000000" points="457.8982,-980.0404 452.5182,-989.5958 457.4491,-985.0202 457,-990 457,-990 457,-990 457.4491,-985.0202 461.4818,-990.4042 457.8982,-980.0404 457.8982,-980.0404"/>
-<text text-anchor="start" x="440.0745" y="-974" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M458.0199,-974.6403C466.3175,-936.0027 522.9246,-949.7709 542,-906 560.999,-862.4045 589.5556,-799 542,-799"/>
+<polygon fill="#000000" stroke="#000000" points="457.9799,-975.0481 452.5217,-984.5591 457.4899,-980.0241 457,-985 457,-985 457,-985 457.4899,-980.0241 461.4783,-985.4409 457.9799,-975.0481 457.9799,-975.0481"/>
+<text text-anchor="start" x="440.0745" y="-969" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
 </g>
 </g>
 </svg>
