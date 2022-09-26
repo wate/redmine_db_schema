@@ -17,6 +17,7 @@ dict:
   Indexes: INDEX一覧
   Constraints: 制約一覧
   Triggers: トリガー
+  Labels: ラベル
   Nullable: NULL許可
   Relations: ER図
   Name: 名前
@@ -47,6 +48,8 @@ comments:
   - table: ar_internal_metadata
   - table: attachments
     tableComment: 添付ファイル
+    labels:
+      - ポリモーフィック関連
     columnComments:
       content_type: |
         Project:プロジェクト
@@ -58,6 +61,7 @@ comments:
         Message:フォーラムメッセージ
         CustomValue:カスタムフィールド
   - table: auth_sources
+    tableComment: LDAP認証
   - table: boards
     tableComment: フォーラム
   - table: changes
@@ -65,9 +69,38 @@ comments:
   - table: changesets
   - table: changesets_issues
   - table: comments
+    tableComment: コメント
+    labels:
+      - ポリモーフィック関連
   - table: custom_field_enumerations
   - table: custom_fields
     tableComment: カスタムフィールド
+    labels:
+      - 単一テーブル継承
+    columnComments:
+      type: |
+        IssueCustomField:チケット
+        TimeEntryCustomField:作業時間
+        ProjectCustomField:プロジェクト
+        VersionCustomField:バージョン
+        DocumentCustomField:文書
+        UserCustomField:ユーザー
+        GroupCustomField:グループ
+        TimeEntryActivityCustomField:作業分類(時間管理)
+        IssuePriorityCustomField:チケットの優先度
+        DocumentCategoryCustomField:文書カテゴリ
+      field_format: |
+        string:テキスト
+        version:バージョン
+        attachment:ファイル
+        user:ユーザー
+        list:リスト
+        link:リンク
+        float 小数
+        int:整数
+        整数:日付
+        bool:真偽値
+        text:長いテキスト
   - table: custom_fields_projects
     tableComment: カスタムフィールド⇔プロジェクト
   - table: custom_fields_roles
@@ -76,14 +109,20 @@ comments:
     tableComment: カスタムフィールド⇔トラッカー
   - table: custom_values
     tableComment: カスタムフィールドの値
+    labels:
+      - ポリモーフィック関連
   - table: documents
     tableComment: 文書
   - table: email_addresses
     tableComment: メールアドレス
   - table: enabled_modules
     tableComment: モジュールの有効化
+    columnComments:
+      name: モジュール名
   - table: enumerations
     tableComment: 選択肢の値
+    labels:
+      - 単一テーブル継承
     columnComments:
       type: |
         IssuePriority:チケットの優先度
@@ -143,6 +182,13 @@ comments:
     tableComment: プロジェクト⇔トラッカー
   - table: queries
     tableComment: カスタムクエリ
+    labels:
+      - 単一テーブル継承
+    columnComments:
+      type: |
+        IssueQuery:チケット
+        ProjectQuery:プロジェクト
+        TimeEntryQuery:作業時間 
   - table: queries_roles
     tableComment: カスタムクエリ⇔ロール
   - table: repositories
@@ -154,6 +200,8 @@ comments:
     tableComment: 設定
   - table: time_entries
     tableComment: 時間管理
+    labels:
+      - ポリモーフィック関連
   - table: tokens
     tableComment: 各種トークン
     columnComments:
@@ -171,6 +219,8 @@ comments:
       time_zone: タイムゾーン
   - table: users
     tableComment: ユーザー / グループ
+    labels:
+      - 単一テーブル継承
     columnComments:
       login: ログインID
       firstname: 名
@@ -187,6 +237,8 @@ comments:
     tableComment: バージョン
   - table: watchers
     tableComment: ウォッチャー
+    labels:
+      - ポリモーフィック関連
     columnComments:
       watchable_type: |
         Issue: チケット
@@ -196,11 +248,14 @@ comments:
         Board:フォーラム(全体)
         Message:フォーラム(単一)
   - table: wiki_content_versions
+    tableComment: Wikiコンテンツバージョン
   - table: wiki_contents
+    tableComment: Wikiコンテンツ
   - table: wiki_pages
     tableComment: Wikiページ
   - table: wiki_redirects
   - table: wikis
+    tableComment: Wiki
   - table: workflows
     tableComment: ワークフロー
     columnComments:

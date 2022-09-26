@@ -2,6 +2,8 @@
 
 ## 概要
 
+コメント
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -21,6 +23,10 @@ CREATE TABLE `comments` (
 ```
 
 </details>
+
+## ラベル
+
+`ポリモーフィック関連`
 
 ## カラム一覧
 

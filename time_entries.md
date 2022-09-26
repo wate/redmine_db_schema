@@ -34,6 +34,10 @@ CREATE TABLE `time_entries` (
 
 </details>
 
+## ラベル
+
+`ポリモーフィック関連`
+
 ## カラム一覧
 
 | 名前          | タイプ           | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント     |

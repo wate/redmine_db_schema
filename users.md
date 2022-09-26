@@ -39,6 +39,10 @@ CREATE TABLE `users` (
 
 </details>
 
+## ラベル
+
+`単一テーブル継承`
+
 ## カラム一覧
 
 | 名前                      | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 親テーブル                           | コメント                                 |

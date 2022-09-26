@@ -2,6 +2,8 @@
 
 ## 概要
 
+Wikiコンテンツバージョン
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 

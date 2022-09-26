@@ -27,6 +27,7 @@
 <polygon fill="none" stroke="#000000" points="97,-694 97,-724 350,-724 350,-694 97,-694"/>
 <text text-anchor="start" x="104" y="-705.4" font-family="Arial" font-size="14.00" fill="#000000">name </text>
 <text text-anchor="start" x="142.899" y="-705.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
+<text text-anchor="start" x="230.0182" y="-705.4" font-family="Arial" font-size="14.00" fill="#000000"> モジュール名</text>
 <polygon fill="none" stroke="#000000" stroke-width="3" points="95,-692.5 95,-831.5 351,-831.5 351,-692.5 95,-692.5"/>
 </g>
 <!-- projects -->

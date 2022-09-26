@@ -2,6 +2,8 @@
 
 ## 概要
 
+LDAP認証
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 

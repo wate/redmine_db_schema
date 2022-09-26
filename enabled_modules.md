@@ -21,11 +21,11 @@ CREATE TABLE `enabled_modules` (
 
 ## カラム一覧
 
-| 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント     |
-| ---------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
-| id         | int(11)      |              | false    | auto_increment   |            |                         |          |
-| project_id | int(11)      | NULL         | true     |                  |            | [projects](projects.md) |          |
-| name       | varchar(255) |              | false    |                  |            |                         |          |
+| 名前         | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント         |
+| ---------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------------- | ------------ |
+| id         | int(11)      |              | false    | auto_increment   |            |                         |              |
+| project_id | int(11)      | NULL         | true     |                  |            | [projects](projects.md) |              |
+| name       | varchar(255) |              | false    |                  |            |                         | モジュール名       |
 
 ## 制約一覧
 

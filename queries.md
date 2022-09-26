@@ -23,26 +23,30 @@ CREATE TABLE `queries` (
   PRIMARY KEY (`id`),
   KEY `index_queries_on_project_id` (`project_id`),
   KEY `index_queries_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
 
+## ラベル
+
+`単一テーブル継承`
+
 ## カラム一覧
 
-| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                                     | 親テーブル                   | コメント     |
-| ------------- | ------------ | ------------ | -------- | ---------------- | --------------------------------------------------------- | ----------------------- | -------- |
-| id            | int(11)      |              | false    | auto_increment   | [projects](projects.md) [queries_roles](queries_roles.md) |                         |          |
-| project_id    | int(11)      | NULL         | true     |                  |                                                           | [projects](projects.md) |          |
-| name          | varchar(255) | ''           | false    |                  |                                                           |                         |          |
-| filters       | text         | NULL         | true     |                  |                                                           |                         |          |
-| user_id       | int(11)      | 0            | false    |                  |                                                           | [users](users.md)       |          |
-| column_names  | text         | NULL         | true     |                  |                                                           |                         |          |
-| sort_criteria | text         | NULL         | true     |                  |                                                           |                         |          |
-| group_by      | varchar(255) | NULL         | true     |                  |                                                           |                         |          |
-| type          | varchar(255) | NULL         | true     |                  |                                                           |                         |          |
-| visibility    | int(11)      | 0            | true     |                  |                                                           |                         |          |
-| options       | text         | NULL         | true     |                  |                                                           |                         |          |
+| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                                     | 親テーブル                   | コメント                                                                             |
+| ------------- | ------------ | ------------ | -------- | ---------------- | --------------------------------------------------------- | ----------------------- | -------------------------------------------------------------------------------- |
+| id            | int(11)      |              | false    | auto_increment   | [projects](projects.md) [queries_roles](queries_roles.md) |                         |                                                                                  |
+| project_id    | int(11)      | NULL         | true     |                  |                                                           | [projects](projects.md) |                                                                                  |
+| name          | varchar(255) | ''           | false    |                  |                                                           |                         |                                                                                  |
+| filters       | text         | NULL         | true     |                  |                                                           |                         |                                                                                  |
+| user_id       | int(11)      | 0            | false    |                  |                                                           | [users](users.md)       |                                                                                  |
+| column_names  | text         | NULL         | true     |                  |                                                           |                         |                                                                                  |
+| sort_criteria | text         | NULL         | true     |                  |                                                           |                         |                                                                                  |
+| group_by      | varchar(255) | NULL         | true     |                  |                                                           |                         |                                                                                  |
+| type          | varchar(255) | NULL         | true     |                  |                                                           |                         | IssueQuery:チケット<br>ProjectQuery:プロジェクト<br>TimeEntryQuery:作業時間 <br>               |
+| visibility    | int(11)      | 0            | true     |                  |                                                           |                         |                                                                                  |
+| options       | text         | NULL         | true     |                  |                                                           |                         |                                                                                  |
 
 ## 制約一覧
 
