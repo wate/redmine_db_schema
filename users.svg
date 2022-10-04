@@ -599,33 +599,34 @@
 <!-- members -->
 <g id="node11" class="node">
 <title>members</title>
-<polygon fill="#efefef" stroke="transparent" points="3180,-1965 3180,-2000 3366,-2000 3366,-1965 3180,-1965"/>
-<polygon fill="none" stroke="#000000" points="3180,-1965 3180,-2000 3366,-2000 3366,-1965 3180,-1965"/>
-<text text-anchor="start" x="3186.8755" y="-1977.8" font-family="Arial Bold" font-size="18.00" fill="#000000">members</text>
-<text text-anchor="start" x="3261.8707" y="-1977.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
-<text text-anchor="start" x="3265.7613" y="-1977.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="3180,-1935 3180,-1965 3366,-1965 3366,-1935 3180,-1935"/>
-<text text-anchor="start" x="3187" y="-1946.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
-<text text-anchor="start" x="3201.7798" y="-1946.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="3180,-1905 3180,-1935 3366,-1935 3366,-1905 3180,-1905"/>
-<text text-anchor="start" x="3187" y="-1916.4" font-family="Arial" font-size="14.00" fill="#000000">user_id </text>
-<text text-anchor="start" x="3236.7882" y="-1916.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="3180,-1875 3180,-1905 3366,-1905 3366,-1875 3180,-1875"/>
-<text text-anchor="start" x="3187" y="-1886.4" font-family="Arial" font-size="14.00" fill="#000000">project_id </text>
-<text text-anchor="start" x="3251.568" y="-1886.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="3180,-1845 3180,-1875 3366,-1875 3366,-1845 3180,-1845"/>
-<text text-anchor="start" x="3187" y="-1856.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
-<text text-anchor="start" x="3260.92" y="-1856.4" font-family="Arial" font-size="14.00" fill="#666666">[timestamp]</text>
-<polygon fill="none" stroke="#000000" points="3180,-1815 3180,-1845 3366,-1845 3366,-1815 3180,-1815"/>
-<text text-anchor="start" x="3187" y="-1826.4" font-family="Arial" font-size="14.00" fill="#000000">mail_notification </text>
-<text text-anchor="start" x="3291.2342" y="-1826.4" font-family="Arial" font-size="14.00" fill="#666666">[tinyint(1)]</text>
+<polygon fill="#efefef" stroke="transparent" points="3180,-1960 3180,-2006 3366,-2006 3366,-1960 3180,-1960"/>
+<polygon fill="none" stroke="#000000" points="3180,-1960 3180,-2006 3366,-2006 3366,-1960 3180,-1960"/>
+<text text-anchor="start" x="3186.8755" y="-1983.8" font-family="Arial Bold" font-size="18.00" fill="#000000">members</text>
+<text text-anchor="start" x="3261.8707" y="-1983.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
+<text text-anchor="start" x="3265.7613" y="-1983.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<text text-anchor="start" x="3192.661" y="-1969.4" font-family="Arial" font-size="14.00" fill="#333333">(プロジェクト)メンバー</text>
+<polygon fill="none" stroke="#000000" points="3180,-1930 3180,-1960 3366,-1960 3366,-1930 3180,-1930"/>
+<text text-anchor="start" x="3187" y="-1941.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
+<text text-anchor="start" x="3201.7798" y="-1941.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="3180,-1900 3180,-1930 3366,-1930 3366,-1900 3180,-1900"/>
+<text text-anchor="start" x="3187" y="-1911.4" font-family="Arial" font-size="14.00" fill="#000000">user_id </text>
+<text text-anchor="start" x="3236.7882" y="-1911.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="3180,-1870 3180,-1900 3366,-1900 3366,-1870 3180,-1870"/>
+<text text-anchor="start" x="3187" y="-1881.4" font-family="Arial" font-size="14.00" fill="#000000">project_id </text>
+<text text-anchor="start" x="3251.568" y="-1881.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="3180,-1840 3180,-1870 3366,-1870 3366,-1840 3180,-1840"/>
+<text text-anchor="start" x="3187" y="-1851.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
+<text text-anchor="start" x="3260.92" y="-1851.4" font-family="Arial" font-size="14.00" fill="#666666">[timestamp]</text>
+<polygon fill="none" stroke="#000000" points="3180,-1810 3180,-1840 3366,-1840 3366,-1810 3180,-1810"/>
+<text text-anchor="start" x="3187" y="-1821.4" font-family="Arial" font-size="14.00" fill="#000000">mail_notification </text>
+<text text-anchor="start" x="3291.2342" y="-1821.4" font-family="Arial" font-size="14.00" fill="#666666">[tinyint(1)]</text>
 </g>
 <!-- members&#45;&gt;users -->
 <g id="edge12" class="edge">
 <title>members:user_id&#45;&gt;users:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M3376.0929,-1918.5423C3456.4416,-1893.6112 3360.7841,-1556.3183 3419,-1482 3446.8436,-1446.4549 3488.3457,-1483.1561 3514,-1446 3541.0198,-1406.8661 3561.5556,-1339 3514,-1339"/>
-<polygon fill="#000000" stroke="#000000" points="3375.8973,-1918.5705 3365.3567,-1915.5462 3370.9487,-1919.2852 3366,-1920 3366,-1920 3366,-1920 3370.9487,-1919.2852 3366.6433,-1924.4538 3375.8973,-1918.5705 3375.8973,-1918.5705"/>
-<text text-anchor="start" x="3373.3245" y="-1930" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M3375.9816,-1913.5588C3455.4638,-1888.9104 3361.3885,-1555.4426 3419,-1482 3446.868,-1446.4741 3488.3457,-1483.1561 3514,-1446 3541.0198,-1406.8661 3561.5556,-1339 3514,-1339"/>
+<polygon fill="#000000" stroke="#000000" points="3375.8974,-1913.5709 3365.3569,-1910.5462 3370.9487,-1914.2854 3366,-1915 3366,-1915 3366,-1915 3370.9487,-1914.2854 3366.6431,-1919.4538 3375.8974,-1913.5709 3375.8974,-1913.5709"/>
+<text text-anchor="start" x="3373.3245" y="-1925" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
 </g>
 <!-- time_entries -->
 <g id="node12" class="node">
@@ -911,45 +912,46 @@
 <!-- changesets -->
 <g id="node18" class="node">
 <title>changesets</title>
-<polygon fill="#efefef" stroke="transparent" points="7776,-2025 7776,-2060 7979,-2060 7979,-2025 7776,-2025"/>
-<polygon fill="none" stroke="#000000" points="7776,-2025 7776,-2060 7979,-2060 7979,-2025 7776,-2025"/>
-<text text-anchor="start" x="7782.8534" y="-2037.8" font-family="Arial Bold" font-size="18.00" fill="#000000">changesets</text>
-<text text-anchor="start" x="7874.8928" y="-2037.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
-<text text-anchor="start" x="7878.7834" y="-2037.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="7776,-1995 7776,-2025 7979,-2025 7979,-1995 7776,-1995"/>
-<text text-anchor="start" x="7783" y="-2006.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
-<text text-anchor="start" x="7797.7798" y="-2006.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="7776,-1965 7776,-1995 7979,-1995 7979,-1965 7776,-1965"/>
-<text text-anchor="start" x="7783" y="-1976.4" font-family="Arial" font-size="14.00" fill="#000000">repository_id </text>
-<text text-anchor="start" x="7867.0112" y="-1976.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="7776,-1935 7776,-1965 7979,-1965 7979,-1935 7776,-1935"/>
-<text text-anchor="start" x="7783" y="-1946.4" font-family="Arial" font-size="14.00" fill="#000000">revision </text>
-<text text-anchor="start" x="7835.1122" y="-1946.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
-<polygon fill="none" stroke="#000000" points="7776,-1905 7776,-1935 7979,-1935 7979,-1905 7776,-1905"/>
-<text text-anchor="start" x="7783" y="-1916.4" font-family="Arial" font-size="14.00" fill="#000000">committer </text>
-<text text-anchor="start" x="7848.3254" y="-1916.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
-<polygon fill="none" stroke="#000000" points="7776,-1875 7776,-1905 7979,-1905 7979,-1875 7776,-1875"/>
-<text text-anchor="start" x="7783" y="-1886.4" font-family="Arial" font-size="14.00" fill="#000000">committed_on </text>
-<text text-anchor="start" x="7874.7952" y="-1886.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
-<polygon fill="none" stroke="#000000" points="7776,-1845 7776,-1875 7979,-1875 7979,-1845 7776,-1845"/>
-<text text-anchor="start" x="7783" y="-1856.4" font-family="Arial" font-size="14.00" fill="#000000">comments </text>
-<text text-anchor="start" x="7851.4502" y="-1856.4" font-family="Arial" font-size="14.00" fill="#666666">[longtext]</text>
-<polygon fill="none" stroke="#000000" points="7776,-1815 7776,-1845 7979,-1845 7979,-1815 7776,-1815"/>
-<text text-anchor="start" x="7783" y="-1826.4" font-family="Arial" font-size="14.00" fill="#000000">commit_date </text>
-<text text-anchor="start" x="7867.0126" y="-1826.4" font-family="Arial" font-size="14.00" fill="#666666">[date]</text>
-<polygon fill="none" stroke="#000000" points="7776,-1785 7776,-1815 7979,-1815 7979,-1785 7776,-1785"/>
-<text text-anchor="start" x="7783" y="-1796.4" font-family="Arial" font-size="14.00" fill="#000000">scmid </text>
-<text text-anchor="start" x="7823.4404" y="-1796.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
-<polygon fill="none" stroke="#000000" points="7776,-1755 7776,-1785 7979,-1785 7979,-1755 7776,-1755"/>
-<text text-anchor="start" x="7783" y="-1766.4" font-family="Arial" font-size="14.00" fill="#000000">user_id </text>
-<text text-anchor="start" x="7832.7882" y="-1766.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="#efefef" stroke="transparent" points="7776,-2020 7776,-2066 7979,-2066 7979,-2020 7776,-2020"/>
+<polygon fill="none" stroke="#000000" points="7776,-2020 7776,-2066 7979,-2066 7979,-2020 7776,-2020"/>
+<text text-anchor="start" x="7782.8534" y="-2043.8" font-family="Arial Bold" font-size="18.00" fill="#000000">changesets</text>
+<text text-anchor="start" x="7874.8928" y="-2043.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
+<text text-anchor="start" x="7878.7834" y="-2043.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<text text-anchor="start" x="7794.1685" y="-2029.4" font-family="Arial" font-size="14.00" fill="#333333">チェンジセット(コミット)</text>
+<polygon fill="none" stroke="#000000" points="7776,-1990 7776,-2020 7979,-2020 7979,-1990 7776,-1990"/>
+<text text-anchor="start" x="7783" y="-2001.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
+<text text-anchor="start" x="7797.7798" y="-2001.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="7776,-1960 7776,-1990 7979,-1990 7979,-1960 7776,-1960"/>
+<text text-anchor="start" x="7783" y="-1971.4" font-family="Arial" font-size="14.00" fill="#000000">repository_id </text>
+<text text-anchor="start" x="7867.0112" y="-1971.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="7776,-1930 7776,-1960 7979,-1960 7979,-1930 7776,-1930"/>
+<text text-anchor="start" x="7783" y="-1941.4" font-family="Arial" font-size="14.00" fill="#000000">revision </text>
+<text text-anchor="start" x="7835.1122" y="-1941.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
+<polygon fill="none" stroke="#000000" points="7776,-1900 7776,-1930 7979,-1930 7979,-1900 7776,-1900"/>
+<text text-anchor="start" x="7783" y="-1911.4" font-family="Arial" font-size="14.00" fill="#000000">committer </text>
+<text text-anchor="start" x="7848.3254" y="-1911.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
+<polygon fill="none" stroke="#000000" points="7776,-1870 7776,-1900 7979,-1900 7979,-1870 7776,-1870"/>
+<text text-anchor="start" x="7783" y="-1881.4" font-family="Arial" font-size="14.00" fill="#000000">committed_on </text>
+<text text-anchor="start" x="7874.7952" y="-1881.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<polygon fill="none" stroke="#000000" points="7776,-1840 7776,-1870 7979,-1870 7979,-1840 7776,-1840"/>
+<text text-anchor="start" x="7783" y="-1851.4" font-family="Arial" font-size="14.00" fill="#000000">comments </text>
+<text text-anchor="start" x="7851.4502" y="-1851.4" font-family="Arial" font-size="14.00" fill="#666666">[longtext]</text>
+<polygon fill="none" stroke="#000000" points="7776,-1810 7776,-1840 7979,-1840 7979,-1810 7776,-1810"/>
+<text text-anchor="start" x="7783" y="-1821.4" font-family="Arial" font-size="14.00" fill="#000000">commit_date </text>
+<text text-anchor="start" x="7867.0126" y="-1821.4" font-family="Arial" font-size="14.00" fill="#666666">[date]</text>
+<polygon fill="none" stroke="#000000" points="7776,-1780 7776,-1810 7979,-1810 7979,-1780 7776,-1780"/>
+<text text-anchor="start" x="7783" y="-1791.4" font-family="Arial" font-size="14.00" fill="#000000">scmid </text>
+<text text-anchor="start" x="7823.4404" y="-1791.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
+<polygon fill="none" stroke="#000000" points="7776,-1750 7776,-1780 7979,-1780 7979,-1750 7776,-1750"/>
+<text text-anchor="start" x="7783" y="-1761.4" font-family="Arial" font-size="14.00" fill="#000000">user_id </text>
+<text text-anchor="start" x="7832.7882" y="-1761.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
 </g>
 <!-- changesets&#45;&gt;users -->
 <g id="edge19" class="edge">
 <title>changesets:user_id&#45;&gt;users:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M7766.0059,-1769.5514C7655.3744,-1758.9912 7819.69,-1564.7587 7724,-1482 7635.4964,-1405.4566 3631.0119,-1339 3514,-1339"/>
-<polygon fill="#000000" stroke="#000000" points="7766.0101,-1769.5515 7775.7982,-1774.4955 7771.005,-1769.7758 7776,-1770 7776,-1770 7776,-1770 7771.005,-1769.7758 7776.2018,-1765.5045 7766.0101,-1769.5515 7766.0101,-1769.5515"/>
-<text text-anchor="start" x="7690.268" y="-1780" font-family="Arial" font-size="10.00" fill="#000000">Detected Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M7765.8453,-1764.5272C7657.6844,-1753.7935 7818.1125,-1563.1407 7724,-1482 7635.3784,-1405.5933 3631.0119,-1339 3514,-1339"/>
+<polygon fill="#000000" stroke="#000000" points="7766.0108,-1764.5348 7775.7906,-1769.4951 7771.0054,-1764.7674 7776,-1765 7776,-1765 7776,-1765 7771.0054,-1764.7674 7776.2094,-1760.5049 7766.0108,-1764.5348 7766.0108,-1764.5348"/>
+<text text-anchor="start" x="7690.268" y="-1775" font-family="Arial" font-size="10.00" fill="#000000">Detected Relation</text>
 </g>
 <!-- imports -->
 <g id="node19" class="node">

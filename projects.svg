@@ -641,33 +641,34 @@
 <!-- members -->
 <g id="node12" class="node">
 <title>members</title>
-<polygon fill="#efefef" stroke="transparent" points="2684,-1935 2684,-1970 2870,-1970 2870,-1935 2684,-1935"/>
-<polygon fill="none" stroke="#000000" points="2684,-1935 2684,-1970 2870,-1970 2870,-1935 2684,-1935"/>
-<text text-anchor="start" x="2690.8755" y="-1947.8" font-family="Arial Bold" font-size="18.00" fill="#000000">members</text>
-<text text-anchor="start" x="2765.8707" y="-1947.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
-<text text-anchor="start" x="2769.7613" y="-1947.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="2684,-1905 2684,-1935 2870,-1935 2870,-1905 2684,-1905"/>
-<text text-anchor="start" x="2691" y="-1916.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
-<text text-anchor="start" x="2705.7798" y="-1916.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="2684,-1875 2684,-1905 2870,-1905 2870,-1875 2684,-1875"/>
-<text text-anchor="start" x="2691" y="-1886.4" font-family="Arial" font-size="14.00" fill="#000000">user_id </text>
-<text text-anchor="start" x="2740.7882" y="-1886.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="2684,-1845 2684,-1875 2870,-1875 2870,-1845 2684,-1845"/>
-<text text-anchor="start" x="2691" y="-1856.4" font-family="Arial" font-size="14.00" fill="#000000">project_id </text>
-<text text-anchor="start" x="2755.568" y="-1856.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="2684,-1815 2684,-1845 2870,-1845 2870,-1815 2684,-1815"/>
-<text text-anchor="start" x="2691" y="-1826.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
-<text text-anchor="start" x="2764.92" y="-1826.4" font-family="Arial" font-size="14.00" fill="#666666">[timestamp]</text>
-<polygon fill="none" stroke="#000000" points="2684,-1785 2684,-1815 2870,-1815 2870,-1785 2684,-1785"/>
-<text text-anchor="start" x="2691" y="-1796.4" font-family="Arial" font-size="14.00" fill="#000000">mail_notification </text>
-<text text-anchor="start" x="2795.2342" y="-1796.4" font-family="Arial" font-size="14.00" fill="#666666">[tinyint(1)]</text>
+<polygon fill="#efefef" stroke="transparent" points="2684,-1930 2684,-1976 2870,-1976 2870,-1930 2684,-1930"/>
+<polygon fill="none" stroke="#000000" points="2684,-1930 2684,-1976 2870,-1976 2870,-1930 2684,-1930"/>
+<text text-anchor="start" x="2690.8755" y="-1953.8" font-family="Arial Bold" font-size="18.00" fill="#000000">members</text>
+<text text-anchor="start" x="2765.8707" y="-1953.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
+<text text-anchor="start" x="2769.7613" y="-1953.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<text text-anchor="start" x="2696.661" y="-1939.4" font-family="Arial" font-size="14.00" fill="#333333">(プロジェクト)メンバー</text>
+<polygon fill="none" stroke="#000000" points="2684,-1900 2684,-1930 2870,-1930 2870,-1900 2684,-1900"/>
+<text text-anchor="start" x="2691" y="-1911.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
+<text text-anchor="start" x="2705.7798" y="-1911.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="2684,-1870 2684,-1900 2870,-1900 2870,-1870 2684,-1870"/>
+<text text-anchor="start" x="2691" y="-1881.4" font-family="Arial" font-size="14.00" fill="#000000">user_id </text>
+<text text-anchor="start" x="2740.7882" y="-1881.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="2684,-1840 2684,-1870 2870,-1870 2870,-1840 2684,-1840"/>
+<text text-anchor="start" x="2691" y="-1851.4" font-family="Arial" font-size="14.00" fill="#000000">project_id </text>
+<text text-anchor="start" x="2755.568" y="-1851.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="2684,-1810 2684,-1840 2870,-1840 2870,-1810 2684,-1810"/>
+<text text-anchor="start" x="2691" y="-1821.4" font-family="Arial" font-size="14.00" fill="#000000">created_on </text>
+<text text-anchor="start" x="2764.92" y="-1821.4" font-family="Arial" font-size="14.00" fill="#666666">[timestamp]</text>
+<polygon fill="none" stroke="#000000" points="2684,-1780 2684,-1810 2870,-1810 2870,-1780 2684,-1780"/>
+<text text-anchor="start" x="2691" y="-1791.4" font-family="Arial" font-size="14.00" fill="#000000">mail_notification </text>
+<text text-anchor="start" x="2795.2342" y="-1791.4" font-family="Arial" font-size="14.00" fill="#666666">[tinyint(1)]</text>
 </g>
 <!-- members&#45;&gt;projects -->
 <g id="edge13" class="edge">
 <title>members:project_id&#45;&gt;projects:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2673.6874,-1858.335C2600.407,-1832.7091 2688.58,-1518.9436 2632,-1452 2561.2538,-1368.2953 2269.597,-1309 2160,-1309"/>
-<polygon fill="#000000" stroke="#000000" points="2674.1278,-1858.4061 2683.2827,-1864.4425 2679.0639,-1859.203 2684,-1860 2684,-1860 2684,-1860 2679.0639,-1859.203 2684.7173,-1855.5575 2674.1278,-1858.4061 2674.1278,-1858.4061"/>
-<text text-anchor="start" x="2594.3245" y="-1870" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2673.809,-1853.3553C2601.3688,-1828.0411 2687.9492,-1518.0929 2632,-1452 2561.1887,-1368.3504 2269.597,-1309 2160,-1309"/>
+<polygon fill="#000000" stroke="#000000" points="2674.1277,-1853.4067 2683.283,-1859.4425 2679.0639,-1854.2033 2684,-1855 2684,-1855 2684,-1855 2679.0639,-1854.2033 2684.717,-1850.5575 2674.1277,-1853.4067 2674.1277,-1853.4067"/>
+<text text-anchor="start" x="2594.3245" y="-1865" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
 </g>
 <!-- enabled_modules -->
 <g id="node13" class="node">
@@ -763,7 +764,7 @@
 <text text-anchor="start" x="3939.361" y="-2013.8" font-family="Arial Bold" font-size="18.00" fill="#000000">enumerations</text>
 <text text-anchor="start" x="4048.3852" y="-2013.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
 <text text-anchor="start" x="4052.2758" y="-2013.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<text text-anchor="start" x="4004.8988" y="-1999.4" font-family="Arial" font-size="14.00" fill="#333333">選択肢の値</text>
+<text text-anchor="start" x="3866.079" y="-1999.4" font-family="Arial" font-size="14.00" fill="#333333">選択肢の値(作業分類/チケットの優先度/文書カテゴリ)</text>
 <polygon fill="none" stroke="#000000" points="3645,-1960 3645,-1990 4440,-1990 4440,-1960 3645,-1960"/>
 <text text-anchor="start" x="3652" y="-1971.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
 <text text-anchor="start" x="3666.7798" y="-1971.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>

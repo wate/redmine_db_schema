@@ -2,7 +2,7 @@
 
 ## 概要
 
-選択肢の値
+選択肢の値(作業分類/チケットの優先度/文書カテゴリ)
 
 <details>
 <summary><strong>テーブル定義</strong></summary>
@@ -21,7 +21,7 @@ CREATE TABLE `enumerations` (
   PRIMARY KEY (`id`),
   KEY `index_enumerations_on_project_id` (`project_id`),
   KEY `index_enumerations_on_id_and_type` (`id`,`type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

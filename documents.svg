@@ -111,7 +111,7 @@
 <text text-anchor="start" x="650.861" y="-441.8" font-family="Arial Bold" font-size="18.00" fill="#000000">enumerations</text>
 <text text-anchor="start" x="759.8852" y="-441.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
 <text text-anchor="start" x="763.7758" y="-441.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<text text-anchor="start" x="716.3988" y="-427.4" font-family="Arial" font-size="14.00" fill="#333333">選択肢の値</text>
+<text text-anchor="start" x="577.579" y="-427.4" font-family="Arial" font-size="14.00" fill="#333333">選択肢の値(作業分類/チケットの優先度/文書カテゴリ)</text>
 <polygon fill="none" stroke="#000000" points="356.5,-388 356.5,-418 1151.5,-418 1151.5,-388 356.5,-388"/>
 <text text-anchor="start" x="363.5" y="-399.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
 <text text-anchor="start" x="378.2798" y="-399.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>

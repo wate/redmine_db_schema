@@ -81,7 +81,7 @@
 <text text-anchor="start" x="305.8784" y="-1278.8" font-family="Arial Bold" font-size="18.00" fill="#000000">workflows</text>
 <text text-anchor="start" x="384.8678" y="-1278.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
 <text text-anchor="start" x="388.7584" y="-1278.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<text text-anchor="start" x="341.5168" y="-1264.4" font-family="Arial" font-size="14.00" fill="#333333">ワークフロー</text>
+<text text-anchor="start" x="273.6819" y="-1264.4" font-family="Arial" font-size="14.00" fill="#333333">ワークフロー/フィールドの権限</text>
 <polygon fill="none" stroke="#000000" points="43,-1225 43,-1255 745,-1255 745,-1225 43,-1225"/>
 <text text-anchor="start" x="50" y="-1236.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
 <text text-anchor="start" x="64.7798" y="-1236.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>

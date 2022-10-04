@@ -64,15 +64,20 @@ comments:
     tableComment: LDAP認証
   - table: boards
     tableComment: フォーラム
-  - table: changes
-  - table: changeset_parents
   - table: changesets
+    tableComment: チェンジセット(コミット)
   - table: changesets_issues
+    tableComment: チェンジセット⇔チケット
+  - table: changeset_parents
+    tableComment: チェンジセット⇔チェンジセット
+  - table: changes
+    tableComment: チェンジセットの内容
   - table: comments
     tableComment: コメント
     labels:
       - ポリモーフィック関連
   - table: custom_field_enumerations
+    tableComment: キーバリューリスト(カスタムフィールド)
   - table: custom_fields
     tableComment: カスタムフィールド
     labels:
@@ -120,7 +125,7 @@ comments:
     columnComments:
       name: モジュール名
   - table: enumerations
-    tableComment: 選択肢の値
+    tableComment: 選択肢の値(作業分類/チケットの優先度/文書カテゴリ)
     labels:
       - 単一テーブル継承
     columnComments:
@@ -173,8 +178,19 @@ comments:
         Issue:チケット
         Changeset:チェンジセット
   - table: journal_details
-  - table: member_roles
+    tableComment: ジャーナル詳細
+    columnComments:
+      journal_id: ジャーナルID
+      property: |
+        attr:属性
+        cf:カスタムフィールド
+      prop_key: 項目
+      old_value: 変更前の値
+      value: 変更後の値
   - table: members
+    tableComment: (プロジェクト)メンバー
+  - table: member_roles
+    tableComment: メンバー⇔ロール
   - table: messages
     tableComment: フォーラムメッセージ
   - table: news
@@ -198,7 +214,24 @@ comments:
     tableComment: リポジトリ
   - table: roles
     tableComment: ロール
+    columnComments:
+      permissions: 権限
+      name: 名称
+      builtin: |
+        1: 非メンバー
+        2: 匿名ユーザー
+        0: それ以外
+      position: 並び順
+      assignable: このロールのユーザーにチケットを割り当て可能
+      issues_visibility: 表示できるチケット
+      time_entries_visibility: 表示できる作業時間
+      users_visibility: 表示できるユーザー
+      all_roles_managed: メンバーの管理(すべてのロール)
   - table: roles_managed_roles
+    tableComment: メンバーの管理(管理対象のロール)
+    columnComments:
+      role_id: ロールID
+      managed_role_id: 管理対象のロールID
   - table: settings
     tableComment: 設定
   - table: time_entries
@@ -258,10 +291,13 @@ comments:
     tableComment: Wikiページ
   - table: wiki_redirects
     tableComment: Wikiリダイレクト
+    columnComments:
+      title: Wikiページ名
+      redirects_to: リダイレクト先Wikiページ名
   - table: wikis
     tableComment: Wiki
   - table: workflows
-    tableComment: ワークフロー
+    tableComment: ワークフロー/フィールドの権限
     labels:
       - 単一テーブル継承
     columnComments:
@@ -315,6 +351,13 @@ common_relations:
     parentTable: users
     parentColumns:
       - id
+  changeset_id: &relation_changeset_id
+    columns:
+      - changeset_id
+    parentTable: changesets
+    parentColumns:
+      - id
+
 
 # ------------
 # Automatically detect relations
@@ -584,6 +627,18 @@ relations:
   # messages
   - table: messages
     <<: *relation_author_id
+  - table: messages
+    columns:
+      - parent_id
+    parentTable: messages
+    parentColumns:
+      - id
+  - table: messages
+    columns:
+      - last_reply_id
+    parentTable: messages
+    parentColumns:
+      - id
   # comments
   - table: comments
     <<: *relation_author_id
@@ -614,3 +669,43 @@ relations:
   # roles_managed_roles
   - table: roles_managed_roles
     <<: *relation_role_id
+  - table: roles_managed_roles
+    columns:
+      - managed_role_id
+    parentTable: roles
+    parentColumns:
+      - id
+  # changeset_parents
+  - table: changeset_parents
+    columns:
+      - changeset_id
+    parentTable: changesets
+    parentColumns:
+      - id
+  - table: changeset_parents
+    columns:
+      - parent_id
+    parentTable: changesets
+    parentColumns:
+      - id
+  # changeset_parents
+  - table: changeset_parents
+    <<: *relation_changeset_id
+  - table: changeset_parents
+    columns:
+      - parent_id
+    parentTable: changesets
+    parentColumns:
+      - id
+  # changesets_issues
+  - table: changesets_issues
+    <<: *relation_changeset_id
+  - table: changesets_issues
+    columns:
+      - issue_id
+    parentTable: issues
+    parentColumns:
+      - id
+  # changes
+  - table: changes
+    <<: *relation_changeset_id

@@ -2,6 +2,8 @@
 
 ## 概要
 
+チェンジセット(コミット)
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -31,7 +33,7 @@ CREATE TABLE `changesets` (
 
 | 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル                                                                                                     | 親テーブル                           | コメント     |
 | ------------- | ------------ | ------------ | -------- | ---------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------- | -------- |
-| id            | int(11)      |              | false    | auto_increment   | [changes](changes.md) [changesets_issues](changesets_issues.md) [changeset_parents](changeset_parents.md) |                                 |          |
+| id            | int(11)      |              | false    | auto_increment   | [changeset_parents](changeset_parents.md) [changesets_issues](changesets_issues.md) [changes](changes.md) |                                 |          |
 | repository_id | int(11)      |              | false    |                  |                                                                                                           | [repositories](repositories.md) |          |
 | revision      | varchar(255) |              | false    |                  |                                                                                                           |                                 |          |
 | committer     | varchar(255) | NULL         | true     |                  |                                                                                                           |                                 |          |

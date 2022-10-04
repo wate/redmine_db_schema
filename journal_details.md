@@ -2,6 +2,8 @@
 
 ## 概要
 
+ジャーナル詳細
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -15,21 +17,21 @@ CREATE TABLE `journal_details` (
   `value` longtext DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `journal_details_journal_id` (`journal_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
 
 ## カラム一覧
 
-| 名前         | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント     |
-| ---------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------- |
-| id         | int(11)     |              | false    | auto_increment   |            |                         |          |
-| journal_id | int(11)     | 0            | false    |                  |            | [journals](journals.md) |          |
-| property   | varchar(30) | ''           | false    |                  |            |                         |          |
-| prop_key   | varchar(30) | ''           | false    |                  |            |                         |          |
-| old_value  | longtext    | NULL         | true     |                  |            |                         |          |
-| value      | longtext    | NULL         | true     |                  |            |                         |          |
+| 名前         | タイプ         | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル                   | コメント                                   |
+| ---------- | ----------- | ------------ | -------- | ---------------- | ---------- | ----------------------- | -------------------------------------- |
+| id         | int(11)     |              | false    | auto_increment   |            |                         |                                        |
+| journal_id | int(11)     | 0            | false    |                  |            | [journals](journals.md) | ジャーナルID                                |
+| property   | varchar(30) | ''           | false    |                  |            |                         | attr:属性<br>cf:カスタムフィールド<br>            |
+| prop_key   | varchar(30) | ''           | false    |                  |            |                         | 項目                                     |
+| old_value  | longtext    | NULL         | true     |                  |            |                         | 変更前の値                                  |
+| value      | longtext    | NULL         | true     |                  |            |                         | 変更後の値                                  |
 
 ## 制約一覧
 

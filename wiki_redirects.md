@@ -18,21 +18,21 @@ CREATE TABLE `wiki_redirects` (
   PRIMARY KEY (`id`),
   KEY `wiki_redirects_wiki_id_title` (`wiki_id`,`title`),
   KEY `index_wiki_redirects_on_wiki_id` (`wiki_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
 
 ## カラム一覧
 
-| 名前                   | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント     |
-| -------------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------- |
-| id                   | int(11)      |              | false    | auto_increment   |            |                   |          |
-| wiki_id              | int(11)      |              | false    |                  |            | [wikis](wikis.md) |          |
-| title                | varchar(255) | NULL         | true     |                  |            |                   |          |
-| redirects_to         | varchar(255) | NULL         | true     |                  |            |                   |          |
-| created_on           | datetime     |              | false    |                  |            |                   |          |
-| redirects_to_wiki_id | int(11)      |              | false    |                  |            | [wikis](wikis.md) |          |
+| 名前                   | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル             | コメント                       |
+| -------------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ----------------- | -------------------------- |
+| id                   | int(11)      |              | false    | auto_increment   |            |                   |                            |
+| wiki_id              | int(11)      |              | false    |                  |            | [wikis](wikis.md) |                            |
+| title                | varchar(255) | NULL         | true     |                  |            |                   | Wikiページ名                   |
+| redirects_to         | varchar(255) | NULL         | true     |                  |            |                   | リダイレクト先Wikiページ名            |
+| created_on           | datetime     |              | false    |                  |            |                   |                            |
+| redirects_to_wiki_id | int(11)      |              | false    |                  |            | [wikis](wikis.md) |                            |
 
 ## 制約一覧
 

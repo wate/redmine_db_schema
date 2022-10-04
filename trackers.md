@@ -17,7 +17,7 @@ CREATE TABLE `trackers` (
   `fields_bits` int(11) DEFAULT 0,
   `default_status_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

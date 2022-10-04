@@ -2,6 +2,8 @@
 
 ## 概要
 
+チェンジセット⇔チケット
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 

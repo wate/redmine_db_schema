@@ -2,6 +2,8 @@
 
 ## 概要
 
+チェンジセット⇔チェンジセット
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
@@ -21,7 +23,7 @@ CREATE TABLE `changeset_parents` (
 | 名前           | タイプ     | デフォルト値       | NULL許可   | 子テーブル      | 親テーブル                       | コメント     |
 | ------------ | ------- | ------------ | -------- | ---------- | --------------------------- | -------- |
 | changeset_id | int(11) |              | false    |            | [changesets](changesets.md) |          |
-| parent_id    | int(11) |              | false    |            |                             |          |
+| parent_id    | int(11) |              | false    |            | [changesets](changesets.md) |          |
 
 ## INDEX一覧
 

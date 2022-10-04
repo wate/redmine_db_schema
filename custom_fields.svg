@@ -151,33 +151,34 @@
 <!-- custom_field_enumerations -->
 <g id="node5" class="node">
 <title>custom_field_enumerations</title>
-<polygon fill="#efefef" stroke="transparent" points="1499.5,-942 1499.5,-977 1830.5,-977 1830.5,-942 1499.5,-942"/>
-<polygon fill="none" stroke="#000000" points="1499.5,-942 1499.5,-977 1830.5,-977 1830.5,-942 1499.5,-942"/>
-<text text-anchor="start" x="1506.3499" y="-954.8" font-family="Arial Bold" font-size="18.00" fill="#000000">custom_field_enumerations</text>
-<text text-anchor="start" x="1726.3963" y="-954.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
-<text text-anchor="start" x="1730.2869" y="-954.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="1499.5,-912 1499.5,-942 1830.5,-942 1830.5,-912 1499.5,-912"/>
-<text text-anchor="start" x="1506.5" y="-923.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
-<text text-anchor="start" x="1521.2798" y="-923.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="1499.5,-882 1499.5,-912 1830.5,-912 1830.5,-882 1499.5,-882"/>
-<text text-anchor="start" x="1506.5" y="-893.4" font-family="Arial" font-size="14.00" fill="#000000">custom_field_id </text>
-<text text-anchor="start" x="1607.6304" y="-893.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<polygon fill="none" stroke="#000000" points="1499.5,-852 1499.5,-882 1830.5,-882 1830.5,-852 1499.5,-852"/>
-<text text-anchor="start" x="1506.5" y="-863.4" font-family="Arial" font-size="14.00" fill="#000000">name </text>
-<text text-anchor="start" x="1545.399" y="-863.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
-<polygon fill="none" stroke="#000000" points="1499.5,-822 1499.5,-852 1830.5,-852 1830.5,-822 1499.5,-822"/>
-<text text-anchor="start" x="1506.5" y="-833.4" font-family="Arial" font-size="14.00" fill="#000000">active </text>
-<text text-anchor="start" x="1546.953" y="-833.4" font-family="Arial" font-size="14.00" fill="#666666">[tinyint(1)]</text>
-<polygon fill="none" stroke="#000000" points="1499.5,-792 1499.5,-822 1830.5,-822 1830.5,-792 1499.5,-792"/>
-<text text-anchor="start" x="1506.5" y="-803.4" font-family="Arial" font-size="14.00" fill="#000000">position </text>
-<text text-anchor="start" x="1558.6248" y="-803.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="#efefef" stroke="transparent" points="1499.5,-937 1499.5,-983 1830.5,-983 1830.5,-937 1499.5,-937"/>
+<polygon fill="none" stroke="#000000" points="1499.5,-937 1499.5,-983 1830.5,-983 1830.5,-937 1499.5,-937"/>
+<text text-anchor="start" x="1506.3499" y="-960.8" font-family="Arial Bold" font-size="18.00" fill="#000000">custom_field_enumerations</text>
+<text text-anchor="start" x="1726.3963" y="-960.8" font-family="Arial" font-size="14.00" fill="#000000"> </text>
+<text text-anchor="start" x="1730.2869" y="-960.8" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<text text-anchor="start" x="1516.4971" y="-946.4" font-family="Arial" font-size="14.00" fill="#333333">キーバリューリスト(カスタムフィールド)</text>
+<polygon fill="none" stroke="#000000" points="1499.5,-907 1499.5,-937 1830.5,-937 1830.5,-907 1499.5,-907"/>
+<text text-anchor="start" x="1506.5" y="-918.4" font-family="Arial" font-size="14.00" fill="#000000">id </text>
+<text text-anchor="start" x="1521.2798" y="-918.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="1499.5,-877 1499.5,-907 1830.5,-907 1830.5,-877 1499.5,-877"/>
+<text text-anchor="start" x="1506.5" y="-888.4" font-family="Arial" font-size="14.00" fill="#000000">custom_field_id </text>
+<text text-anchor="start" x="1607.6304" y="-888.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
+<polygon fill="none" stroke="#000000" points="1499.5,-847 1499.5,-877 1830.5,-877 1830.5,-847 1499.5,-847"/>
+<text text-anchor="start" x="1506.5" y="-858.4" font-family="Arial" font-size="14.00" fill="#000000">name </text>
+<text text-anchor="start" x="1545.399" y="-858.4" font-family="Arial" font-size="14.00" fill="#666666">[varchar(255)]</text>
+<polygon fill="none" stroke="#000000" points="1499.5,-817 1499.5,-847 1830.5,-847 1830.5,-817 1499.5,-817"/>
+<text text-anchor="start" x="1506.5" y="-828.4" font-family="Arial" font-size="14.00" fill="#000000">active </text>
+<text text-anchor="start" x="1546.953" y="-828.4" font-family="Arial" font-size="14.00" fill="#666666">[tinyint(1)]</text>
+<polygon fill="none" stroke="#000000" points="1499.5,-787 1499.5,-817 1830.5,-817 1830.5,-787 1499.5,-787"/>
+<text text-anchor="start" x="1506.5" y="-798.4" font-family="Arial" font-size="14.00" fill="#000000">position </text>
+<text text-anchor="start" x="1558.6248" y="-798.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
 </g>
 <!-- custom_field_enumerations&#45;&gt;custom_fields -->
 <g id="edge4" class="edge">
 <title>custom_field_enumerations:custom_field_id&#45;&gt;custom_fields:id</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1489.5045,-896.1265C1436.2315,-886.2046 1456.6471,-794.2657 1499.5,-749.5 1572.5618,-673.1769 2376.4382,-784.3231 2449.5,-708 2482.3849,-673.6472 2497.0556,-601 2449.5,-601"/>
-<polygon fill="#000000" stroke="#000000" points="1489.538,-896.1293 1499.1082,-901.4829 1494.519,-896.5647 1499.5,-897 1499.5,-897 1499.5,-897 1494.519,-896.5647 1499.8918,-892.5171 1489.538,-896.1293 1489.538,-896.1293"/>
-<text text-anchor="start" x="1409.8245" y="-907" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1489.4694,-891.1224C1436.0028,-881.1544 1456.3722,-788.793 1499.5,-744 1572.7648,-667.9063 2376.2352,-784.0937 2449.5,-708 2482.484,-673.7424 2497.0556,-601 2449.5,-601"/>
+<polygon fill="#000000" stroke="#000000" points="1489.5381,-891.1283 1499.1078,-896.4829 1494.519,-891.5642 1499.5,-892 1499.5,-892 1499.5,-892 1494.519,-891.5642 1499.8922,-887.5171 1489.5381,-891.1283 1489.5381,-891.1283"/>
+<text text-anchor="start" x="1409.8245" y="-902" font-family="Arial" font-size="10.00" fill="#000000">Additional Relation</text>
 </g>
 <!-- custom_values -->
 <g id="node6" class="node">

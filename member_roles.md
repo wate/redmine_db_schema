@@ -2,6 +2,8 @@
 
 ## 概要
 
+メンバー⇔ロール
+
 <details>
 <summary><strong>テーブル定義</strong></summary>
 
