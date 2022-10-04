@@ -15,7 +15,7 @@ CREATE TABLE `wikis` (
   `status` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   KEY `wikis_project_id` (`project_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

@@ -17,7 +17,7 @@ CREATE TABLE `watchers` (
   KEY `watchers_user_id_type` (`user_id`,`watchable_type`),
   KEY `index_watchers_on_user_id` (`user_id`),
   KEY `index_watchers_on_watchable_id_and_watchable_type` (`watchable_id`,`watchable_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

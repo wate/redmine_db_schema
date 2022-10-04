@@ -14,7 +14,7 @@ CREATE TABLE `enabled_modules` (
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `enabled_modules_project_id` (`project_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>

@@ -15,7 +15,7 @@ CREATE TABLE `custom_field_enumerations` (
   `active` tinyint(1) NOT NULL DEFAULT 1,
   `position` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ```
 
 </details>
