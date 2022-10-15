@@ -25,13 +25,13 @@ CREATE TABLE `issue_relations` (
 
 ## カラム一覧
 
-| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル               | コメント     |
-| ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ------------------- | -------- |
-| id            | int(11)      |              | false    | auto_increment   |            |                     |          |
-| issue_from_id | int(11)      |              | false    |                  |            | [issues](issues.md) |          |
-| issue_to_id   | int(11)      |              | false    |                  |            | [issues](issues.md) |          |
-| relation_type | varchar(255) | ''           | false    |                  |            |                     |          |
-| delay         | int(11)      | NULL         | true     |                  |            |                     |          |
+| 名前            | タイプ          | デフォルト値       | NULL許可   | Extra Definition | 子テーブル      | 親テーブル               | コメント                                                                                                                                                                                                                                             |
+| ------------- | ------------ | ------------ | -------- | ---------------- | ---------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| id            | int(11)      |              | false    | auto_increment   |            |                     |                                                                                                                                                                                                                                                  |
+| issue_from_id | int(11)      |              | false    |                  |            | [issues](issues.md) | 関連元チケットID                                                                                                                                                                                                                                        |
+| issue_to_id   | int(11)      |              | false    |                  |            | [issues](issues.md) | 関連先チケットID                                                                                                                                                                                                                                        |
+| relation_type | varchar(255) | ''           | false    |                  |            |                     | relates:関連している<br>duplicates:次のチケットと重複<br>duplicated:次のチケットが重複<br>blocks:ブロック先<br>blocked:ブロック元<br>precedes:次のチケットに先行<br>follows:次のチケットに後続<br>copied_to:コピー先<br>copied_from:コピー元<br>                                                             |
+| delay         | int(11)      | NULL         | true     |                  |            |                     | 遅延日数                                                                                                                                                                                                                                             |
 
 ## 制約一覧
 

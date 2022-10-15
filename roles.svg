@@ -36,7 +36,7 @@
 <polygon fill="none" stroke="#000000" points="1236,-226 1236,-256 1757,-256 1757,-226 1236,-226"/>
 <text text-anchor="start" x="1243" y="-237.4" font-family="Arial" font-size="14.00" fill="#000000">builtin </text>
 <text text-anchor="start" x="1283.4488" y="-237.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<text text-anchor="start" x="1330.8962" y="-237.4" font-family="Arial" font-size="14.00" fill="#000000"> 1: 非メンバー 2: 匿名ユーザー 0: それ以外 </text>
+<text text-anchor="start" x="1330.8962" y="-237.4" font-family="Arial" font-size="14.00" fill="#000000"> 1:非メンバー 2:匿名ユーザー 0:それ以外 </text>
 <polygon fill="none" stroke="#000000" points="1236,-196 1236,-226 1757,-226 1757,-196 1236,-196"/>
 <text text-anchor="start" x="1243" y="-207.4" font-family="Arial" font-size="14.00" fill="#000000">permissions </text>
 <text text-anchor="start" x="1321.5554" y="-207.4" font-family="Arial" font-size="14.00" fill="#666666">[text]</text>

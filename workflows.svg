@@ -155,7 +155,7 @@
 <polygon fill="none" stroke="#000000" points="668,-223 668,-253 1189,-253 1189,-223 668,-223"/>
 <text text-anchor="start" x="675" y="-234.4" font-family="Arial" font-size="14.00" fill="#000000">builtin </text>
 <text text-anchor="start" x="715.4488" y="-234.4" font-family="Arial" font-size="14.00" fill="#666666">[int(11)]</text>
-<text text-anchor="start" x="762.8962" y="-234.4" font-family="Arial" font-size="14.00" fill="#000000"> 1: 非メンバー 2: 匿名ユーザー 0: それ以外 </text>
+<text text-anchor="start" x="762.8962" y="-234.4" font-family="Arial" font-size="14.00" fill="#000000"> 1:非メンバー 2:匿名ユーザー 0:それ以外 </text>
 <polygon fill="none" stroke="#000000" points="668,-193 668,-223 1189,-223 1189,-193 668,-193"/>
 <text text-anchor="start" x="675" y="-204.4" font-family="Arial" font-size="14.00" fill="#000000">permissions </text>
 <text text-anchor="start" x="753.5554" y="-204.4" font-family="Arial" font-size="14.00" fill="#666666">[text]</text>
