@@ -143,6 +143,20 @@ comments:
     tableComment: カテゴリー
   - table: issue_relations
     tableComment: 関連チケット
+    columnComments:
+      issue_from_id: 関連元チケットID
+      issue_to_id: 関連先チケットID
+      relation_type: |
+        relates:関連している
+        duplicates:次のチケットと重複
+        duplicated:次のチケットが重複
+        blocks:ブロック先
+        blocked:ブロック元
+        precedes:次のチケットに先行
+        follows:次のチケットに後続
+        copied_to:コピー先
+        copied_from:コピー元
+      delay: 遅延日数
   - table: issue_statuses
     tableComment: ステータス
   - table: issues
@@ -218,9 +232,9 @@ comments:
       permissions: 権限
       name: 名称
       builtin: |
-        1: 非メンバー
-        2: 匿名ユーザー
-        0: それ以外
+        1:非メンバー
+        2:匿名ユーザー
+        0:それ以外
       position: 並び順
       assignable: このロールのユーザーにチケットを割り当て可能
       issues_visibility: 表示できるチケット
