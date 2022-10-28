@@ -29,6 +29,7 @@ dict:
   Definition: 定義
   Table Definition: テーブル定義
 exclude:
+  - ar_internal_metadata
   - schema_migrations
 lint:
   requireTableComment:
@@ -45,7 +46,6 @@ lint:
 # コメント
 # ------------
 comments:
-  - table: ar_internal_metadata
   - table: attachments
     tableComment: 添付ファイル
     labels:

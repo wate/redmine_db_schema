@@ -4,7 +4,6 @@
 
 | 名前                                                        | カラム一覧      | コメント                                               | タイプ        | ラベル                    |
 | --------------------------------------------------------- | ---------- | -------------------------------------------------- | ---------- | ---------------------- |
-| [ar_internal_metadata](ar_internal_metadata.md)           | 4          |                                                    | BASE TABLE |                        |
 | [attachments](attachments.md)                             | 13         | 添付ファイル                                             | BASE TABLE | `ポリモーフィック関連`           |
 | [auth_sources](auth_sources.md)                           | 17         | LDAP認証                                             | BASE TABLE |                        |
 | [boards](boards.md)                                       | 9          | フォーラム                                              | BASE TABLE |                        |
