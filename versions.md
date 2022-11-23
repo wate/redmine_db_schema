@@ -22,7 +22,7 @@ CREATE TABLE `versions` (
   PRIMARY KEY (`id`),
   KEY `versions_project_id` (`project_id`),
   KEY `index_versions_on_sharing` (`sharing`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

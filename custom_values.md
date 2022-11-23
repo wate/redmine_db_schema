@@ -17,7 +17,7 @@ CREATE TABLE `custom_values` (
   PRIMARY KEY (`id`),
   KEY `custom_values_customized` (`customized_type`,`customized_id`),
   KEY `index_custom_values_on_custom_field_id` (`custom_field_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

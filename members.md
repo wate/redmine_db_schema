@@ -18,7 +18,7 @@ CREATE TABLE `members` (
   UNIQUE KEY `index_members_on_user_id_and_project_id` (`user_id`,`project_id`),
   KEY `index_members_on_user_id` (`user_id`),
   KEY `index_members_on_project_id` (`project_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

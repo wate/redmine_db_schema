@@ -29,7 +29,7 @@ CREATE TABLE `time_entries` (
   KEY `index_time_entries_on_activity_id` (`activity_id`),
   KEY `index_time_entries_on_user_id` (`user_id`),
   KEY `index_time_entries_on_created_on` (`created_on`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

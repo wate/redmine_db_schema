@@ -12,7 +12,7 @@ CREATE TABLE `custom_fields_roles` (
   `custom_field_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL,
   UNIQUE KEY `custom_fields_roles_ids` (`custom_field_id`,`role_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

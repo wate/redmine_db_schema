@@ -18,7 +18,7 @@ CREATE TABLE `wiki_redirects` (
   PRIMARY KEY (`id`),
   KEY `wiki_redirects_wiki_id_title` (`wiki_id`,`title`),
   KEY `index_wiki_redirects_on_wiki_id` (`wiki_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

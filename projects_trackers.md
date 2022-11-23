@@ -13,7 +13,7 @@ CREATE TABLE `projects_trackers` (
   `tracker_id` int(11) NOT NULL DEFAULT 0,
   UNIQUE KEY `projects_trackers_unique` (`project_id`,`tracker_id`),
   KEY `projects_trackers_project_id` (`project_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

@@ -16,7 +16,7 @@ CREATE TABLE `issue_categories` (
   PRIMARY KEY (`id`),
   KEY `issue_categories_project_id` (`project_id`),
   KEY `index_issue_categories_on_assigned_to_id` (`assigned_to_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

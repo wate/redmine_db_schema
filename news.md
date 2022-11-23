@@ -21,7 +21,7 @@ CREATE TABLE `news` (
   KEY `news_project_id` (`project_id`),
   KEY `index_news_on_author_id` (`author_id`),
   KEY `index_news_on_created_on` (`created_on`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

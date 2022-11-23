@@ -18,7 +18,7 @@ CREATE TABLE `email_addresses` (
   `updated_on` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_email_addresses_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

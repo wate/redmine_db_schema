@@ -17,7 +17,7 @@ CREATE TABLE `issue_statuses` (
   PRIMARY KEY (`id`),
   KEY `index_issue_statuses_on_position` (`position`),
   KEY `index_issue_statuses_on_is_closed` (`is_closed`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

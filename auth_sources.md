@@ -28,7 +28,7 @@ CREATE TABLE `auth_sources` (
   `verify_peer` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   KEY `index_auth_sources_on_id_and_type` (`id`,`type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

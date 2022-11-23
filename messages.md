@@ -27,7 +27,7 @@ CREATE TABLE `messages` (
   KEY `index_messages_on_last_reply_id` (`last_reply_id`),
   KEY `index_messages_on_author_id` (`author_id`),
   KEY `index_messages_on_created_on` (`created_on`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

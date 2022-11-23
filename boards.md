@@ -21,7 +21,7 @@ CREATE TABLE `boards` (
   PRIMARY KEY (`id`),
   KEY `boards_project_id` (`project_id`),
   KEY `index_boards_on_last_message_id` (`last_message_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

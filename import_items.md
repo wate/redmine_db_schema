@@ -17,7 +17,7 @@ CREATE TABLE `import_items` (
   `unique_id` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_import_items_on_import_id_and_unique_id` (`import_id`,`unique_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

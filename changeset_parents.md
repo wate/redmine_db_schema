@@ -13,7 +13,7 @@ CREATE TABLE `changeset_parents` (
   `parent_id` int(11) NOT NULL,
   KEY `changeset_parents_changeset_ids` (`changeset_id`),
   KEY `changeset_parents_parent_ids` (`parent_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

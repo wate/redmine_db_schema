@@ -18,7 +18,7 @@ CREATE TABLE `issue_relations` (
   UNIQUE KEY `index_issue_relations_on_issue_from_id_and_issue_to_id` (`issue_from_id`,`issue_to_id`),
   KEY `index_issue_relations_on_issue_from_id` (`issue_from_id`),
   KEY `index_issue_relations_on_issue_to_id` (`issue_to_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

@@ -24,7 +24,7 @@ CREATE TABLE `changesets` (
   KEY `index_changesets_on_repository_id` (`repository_id`),
   KEY `index_changesets_on_committed_on` (`committed_on`),
   KEY `changesets_repos_scmid` (`repository_id`,`scmid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

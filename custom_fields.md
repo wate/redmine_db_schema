@@ -30,7 +30,7 @@ CREATE TABLE `custom_fields` (
   `description` text DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_custom_fields_on_id_and_type` (`id`,`type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

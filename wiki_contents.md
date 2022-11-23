@@ -19,7 +19,7 @@ CREATE TABLE `wiki_contents` (
   PRIMARY KEY (`id`),
   KEY `wiki_contents_page_id` (`page_id`),
   KEY `index_wiki_contents_on_author_id` (`author_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

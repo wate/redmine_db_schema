@@ -24,7 +24,7 @@ CREATE TABLE `repositories` (
   `created_on` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_repositories_on_project_id` (`project_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

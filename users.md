@@ -34,7 +34,7 @@ CREATE TABLE `users` (
   KEY `index_users_on_id_and_type` (`id`,`type`),
   KEY `index_users_on_auth_source_id` (`auth_source_id`),
   KEY `index_users_on_type` (`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

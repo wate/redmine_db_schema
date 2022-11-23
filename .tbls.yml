@@ -51,15 +51,15 @@ comments:
     labels:
       - ポリモーフィック関連
     columnComments:
-      content_type: |
+      container_type: |
         Project:プロジェクト
-        Issue:文書
+        Issue:チケット
         WikiPage: Wikiページ
         Version:バージョン
         News:ニュース
         Document:文書
         Message:フォーラムメッセージ
-        CustomValue:カスタムフィールド
+        CustomValue:カスタムフィールドの値
   - table: auth_sources
     tableComment: LDAP認証
   - table: boards
@@ -638,6 +638,55 @@ relations:
   # attachments
   - table: attachments
     <<: *relation_author_id
+  # - table: attachments
+  #   columns:
+  #     - container_id
+  #   parentTable: projects
+  #   parentColumns:
+  #     - id
+  #   def: container_type == 'Project'
+  # - table: attachments
+  #   columns:
+  #     - container_id
+  #   parentTable: issues
+  #   parentColumns:
+  #     - id
+  #   def: container_type == 'Issue'
+  # - table: attachments
+  #   columns:
+  #     - container_id
+  #   parentTable: wiki_pages
+  #   parentColumns:
+  #     - id
+  #   def: container_type == 'WikiPage'
+  # - table: attachments
+  #   columns:
+  #     - container_id
+  #   parentTable: versions
+  #   parentColumns:
+  #     - id
+  #   def: container_type == 'Version'
+  # - table: attachments
+  #   columns:
+  #     - container_id
+  #   parentTable: news
+  #   parentColumns:
+  #     - id
+  #   def: container_type == 'News'
+  # - table: attachments
+  #   columns:
+  #     - container_id
+  #   parentTable: documents
+  #   parentColumns:
+  #     - id
+  #   def: container_type == 'Document'
+  # - table: attachments
+  #   columns:
+  #     - container_id
+  #   parentTable: messages
+  #   parentColumns:
+  #     - id
+  #   def: container_type == 'Message'
   # messages
   - table: messages
     <<: *relation_author_id

@@ -13,7 +13,7 @@ CREATE TABLE `changesets_issues` (
   `issue_id` int(11) NOT NULL,
   UNIQUE KEY `changesets_issues_ids` (`changeset_id`,`issue_id`),
   KEY `index_changesets_issues_on_issue_id` (`issue_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>

@@ -19,7 +19,7 @@ CREATE TABLE `documents` (
   KEY `documents_project_id` (`project_id`),
   KEY `index_documents_on_category_id` (`category_id`),
   KEY `index_documents_on_created_on` (`created_on`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
 
 </details>
